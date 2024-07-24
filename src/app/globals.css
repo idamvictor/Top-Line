@@ -2,11 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+/* @layer base { */
+  /* :root {
+  
+} */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -30,4 +29,27 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+/* navlinks hover */
+.nav_links{
+position: relative;
+}
+.nav_links::before{
+ content: " ";
+ position: absolute;
+ background: #000;
+ width: 0%;
+ height: 10%;
+ bottom: 0;
+ left: 0;
+ transition: all 500ms ease;
+}
+.nav_links:hover::before {
+  transform-origin: right;
+  transition: all 500ms ease;
+  background-image: linear-gradient(220deg, #8B9A06,#464D09);
+
+ width: 100%;
+ height: 10%;
+ bottom: 0;
 }
