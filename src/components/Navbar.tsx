@@ -24,7 +24,7 @@ const NavLinks=[
 ]
 const Navbar = () => { 
   return (
-    <nav className='bg-slate-100 py-3 px-3 flex justify-between  md:justify-evenly items-center'>
+    <nav className='bg-slate-100 py-3 px-3 flex justify-between  md:justify-evenly items-center '>
       <Logo />
       <FaBarsStaggered className=" text-2xl md:hidden mr-3 cursor-pointer"/>
       <Links />
