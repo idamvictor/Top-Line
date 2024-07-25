@@ -53,3 +53,19 @@ position: relative;
  height: 10%;
  bottom: 0;
 }
+
+
+
+/* Path 4.2
+
+position: absolute;
+left: -0.96%;
+right: 40.22%;
+top: 71.2%;
+bottom: 24.56%;
+
+/* theme */
+/* background: #FFFFFF; */
+.theme{
+  transform: matrix(1, 0.01, 0.01, -1, 0, 0);
+}

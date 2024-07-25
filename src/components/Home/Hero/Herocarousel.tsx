@@ -1,10 +1,12 @@
 "use client"
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
-
+import heroOne from '@/../public/toplineone.jpg'
+import heroTwo from '@/../public/toplineTwo.jpg'
+import Image from "next/image";
 const imgs = [
-  "/imgs/nature/1.jpg",
-  "/imgs/nature/2.jpg",
+  heroOne,
+  heroTwo,
 ];
 
 const ONE_SECOND = 1000;
@@ -51,7 +53,7 @@ export const SwipeCarousel = () => {
   };
 
   return (
-    <div className="relative overflow-hidden h-full max-h-[550px]">
+    <div className="relative overflow-hidden h-full md:max-h-[550px]">
       <motion.div
         drag="x"
         dragConstraints={{
@@ -85,18 +87,30 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
         return (
           <motion.div
             key={idx}
-            style={{
-              backgroundImage: `url(${imgSrc})`,
-              backgroundSize: "cover",
-              borderColor:"blue",
-              backgroundPosition: "center",
-            }}
+            // style={{
+            //   backgroundImage: `url(${heroOne})`,
+            //   backgroundSize: "cover",
+            //   borderColor:"blue",
+            //   backgroundPosition: "center",
+            // }}
             animate={{
               opacity: imgIndex === idx ? 1 : 0.85,
             }}
             transition={SPRING_OPTIONS}
-            className="aspect-video w-screen shrink-0  bg-neutral-200 "
+            className="aspect-video w-screen shrink-0   "
+          >
+            <Image
+            src={imgSrc}
+            alt=''
+            loading='lazy'
+            width={500}
+            height={400}
+            className='w-full h-[25rem] md:h-full '
           />
+
+            
+          </motion.div>
+          
         );
       })}
     </>
