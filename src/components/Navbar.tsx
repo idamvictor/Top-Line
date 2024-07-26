@@ -24,7 +24,7 @@ const NavLinks=[
 ]
 const Navbar = () => { 
   return (
-    <nav className='bg-slate-100 py-3 px-3 flex justify-between  md:justify-evenly items-center '>
+    <nav className='bg-white py-3 px-3 md:py-5 flex justify-between  md:justify-evenly items-center '>
       <Logo />
       <FaBarsStaggered className=" text-2xl md:hidden mr-3 cursor-pointer"/>
       <Links />
@@ -33,10 +33,10 @@ const Navbar = () => {
   );
 };
 
-const Logo = () => {
+export const Logo = () => {
   return (
     <div className='flex justify-center items-center w-fit gap-1'>
-      <div className='logo bg-background h-14 w-14 rounded-full flex justify-center items-center'>
+      <div className='logo bg-background h-10 w-10 rounded-full flex justify-center items-center'>
         <svg
           width='28'
           height='24'

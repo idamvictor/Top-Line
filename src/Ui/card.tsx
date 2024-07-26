@@ -19,6 +19,9 @@ const Card = ({className, children }: any) => {
             opacity: 1
         }
     }}
+    whileHover={{
+        scale:1.2
+    }}
     transition={{
         type: "spring",
         mass: 3,

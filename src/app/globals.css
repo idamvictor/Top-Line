@@ -56,6 +56,7 @@ position: relative;
 
 
 
+
 /* Path 4.2
 
 position: absolute;
@@ -66,6 +67,78 @@ bottom: 24.56%;
 
 /* theme */
 /* background: #FFFFFF; */
-.theme{
-  transform: matrix(1, 0.01, 0.01, -1, 0, 0);
+.custom-shape-divider-bottom-1721955052 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+.top_curve {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1721955052 svg {
+  position: relative;
+  display: block;
+  width: calc(128% + 1.3px);
+  height: 123px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1721955052 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.custom-shape-trade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+
+}
+
+
+.custom-shape-trade svg {
+  position: relative;
+    display: block;
+    width: calc(153% + 1.3px);
+    height: 359px;
+}
+
+.custom-shape-trade .shape-fill {
+  fill: #FFFFFF;
+}
+
+
+/* divide svg */
+.custom-shape-divider-top-1721991272 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1721991272 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 106px;
+}
+
+.custom-shape-divider-top-1721991272 .shape-fill {
+  fill: #FFFFFF;
 }
