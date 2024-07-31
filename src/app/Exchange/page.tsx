@@ -80,7 +80,7 @@ const Exchange = () => {
         </div>
       </div>
       {/* welcome */}
-      <div className='Welcome flex justify-center p-10 items-center bg-white'>
+      <div className='Welcome relative flex justify-center p-10 items-center bg-white'>
         <Image
           src={imagetwo}
           alt='crypto'
@@ -104,9 +104,12 @@ const Exchange = () => {
             Discover
           </button>
         </div>
+
       </div>
+      
       {/* rates */}
-      <div className='rates bg-background grid'>
+      <div className='rates bg-background grid  relative'>
+
         <div className='custom-shape-divider-top-1721957864'>
           <svg
             data-name='Layer 1'
@@ -124,7 +127,7 @@ const Exchange = () => {
         <div className='grid m-5 gap-y-5 sm:grid-cols-3 bg-white w-[80%] max-w-[1000px] mx-auto py-5 rounded-xl'>
            {/* our Rates Tab */}
           <div className=' space-y-5 text-sm'>
-            <p className='border-b border-b-black text-center text-xl font-bold text-lightforeground'>OUR RATES</p>
+            <p className='border-b border-b-black text-center text-base md:text-xl font-bold text-lightforeground'>OUR RATES</p>
             <div className='info-wrapper flex justify-center gap-5 px-7'>
               <div className='icon flex gap-3'>
               <FaBtc className="text-2xl md:text-3xl text-lightforeground"/>
@@ -149,7 +152,7 @@ const Exchange = () => {
   {/*  Reserve Tab */}
 
 <div className='space-y-5 text-sm'>
-            <p className='border-b border-b-black text-center text-xl font-bold text-lightforeground'>OUR RESERVES</p>
+            <p className='border-b border-b-black text-center text-base md:text-xl font-bold text-lightforeground'>OUR RESERVES</p>
             <div className="wrapper">
                <div className="flex justify-center items-center">
             <CiBank className="font-extrabold text-2xl md:text-3xl text-lightforeground"/>
@@ -181,7 +184,7 @@ const Exchange = () => {
 
   {/* Latest Exchange  */}
           <div className=''>
-            <p className='border-b border-b-black text-center text-lg font-bold text-lightforeground'>LATEST EXCHANGES</p>
+            <p className='border-b border-b-black text-center text-base md:text-lg font-bold text-lightforeground'>LATEST EXCHANGES</p>
             <div className="historyBar h-[80%] flex items-center flex-col">
 <div className="text-sm p-5 px-2 space-y-6 my-2 border-b-2">
               <p className=" space-x-5">

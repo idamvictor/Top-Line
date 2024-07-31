@@ -28,7 +28,7 @@ const Homepage = () => {
 // this is hero UI
 const HeroUi =()=>{
   return(
-    <section  className='md:pb-[18rem] lg:pb-28 relative data-aos="fade-up"'>
+    <section  className='md:pb-[18rem] lg:pb-28 relative '>
         <SwipeCarousel />
         <div className='txt-btn absolute top-5 w-full  flex justify-center items-center '
         data-aos="zoom-out-right">

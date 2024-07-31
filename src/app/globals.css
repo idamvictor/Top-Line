@@ -215,3 +215,19 @@ button {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
  }
+
+ /* Community background Image */
+ .community::before{
+  content: "";
+  background-image: url("../../public/community.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0.4;
+  z-index: 2;
+ }

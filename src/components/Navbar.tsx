@@ -29,7 +29,7 @@ const NavLinks=[
 const Navbar = () => { 
  const pathName =usePathname();
   return (
-    <nav className='bg-white py-3 px-3 md:py-5 flex justify-between  md:justify-evenly items-center '>
+    <nav className='bg-white py-3 fixed top-0 z-40 w-full px-3 md:py-5 flex justify-between  md:justify-evenly items-center '>
       <Link href="/">
       <Logo />
       </Link>
@@ -75,7 +75,7 @@ const Links = ({pathName}: any) => {
         {
             NavLinks.map((link, index)=>{
                 return(
-                   <li key={index} className={`nav_links ${pathName.startsWith(link.link)?"active":""}`}>
+                   <li key={index} className={`nav_links pb-1 ${pathName.startsWith(link.link)?"active":""}`}>
                     <Link href={link.link}>
                     {link.name}
                     </Link>
