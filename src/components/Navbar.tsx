@@ -1,33 +1,40 @@
+'use client'
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
 const NavLinks=[
     {
         name:"Exchange",
-        link:"",
+        link:"/Exchange",
     },
     {
         name:"Mentorship",
-        link:"",
+        link:"/Mentorship",
     },
     {
         name:"Community",
-        link:"",
+        link:"/Community",
     },
     {
         name:"Signal service",
-        link:"",
+        link:"/Signal",
     },
     {
         name:"Capital management",
-        link:"",
+        link:"/Management",
     },
 ]
+ 
 const Navbar = () => { 
+ const pathName =usePathname();
   return (
     <nav className='bg-white py-3 px-3 md:py-5 flex justify-between  md:justify-evenly items-center '>
+      <Link href="/">
       <Logo />
+      </Link>
       <FaBarsStaggered className=" text-2xl md:hidden mr-3 cursor-pointer"/>
-      <Links />
+      <Links pathName={pathName}/>
       <p className="hidden md:flex nav_links">More</p>
     </nav>
   );
@@ -62,14 +69,16 @@ export const Logo = () => {
     </div>
   );
 };
-const Links = () => {
+const Links = ({pathName}: any) => {
   return (
     <ul className="hidden md:flex gap-3 font-medium">
         {
             NavLinks.map((link, index)=>{
                 return(
-                   <li key={index} className="nav_links">
-                        {link.name}
+                   <li key={index} className={`nav_links ${pathName.startsWith(link.link)?"active":""}`}>
+                    <Link href={link.link}>
+                    {link.name}
+                    </Link>
                    </li>
                 )
             })

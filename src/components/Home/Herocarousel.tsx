@@ -1,13 +1,10 @@
-"use client"
+"use client";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
-import heroOne from '@/../public/toplineone.jpg'
-import heroTwo from '@/../public/toplineTwo.jpg'
+import heroOne from "@/../public/toplineone.jpg";
+import heroTwo from "@/../public/toplineTwo.jpg";
 import Image from "next/image";
-const imgs = [
-  heroOne,
-  heroTwo,
-];
+const imgs = [heroOne, heroTwo];
 
 const ONE_SECOND = 1000;
 const AUTO_DELAY = ONE_SECOND * 10;
@@ -53,9 +50,9 @@ export const SwipeCarousel = () => {
   };
 
   return (
-    <div className="relative overflow-hidden h-full md:max-h-[550px]">
+    <div className='relative overflow-hidden h-full md:max-h-[550px]'>
       <motion.div
-        drag="x"
+        drag='x'
         dragConstraints={{
           left: 0,
           right: 0,
@@ -68,18 +65,18 @@ export const SwipeCarousel = () => {
         }}
         transition={SPRING_OPTIONS}
         onDragEnd={onDragEnd}
-        className="flex cursor-grab items-center active:cursor-grabbing"
+        className='flex cursor-grab items-center active:cursor-grabbing'
       >
         <Images imgIndex={imgIndex} />
       </motion.div>
 
       <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
-      
+
       {/* <GradientEdges /> */}
     </div>
   );
 };
-
+// Ui
 const Images = ({ imgIndex }: { imgIndex: number }) => {
   return (
     <>
@@ -87,30 +84,21 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
         return (
           <motion.div
             key={idx}
-            // style={{
-            //   backgroundImage: `url(${heroOne})`,
-            //   backgroundSize: "cover",
-            //   borderColor:"blue",
-            //   backgroundPosition: "center",
-            // }}
             animate={{
               opacity: imgIndex === idx ? 1 : 0.85,
             }}
             transition={SPRING_OPTIONS}
-            className="aspect-video w-screen shrink-0   "
+            className='aspect-video w-screen shrink-0   '
           >
             <Image
-            src={imgSrc}
-            alt=''
-            loading='lazy'
-            width={500}
-            height={400}
-            className='w-full h-[25rem] md:h-full '
-          />
-
-            
+              src={imgSrc}
+              alt=''
+              loading='lazy'
+              width={500}
+              height={400}
+              className='w-full h-[25rem] md:h-full max-h-[1000px] max-w-[2000px]'
+            />
           </motion.div>
-          
         );
       })}
     </>
@@ -125,7 +113,7 @@ const Dots = ({
   setImgIndex: Dispatch<SetStateAction<number>>;
 }) => {
   return (
-    <div className="flex w-fit justify-center gap-2 absolute z-50 bottom-2 right-2" >
+    <div className='flex w-fit justify-center gap-2 absolute z-50 bottom-2 right-2'>
       {imgs.map((_, idx) => {
         return (
           <button
@@ -138,14 +126,5 @@ const Dots = ({
         );
       })}
     </div>
-  );
-};
-
-const GradientEdges = () => {
-  return (
-    <>
-      <div className="pointer-events-none absolute bottom-0 left-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-r from-neutral-950/50 to-neutral-950/0" />
-      <div className="pointer-events-none absolute bottom-0 right-0 top-0 w-[10vw] max-w-[100px] bg-gradient-to-l from-neutral-950/50 to-neutral-950/0" />
-    </>
   );
 };
