@@ -1,8 +1,12 @@
 'use client'
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
+
+/**
+ * Array of navigation links with name and corresponding link.
+ */
 const NavLinks=[
     {
         name:"Exchange",
@@ -25,24 +29,91 @@ const NavLinks=[
         link:"/Management",
     },
 ]
+/**
+ * Array of additional navigation links with name and corresponding link.
+ */
+const MoreNavLinks=[
+    {
+        name:"Exchange",
+        link:"/Exchange",
+    },
+    {
+        name:"Mentorship",
+        link:"/Mentorship",
+    },
+    {
+        name:"Community",
+        link:"/Community",
+    },
+    {
+        name:"Signal service",
+        link:"/Signal",
+    },
+    {
+        name:"Capital management",
+        link:"/Management",
+    },
+]
  
+
 const Navbar = () => { 
+ 
+  const moreElement = useRef<HTMLDivElement>(null);
  const pathName =usePathname();
+ useEffect(() => {
+  if (moreElement.current) {
+    console.log(moreElement.current.style.height); // Should log the element now
+  }
+}, [moreElement]);
   return (
     <nav className='bg-white py-3 fixed top-0 z-40 w-full px-3 md:py-5 flex justify-between  md:justify-evenly items-center '>
-      <Link href="/">
-      <Logo />
+      <Link href='/'>
+        <Logo />
       </Link>
-      <FaBarsStaggered className=" text-2xl md:hidden mr-3 cursor-pointer"/>
-      <Links pathName={pathName}/>
-      <p className="hidden md:flex nav_links">More</p>
+      <FaBarsStaggered className=' text-2xl md:hidden mr-3 cursor-pointer' />
+      <Links pathName={pathName} />
+      <p  className='hidden md:flex  more z-30 bg-slate-500 h-10' >
+        <span className="nav_links">
+        More
+        </span>
+        </p>
+
+      <div ref={moreElement} className=' more_options w-full  h-0 overflow-hidden  bg-white absolute z-20 top-16 right-2
+       inset-0 transition-all  ease-in-out '>
+    	<ul className="flex items-center justify-evenly">
+        {MoreNavLinks.map((link, index)=>{
+          return(
+        <li key={index} className=" inset-0">
+          <Link href={link.link}>
+          {link.name}
+          </Link>
+        </li>
+         
+          )
+        })}
+      </ul>
+      </div>
+      <nav className="mobile_nav absolute bg-yellow-500 block md:hidden left-0 w-screen h-screen z-50 top-16">
+      <ul className="flex items-center justify-evenly">
+        {MoreNavLinks.map((link, index)=>{
+          return(
+        <li key={index} className=" inset-0">
+          <Link href={link.link}>
+          {link.name}
+          </Link>
+        </li>
+         
+          )
+        })}
+      </ul>
+      </nav>
     </nav>
   );
 };
 
 export const Logo = () => {
   return (
-    <div className='flex justify-center items-center w-fit gap-1'>
+    <div className='flex justify-center items-center w-fit gap-1 z-30'>
       <div className='logo bg-background h-10 w-10 rounded-full flex justify-center items-center'>
         <svg
           width='28'
@@ -71,7 +142,7 @@ export const Logo = () => {
 };
 const Links = ({pathName}: any) => {
   return (
-    <ul className="hidden md:flex gap-3 font-medium">
+    <ul className="hidden md:flex gap-3 font-medium z-30">
         {
             NavLinks.map((link, index)=>{
                 return(

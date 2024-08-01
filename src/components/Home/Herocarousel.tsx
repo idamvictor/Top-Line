@@ -37,7 +37,7 @@ export const SwipeCarousel = () => {
     }, AUTO_DELAY);
 
     return () => clearInterval(intervalRef);
-  }, []);
+  },);
 
   const onDragEnd = () => {
     const x = dragX.get();

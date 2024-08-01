@@ -1,5 +1,10 @@
+/**
+ * React functional component representing a page with community information and social links.
+ * Uses AOS library for animations.
+ * @returns JSX element representing the community page.
+ */
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { FaTelegramPlane } from "react-icons/fa";
 import {
   FaFacebookF,
@@ -9,8 +14,12 @@ import {
 } from "react-icons/fa6";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles-
-const page = () => {
-  React.useEffect(() => {
+const Page = () => {
+/**
+ * useEffect hook that initializes the AOS library with a duration of 1000ms.
+ * AOS is a library that animates elements on scroll.
+ */
+useEffect(() => {
     AOS.init({
       duration: 1000,
     });
@@ -68,4 +77,4 @@ const SocialLinks = () => {
     </div>
   );
 };
-export default page;
+export default Page;

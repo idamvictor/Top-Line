@@ -10,6 +10,11 @@ import AOS from "aos";
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 const Homepage = () => {
+  /**
+   * useEffect hook that initializes the AOS library with the specified duration.
+   * AOS is a library for CSS animations when scrolling.
+   * @returns None
+   */
   React.useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -67,11 +72,6 @@ const HeroUi =()=>{
           </Card>
         </div>
         <div
-          // initial='initial'
-          // animate='animate'
-          // transition={{
-          //   staggerChildren: 0.05,
-          // }}
           className='absolute hidden md:grid md:bottom-5 w-full grid-cols-4 md:px-5 px-2 gap-5 place-items-center'
         data-aos="fade-up"
         >

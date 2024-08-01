@@ -231,3 +231,35 @@ button {
   opacity: 0.4;
   z-index: 2;
  }
+ /* traingle */
+ .triangle{
+  clip-path: polygon(0 57%, 100% 100%, 100% 0);
+ }
+
+ body:has(.top_left_ball:hover) .top-right-pop-review{
+  scale: 1.1;
+  opacity: 1;
+ }
+ body:has(.top_right_ball:hover) .top-left-pop-review{
+  scale: 1.1;
+  opacity: 1;
+ }
+ body:has(.ball:hover) .pop-review{
+  scale: 1.1;
+  opacity: 1;
+ }
+ body:has(.ball:hover) .pop-review{
+  scale: 1.1;
+  opacity: 1;
+ }
+ body:has(.ball:hover) .pop-review{
+  scale: 1.1;
+  opacity: 1;
+ }
+
+body:has(.more:hover,.more_options:hover) .more_options{
+  height: fit-content;
+  padding-top: 10px;
+  padding-bottom: 10px;
+ 
+}
