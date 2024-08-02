@@ -53,3 +53,295 @@ position: relative;
  height: 10%;
  bottom: 0;
 }
+.active:before {
+  transform-origin: right;
+  transition: all 500ms ease;
+  background-image: linear-gradient(220deg, #8B9A06,#464D09);
+
+ width: 100%;
+ height: 10%;
+ bottom: 0;
+}
+
+
+
+
+/* Path 4.2
+
+position: absolute;
+left: -0.96%;
+right: 40.22%;
+top: 71.2%;
+bottom: 24.56%;
+
+/* theme */
+/* background: #FFFFFF; */
+.custom-shape-divider-bottom-1721955052 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+.top_curve {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1721955052 svg {
+  position: relative;
+  display: block;
+  width: calc(128% + 1.3px);
+  height: 123px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1721955052 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.custom-shape-trade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+
+}
+
+
+.custom-shape-trade svg {
+  position: relative;
+    display: block;
+    width: calc(153% + 1.3px);
+    height: 359px;
+}
+
+.custom-shape-trade .shape-fill {
+  fill: #FFFFFF;
+}
+
+
+/* divide svg */
+.custom-shape-divider-top-1721991272 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1721991272 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 106px;
+}
+
+.custom-shape-divider-top-1721991272 .shape-fill {
+  fill: #FFFFFF;
+}
+
+
+.review_top_shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+/* Home Buttons */
+button {
+  margin: 0.5em;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all ease-in;
+  border: 1px transparent solid; 
+
+ }
+.HomeBtn:hover {
+  color: #464D09;
+  border: 1px #7e8638 solid; 
+ }
+ 
+ .HomeBtn:after {
+  content: "";
+  background: white;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s ease;
+ }
+.ExchangeBtn:hover {
+  color: #ffffff;
+   border: 1px #7e8638 solid; 
+ }
+ 
+ .ExchangeBtn:after {
+  content: "";
+  background: #464D09;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s ease;
+ }
+ 
+ button:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+ }
+
+ /* Community background Image */
+ .community::before{
+  content: "";
+  background-image: url("../../public/community.jpeg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0.4;
+  z-index: 2;
+ }
+ /* traingle */
+ .triangle{
+  clip-path: polygon(0 57%, 100% 100%, 100% 0);
+ }
+
+ body:has(.top_left_ball:hover) .top-right-pop-review{
+  scale: 1.1;
+  opacity: 1;
+ }
+ body:has(.top_right_ball:hover) .top-left-pop-review{
+  scale: 1.1;
+  opacity: 1;
+ }
+ body:has(.ball:hover) .pop-review{
+  scale: 1.1;
+  opacity: 1;
+ }
+ body:has(.ball:hover) .pop-review{
+  scale: 1.1;
+  opacity: 1;
+ }
+ body:has(.ball:hover) .pop-review{
+  scale: 1.1;
+  opacity: 1;
+ }
+/* open desktop more option */
+body:has(.more:hover,.more_options:hover) .more_options{
+  height: fit-content;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+
+/* styles for custom bar */
+/* Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+}
+
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+}
+
+.checkmark span {
+  width: 32px;
+  height: 3px;
+  border-radius: 100px;
+  @apply bg-background;
+  /* background-color: rgb(0, 0, 0); */
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.checkmark span:nth-child(1) {
+  top: 10%;
+}
+
+.checkmark span:nth-child(2) {
+  top: 50%;
+}
+
+.checkmark span:nth-child(3) {
+  top: 90%;
+}
+
+.container input:checked + .checkmark span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  -moz-transform: translateY(-50%) rotate(45deg);
+  -ms-transform: translateY(-50%) rotate(45deg);
+  -o-transform: translateY(-50%) rotate(45deg);
+}
+
+.container input:checked + .checkmark span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  -moz-transform: translateY(-50%) rotate(-45deg);
+  -ms-transform: translateY(-50%) rotate(-45deg);
+  -o-transform: translateY(-50%) rotate(-45deg);
+}
+
+.container input:checked + .checkmark span:nth-child(3) {
+  transform: translateX(-50px);
+  -webkit-transform: translateX(-50px);
+  -moz-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
+  opacity: 0;
+}
