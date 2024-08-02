@@ -258,12 +258,11 @@ button {
   scale: 1.1;
   opacity: 1;
  }
-
+/* open desktop more option */
 body:has(.more:hover,.more_options:hover) .more_options{
   height: fit-content;
   padding-top: 10px;
   padding-bottom: 10px;
- 
 }
 
 

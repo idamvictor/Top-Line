@@ -66,6 +66,10 @@ const Navbar = () => {
   const [toggleNav, setToggleNav] = useState(false);
   const pathName = usePathname();
   useEffect(() => {
+
+    if (!toggleNav) {
+      return
+    }
     const handleResize = () => {
       setToggleNav(false);
     };
@@ -73,7 +77,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [toggleNav]);
   return (
     <nav className='max-w-[1500px] shadow-md shadow-foreground bg-white py-3 fixed top-0 z-40 w-full px-3 md:py-5 flex justify-between  md:justify-evenly items-center '>
       <Link href='/'>
@@ -150,7 +154,7 @@ const MobileNav = () => {
       className='mobile_nav absolute bg-white text-foreground text-xl sm:text-2xl block md:hidden right-0 w-fit h-[97vh] z-20 top-14 rounded-lg'
     >
       <ul className='text-base flex flex-col items-center justify-start pt-14 gap-y-5 h-full max-h-[90vh]'>
-        {MoreNavLinks.map((link, index) => {
+        {NavLinks.map((link, index) => {
           return (
             <li key={index} className=' text-center min-w-60 border-b-2 '>
               <Link href={link.link}>{link.name}</Link>
