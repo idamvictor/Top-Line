@@ -5,13 +5,12 @@
  * @returns JSX element containing the Exchange section content.
  */
 'use client'
-import React, { useRef } from "react";
+import React from "react";
 import image from "../../../public/excHero.png";
 import imagetwo from "../../../public/Layer2.png";
 import imagethree from "../../../public/Nelle.png";
 import Image from "next/image";
 import Card from "@/Ui/card";
-import { animate, motion } from 'framer-motion'
 import { FaArrowRightLong, FaBtc, FaEthereum, FaStar } from "react-icons/fa6";
 import { CiBank } from "react-icons/ci";
 import { TbArrowsDoubleSwNe } from "react-icons/tb";
@@ -22,9 +21,9 @@ const Exchange = () => {
       <div className='relative hero_wraapper bg-background justify-center items-center  '>
         <div className=' flex pt-10 text-white pb-3 px-10 justify-center items-center'>
           <div className='text_btn md:block flex flex-col justify-between items-center w-50% max-w-[500px]'>
-            <h1 className='text-xl sm:text-2xl font-normal mb-5'>
+            <h1 className='text-lg sm:text-xl font-normal mb-5'>
               We provide easy solution to exchange your{" "}
-              <span className='text-2xl sm:text-3xl font-bold'>
+              <span className='text-2xl sm:text-3xl font-bold pl-1'>
                 Cryptocurrency/ GiftCard for Cash
               </span>
             </h1>
@@ -39,8 +38,8 @@ const Exchange = () => {
           <Image
             src={image}
             alt='crypto'
-            width={500}
-            height={500}
+            width={400}
+            height={400}
             className='hidden md:block'
           />
         </div>

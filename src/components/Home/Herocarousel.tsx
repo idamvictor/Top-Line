@@ -96,7 +96,7 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
               loading='lazy'
               width={500}
               height={400}
-              className='w-full h-[25rem] md:h-full max-h-[1000px] max-w-[2000px]'
+              className='w-full h-[25rem] md:h-full max-h-[1000px] max-w-[2000px] '
             />
           </motion.div>
         );
