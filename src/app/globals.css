@@ -242,10 +242,10 @@ button {
   scale: 1.1;
   opacity: 1;
  }
- body:has(.top_right_ball:hover) .top-left-pop-review{
+ /* body:has(.top_right_ball:hover) .top-left-pop-review{
   scale: 1.1;
   opacity: 1;
- }
+ } */
  body:has(.ball:hover) .pop-review{
   scale: 1.1;
   opacity: 1;
@@ -289,12 +289,12 @@ body:has(.more:hover,.more_options:hover) .more_options{
   position: relative;
   top: 0;
   left: 0;
-  height: 1.3em;
-  width: 1.3em;
+  height: 1em;
+  width: 1em;
 }
 
 .checkmark span {
-  width: 32px;
+  width: 25px;
   height: 3px;
   border-radius: 100px;
   @apply bg-background;

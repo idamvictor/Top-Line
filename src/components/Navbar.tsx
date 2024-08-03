@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
 import Bars from "@/Ui/Bars";
-
 /**
  * Array of navigation links with name and corresponding link.
  */
@@ -65,6 +64,12 @@ const MoreNavLinks = [
 const Navbar = () => {
   const [toggleNav, setToggleNav] = useState(false);
   const pathName = usePathname();
+ useEffect(()=>{
+   if (toggleNav) {
+    setToggleNav(false)
+   }/* eslint-disable */
+ },[pathName])
+
   useEffect(() => {
 
     if (!toggleNav) {
@@ -120,7 +125,7 @@ const Navbar = () => {
           })}
         </ul>
       </div>
-      <AnimatePresence>{toggleNav && <MobileNav />}</AnimatePresence>
+      <AnimatePresence>{toggleNav && <MobileNav handleClick={setToggleNav} />}</AnimatePresence>
     </nav>
   );
 };
@@ -129,7 +134,7 @@ const Navbar = () => {
  * Functional component for rendering a mobile navigation bar.
  * returns {JSX.Element} A JSX element representing the mobile navigation bar.
  */
-const MobileNav = () => {
+const MobileNav = ({handleClick} :any) => {
   return (
     <motion.nav
       initial={{
@@ -157,7 +162,7 @@ const MobileNav = () => {
         {NavLinks.map((link, index) => {
           return (
             <li key={index} className=' text-center min-w-60 border-b-2 '>
-              <Link href={link.link}>{link.name}</Link>
+              <Link href={link.link} onClick={()=>handleClick(false)}>{link.name}</Link>
             </li>
           );
         })}
