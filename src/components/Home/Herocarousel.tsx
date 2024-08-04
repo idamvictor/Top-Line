@@ -37,7 +37,7 @@ export const SwipeCarousel = () => {
     }, AUTO_DELAY);
 
     return () => clearInterval(intervalRef);
-  },);
+  });
 
   const onDragEnd = () => {
     const x = dragX.get();
@@ -50,7 +50,7 @@ export const SwipeCarousel = () => {
   };
 
   return (
-    <div className='relative overflow-hidden h-full md:max-h-[550px]'>
+    <div className='relative overflow-hidden h-full'>
       <motion.div
         drag='x'
         dragConstraints={{
@@ -88,15 +88,15 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
               opacity: imgIndex === idx ? 1 : 0.85,
             }}
             transition={SPRING_OPTIONS}
-            className='aspect-video w-screen shrink-0   '
+            className=' w-screen shrink-0 h-[90vh] '
           >
             <Image
               src={imgSrc}
               alt=''
               loading='lazy'
-              width={500}
-              height={400}
-              className='w-full h-[25rem] md:h-full max-h-[1000px] max-w-[2000px] '
+              // width={500}
+              // height={400}
+              className='w-full opacity-40 h-full md:h-full aspect-w-0 aspect-h-0'
             />
           </motion.div>
         );

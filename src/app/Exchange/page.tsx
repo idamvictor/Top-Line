@@ -6,6 +6,11 @@
  */
 import Exchange from "@/components/Exchange/Page";
 import React from "react";
+import type { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "TopLine Exchange",
+  description: "TopLine Trading",
+};
 const ExchangePage = () => {
   return (
     <section className='overflow-x-hidden  bg-white'>
