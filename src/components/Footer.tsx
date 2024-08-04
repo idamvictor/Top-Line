@@ -3,7 +3,7 @@ import { Logo } from './Navbar'
 
 const Footer = () => {
   return (
-    <footer className='relative bg-zinc-900 text-white py-16 px-10 grid gap-y-10 md:grid-cols-3 gap-x-20'>
+    <footer className='font-manrope relative bg-zinc-900 text-white py-16 px-10 grid gap-y-10 md:grid-cols-3 gap-x-20'>
       <div className='first-box space-y-7 text-sm font-light'>
       <div className='flex justify-center items-center w-fit gap-1'>
         <svg

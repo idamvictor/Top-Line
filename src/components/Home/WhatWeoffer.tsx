@@ -23,7 +23,7 @@ const WhatWeoffer = () => {
     data-aos="fade-up"
       className='flex flex-wrap gap-5 gap-y-10 py-5 items-center justify-center'
     >
-    <Card className=' p-1 border border-lightforeground w-fit max-w-52 flex flex-wrap'>
+    <Card className=' p-1 border border-lightforeground w-fit max-w-56 flex flex-wrap'>
             <CardHeader className='p-2'>
               <CardTitle className='  max-sm:text-lg text-xl text-center text-lightforeground'>
               <Image
@@ -39,7 +39,7 @@ const WhatWeoffer = () => {
             <p className=' text-lg max-sm:py-3 sm:text-lg font-bold  '>
         Academy
         </p>
-        <p className='m-2 text-[15px] max-sm:pb-2 sm:text-[13px] font-normal '>
+        <p className='m-2 text-sm max-sm:pb-2 sm:text-sm font-normal '>
           The global audience is increasingly seeking diverse and inclusive
           content that represents different cultures and perspectives. is
           uniquely positioned to meet this demand by highlighting African
@@ -47,7 +47,7 @@ const WhatWeoffer = () => {
         </p>
             </CardContent>
           </Card>
-    <Card className=' p-1 border border-lightforeground w-fit max-w-52 flex flex-wrap'>
+    <Card className=' p-1 border border-lightforeground w-fit max-w-56 flex flex-wrap'>
             <CardHeader className='p-2'>
               <CardTitle className='  max-sm:text-lg text-xl text-center text-lightforeground'>
               <Image
@@ -63,7 +63,7 @@ const WhatWeoffer = () => {
             <p className=' text-lg max-sm:py-3 sm:text-lg font-bold  '>
         Academy
         </p>
-        <p className='m-2 text-[15px] max-sm:pb-2 sm:text-[13px] font-normal '>
+        <p className='m-2 text-sm max-sm:pb-2 sm:text-sm font-normal '>
           The global audience is increasingly seeking diverse and inclusive
           content that represents different cultures and perspectives. is
           uniquely positioned to meet this demand by highlighting African
@@ -71,7 +71,7 @@ const WhatWeoffer = () => {
         </p>
             </CardContent>
           </Card>
-    <Card className=' p-1 border border-lightforeground w-fit max-w-52 flex flex-wrap'>
+    <Card className=' p-1 border border-lightforeground w-fit max-w-56 flex flex-wrap'>
             <CardHeader className='p-2'>
               <CardTitle className='  max-sm:text-lg text-xl text-center text-lightforeground'>
               <Image
@@ -87,7 +87,7 @@ const WhatWeoffer = () => {
             <p className=' text-lg max-sm:py-3 sm:text-lg font-bold  '>
         Academy
         </p>
-        <p className='m-2 text-[15px] max-sm:pb-2 sm:text-[13px] font-normal '>
+        <p className='m-2 text-sm max-sm:pb-2 sm:text-sm font-normal '>
           The global audience is increasingly seeking diverse and inclusive
           content that represents different cultures and perspectives. is
           uniquely positioned to meet this demand by highlighting African
@@ -95,7 +95,7 @@ const WhatWeoffer = () => {
         </p>
             </CardContent>
           </Card>
-    <Card className=' p-1 border border-lightforeground w-fit max-w-52 flex flex-wrap'>
+    <Card className=' p-1 border border-lightforeground w-fit max-w-56 flex flex-wrap'>
             <CardHeader className='p-2'>
               <CardTitle className='  max-sm:text-lg text-xl text-center text-lightforeground'>
               <Image
@@ -111,7 +111,7 @@ const WhatWeoffer = () => {
             <p className=' text-lg max-sm:py-3 sm:text-lg font-bold  '>
         Academy
         </p>
-        <p className='m-2 text-[15px] max-sm:pb-2 sm:text-[13px] font-normal '>
+        <p className='m-2 text-sm max-sm:pb-2 sm:text-sm font-normal '>
           The global audience is increasingly seeking diverse and inclusive
           content that represents different cultures and perspectives. is
           uniquely positioned to meet this demand by highlighting African
@@ -119,7 +119,7 @@ const WhatWeoffer = () => {
         </p>
             </CardContent>
           </Card>
-    <Card className=' p-1 border border-lightforeground w-fit max-w-52 flex flex-wrap'>
+    <Card className=' p-1 border border-lightforeground w-fit max-w-56 flex flex-wrap'>
             <CardHeader className='p-2'>
               <CardTitle className='  max-sm:text-lg text-xl text-center text-lightforeground'>
               <Image
@@ -135,7 +135,7 @@ const WhatWeoffer = () => {
             <p className=' text-lg max-sm:py-3 sm:text-lg font-bold  '>
         Academy
         </p>
-        <p className='m-2 text-[15px] max-sm:pb-2 sm:text-[13px] font-normal '>
+        <p className='m-2 text-sm max-sm:pb-2 sm:text-sm font-normal '>
           The global audience is increasingly seeking diverse and inclusive
           content that represents different cultures and perspectives. is
           uniquely positioned to meet this demand by highlighting African
@@ -177,7 +177,7 @@ const Cardcontent=()=>{
         <p className=' text-lg max-sm:py-3 sm:text-lg font-bold  '>
         Academy
         </p>
-        <p className='m-2 text-[15px] max-sm:pb-2 sm:text-[13px] font-normal '>
+        <p className='m-2 text-sm max-sm:pb-2 sm:text-sm font-normal '>
           The global audience is increasingly seeking diverse and inclusive
           content that represents different cultures and perspectives. is
           uniquely positioned to meet this demand by highlighting African

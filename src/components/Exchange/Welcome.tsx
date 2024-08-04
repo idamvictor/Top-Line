@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Welcome = () => {
   return (
-    <div data-aos="fade-up" className='Welcome relative flex justify-center p-10 items-center bg-white'>
+    <div data-aos="fade-up" className='Welcome  relative flex justify-center p-10 items-center bg-white'>
     <Image
       src={imagetwo}
       alt='crypto'

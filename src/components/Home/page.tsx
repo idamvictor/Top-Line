@@ -29,7 +29,7 @@ const Homepage = () => {
     });
   });
   return (
-    <main data-aos='fade-up  ' className="overflow-x-hidden w-screen" >
+    <main data-aos='fade-up  ' className="font-manrope overflow-x-hidden w-screen" >
       <HeroUi />
       <AboutUs />
       <WhatWeoffer />
@@ -75,7 +75,7 @@ const HeroUi = () => {
         </div>
       </section>
 
-      <div className='wrapper px-5  relative'>
+      <div className='wrapper px-5 pt-10   relative'>
         <div
           className='  grid grid-cols-2 lg:grid-cols-4 mt-4  gap-5 w-full md:px-10 px-2 place-items-center'
           data-aos='fade-up'

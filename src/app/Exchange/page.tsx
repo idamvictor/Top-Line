@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 const ExchangePage = () => {
   return (
-    <section className='overflow-x-hidden  bg-white'>
+    <section className='overflow-x-hidden font-manrope bg-white'>
      <Exchange/>
     </section>
   );

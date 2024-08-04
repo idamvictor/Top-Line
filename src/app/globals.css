@@ -160,6 +160,7 @@ bottom: 24.56%;
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  padding: 0;
   transform: rotate(180deg);
 }
 .top_curve {
@@ -167,6 +168,7 @@ bottom: 24.56%;
   bottom: 0;
   left: 0;
   width: 100%;
+  padding: 0;
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);

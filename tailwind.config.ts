@@ -56,6 +56,15 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
+        manrope: ["var(--font-manrope)"],
+        freizeit_trial_thin: ["var(--font-freizeit_trial_thin)"],
+        freizeit_trial_light: ["var(--font-freizeit_trial_light)"],
+        freizeit_trial_extralight: ["var(--font-freizeit_trial_extralight)"],
+        freizeit_trial_regular: ["var(--font-freizeit_trial_regular)"],
+        freizeit_trial_medium: ["var(--font-freizeit_trial_medium)"],
+        freizeit_trial_bold: ["var(--font-freizeit_trial_bold)"],
+        freizeit_trial_extrabold: ["var(--font-freizeit_trial_extrabold)"],
+
       },
       keyframes: {
         "accordion-down": {

@@ -21,7 +21,7 @@ const Exchange = () => {
   return (
     <>
       <div className='relative hero_wraapper bg-background justify-center items-center  '>
-        <div data-aos="fade-up"   className=' flex pt-10 text-white pb-3 px-10 justify-center items-center'>
+        <div data-aos="fade-up"   className='min-h-[60vh]  flex pt-10 text-white pb-3 px-10 justify-center items-center'>
           <div className='text_btn md:block flex flex-col justify-between items-center w-50% max-w-[500px]'>
             <h1 className='text-lg sm:text-xl font-normal mb-5'>
               We provide easy solution to exchange your{" "}
@@ -45,7 +45,7 @@ const Exchange = () => {
             className='hidden md:block'
           />
         </div>
-        <div className='curve relative h-[109px] '>
+        <div className='curve relative h-[106px] '>
           <div className='custom-shape-divider-bottom-1721955052'>
             <svg
               data-name='Layer 1'
