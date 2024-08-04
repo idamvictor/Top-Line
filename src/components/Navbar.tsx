@@ -84,7 +84,7 @@ const Navbar = () => {
     };
   }, [toggleNav]);
   return (
-    <nav className='max-w-[1500px] shadow-md shadow-foreground bg-white py-3 fixed top-0 z-40 w-full px-3 md:py-5 flex justify-between  md:justify-evenly items-center '>
+    <nav className=' text-black shadow-md shadow-foreground bg-white py-3 fixed top-0 z-40 w-full px-3 md:py-5 flex justify-between  lg:justify-evenly items-center '>
       <Link href='/'>
         <Logo />
       </Link>
@@ -112,7 +112,7 @@ const Navbar = () => {
         className=' more_options w-full bg-white  h-0 overflow-hidden   absolute z-20 top-[3.8rem] lg:top-[3.7rem]  
        inset-0 transition-all ease-in-out '
       >
-        <ul className='flex items-center justify-evenly gap-2 lg:gap-5 mt-7 mb-3 '>
+        <ul className='MoreNavLinks flex items-center justify-evenly gap-2 lg:gap-5 mt-7 mb-3 '>
           {MoreNavLinks.map((link, index) => {
             return (
               <li
@@ -161,7 +161,7 @@ const MobileNav = ({handleClick} :any) => {
       <ul className='text-base flex flex-col items-center justify-start pt-14 gap-y-5 h-full max-h-[90vh]'>
         {NavLinks.map((link, index) => {
           return (
-            <li key={index} className=' text-center min-w-60 border-b-2 '>
+            <li key={index} className=' text-center min-w-60  border-b-2 '>
               <Link href={link.link} onClick={()=>handleClick(false)}>{link.name}</Link>
             </li>
           );
@@ -181,11 +181,12 @@ export const Logo = () => {
     <div className='flex justify-center items-center w-fit gap-1 z-50'>
       <div className='logo bg-background h-10 w-10 rounded-full flex justify-center items-center'>
         <svg
-          width='28'
-          height='24'
+          width='35'
+          height='35'
           viewBox='0 0 18 14'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
+          className=" max-md:w-7 max-md:h-7"
         >
           <path
             d='M10.8046 13.4684H9.43484V4.14225H0.109375V2.77246H10.8046V13.4684Z'
@@ -201,7 +202,7 @@ export const Logo = () => {
           />
         </svg>
       </div>
-      <h1 className=' text-black font-bold text-xl '>TOPLINE</h1>
+      <h1 className=' text-black font-bold text-lg md:text-2xl '>TOPLINE</h1>
     </div>
   );
 };
@@ -212,7 +213,7 @@ export const Logo = () => {
  */
 const Links = ({ pathName }: any) => {
   return (
-    <ul className='hidden md:flex gap-3 font-medium z-30'>
+    <ul className='hidden md:flex gap-3 lg:gap-x-10  font-medium z-30'>
       {NavLinks.map((link, index) => {
         return (
           <li

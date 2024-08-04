@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`max-w-[1500px] mx-auto overflow-x-hidden pt-16 ${inter.className}`}>
+      <body className={` pt-[4rem] ${inter.className}`}>
         <Navbar/>
         {children}
         <Footer/>

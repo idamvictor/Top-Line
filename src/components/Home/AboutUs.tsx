@@ -12,14 +12,15 @@ function AboutUs() {
   return (
     <div
     data-aos="fade-up"
-    className='Aboutus max-w-[700px] md:max-w-[1000px] mx-auto my-10 text-foreground'>
-    <h2 className=' text-3xl font-bold pt-5 pb-5 pl-10 md:pl-0  mt-3 flex flex-col md:items-center  items-start justify-center gap-5'>
-      About Us
-      <p className="w-10 h-1 bg-background rounded-full mb-2"></p>
+    className='Aboutus md:px-7 max-w-[1500px]  mx-auto my-20 text-foreground'>
+    <h2 className='text-xl  md:text-2xl font-bold pt-5 mb-5 md:mb-10 pl-5 md:pl-0  mt-3 flex flex-col md:items-center  items-start justify-center gap-2 md:gap-5  '>
+      About TopLine Trading
+      <p className="w-10 h-1 ml-1 bg-background rounded-full "></p>
     </h2>
-    <div className='img_text flex relative items-start ml-2 md:ml-0 justify-center gap-5 min-h-fit h-fit '>
-      <p className='z-20 text-lg leading-7 text-justify  md:text-base px-5 md:font-medium   '>
-        we are your partner in your journey in exploring the financial
+
+    <div className='img_text flex relative items-start ml-2 md:ml-0 justify-center md:items-center min-h-fit h-fit '>
+      <p className='z-20 About_Txt text-left leading-relaxed md:text-left   px-5 md:font-medium   '>
+        <span className=' font-extrabold text-lightforeground'>We</span> are your partner in your journey in exploring the financial
         market, our mission is to empower you with the skills, support,
         strategies & resource needed to succeed in the markets and achieve
         your financial goals, we are your partner in your journey in
@@ -36,7 +37,7 @@ function AboutUs() {
         loading='lazy'
         width={500}
         height={400}
-        className='min-w-[50%] hidden md:block md:h-auto '
+        className='min-w-[50%] hidden md:block rounded-xl '
       />
     </div>
   </div>
