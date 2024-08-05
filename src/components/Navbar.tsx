@@ -52,7 +52,7 @@ const MoreNavLinks = [
   },
   {
     name: "FAQ",
-    link: "/Management",
+    link: "/FAQ",
   },
 ];
 

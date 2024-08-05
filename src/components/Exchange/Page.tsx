@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import image from "../../../public/excHero.png";
 import Image from "next/image";
@@ -11,40 +11,47 @@ import LearnMore from "@/components/Exchange/LearnMore";
 import BlogPost from "@/components/Exchange/BlogPost";
 import Trades from "@/components/Exchange/Trades";
 import AOS from "aos";
-import 'aos/dist/aos.css'; 
+import "aos/dist/aos.css";
 const Exchange = () => {
-    React.useEffect(() => {
-        AOS.init({
-          duration: 1000,
-        });
-      });
+  React.useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  });
   return (
     <>
       <div className='relative hero_wraapper bg-background justify-center items-center  '>
-        <div data-aos="fade-up"   className='min-h-[60vh]  flex pt-10 text-white pb-3 px-10 justify-center items-center'>
-          <div className='text_btn md:block flex flex-col justify-between items-center w-50% max-w-[500px]'>
-            <h1 className='text-lg sm:text-xl font-normal mb-5'>
+        <div
+          
+          className='min-h-[60vh]  flex pt-10 text-white pb-3 px-10 justify-center items-center'
+        >
+          <div className='text_btn md:block flex flex-col justify-between items-center w-50% '>
+            <h1 data-aos='fade-up' className='Hero_Txt font-normal mb-5'>
               We provide easy solution to exchange your{" "}
-              <span className='text-2xl sm:text-3xl font-bold pl-1'>
+              <span className=' Hero_Txt font-bold pl-1'>
                 Cryptocurrency/ GiftCard for Cash
               </span>
             </h1>
-            <p className='font-normal text-base mb-9'>
+            <p data-aos='fade-up' className='font-normal text-lg lg:text-xl mb-9'>
               Topline is a platform for trading your bitcoin and giftcard at the
               best rate, why not give us a trial.
             </p>
-            <button className='bg-white ExchangeBtn text-black px-6 py-3 excha rounded-full'>
+            <button data-aos='fade-up' className=' text-xl lg:text-2xl flex md:justify-center items-center gap-4 HomeBtn  px-4 py-2 md:px-6 md:py-3 font-medium bg-white ExchangeBtn text-black rounded-full'>
               Get Started
             </button>
           </div>
-          <Image
-            src={image}
-            alt='crypto'
-            width={400}
-            height={400}
-            className='hidden md:block'
-          />
+
+          <div className='img_container '>
+            <Image
+              src={image}
+              alt='crypto'
+              width={400}
+              height={400}
+              className='hidden md:block w-50% min-w-[400px]'
+            />
+          </div>
         </div>
+
         <div className='curve relative h-[106px] '>
           <div className='custom-shape-divider-bottom-1721955052'>
             <svg

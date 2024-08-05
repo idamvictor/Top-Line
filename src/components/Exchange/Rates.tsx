@@ -4,7 +4,7 @@ import { CiBank } from "react-icons/ci";
 import { TbArrowsDoubleSwNe } from "react-icons/tb";
 const Rates = () => {
   return (
-    <div className='rates bg-background grid  relative'>
+    <div className='rates bg-background grid  mx-auto relative'>
     <div className='custom-shape-divider-top-1721957864'>
       <svg
         data-name='Layer 1'
@@ -19,9 +19,9 @@ const Rates = () => {
       </svg>
     </div>
 
-    <div data-aos="fade-up" className='grid m-5 gap-y-5 sm:grid-cols-3 bg-white w-[80%] max-w-[1000px] mx-auto py-5 rounded-xl'>
+    <div className='grid m-5 gap-y-5 sm:grid-cols-3 bg-white w-[80%] max-w-[1000px] mx-auto py-5 rounded-xl'>
       {/* our Rates Tab */}
-      <div className=' space-y-5 text-sm'>
+      <div data-aos="fade-left" className=' space-y-5 text-sm'>
         <p className='border-b border-b-black text-center text-base md:text-xl font-bold text-lightforeground'>
           OUR RATES
         </p>
@@ -48,7 +48,7 @@ const Rates = () => {
       </div>
       {/*  Reserve Tab */}
 
-      <div className='space-y-5 text-sm'>
+      <div data-aos="fade-down" className='space-y-5 text-sm'>
         <p className='border-b border-b-black text-center text-base md:text-xl font-bold text-lightforeground'>
           OUR RESERVES
         </p>
@@ -83,7 +83,7 @@ const Rates = () => {
       </div>
 
       {/* Latest Exchange  */}
-      <div className=''>
+      <div data-aos="fade-right" className=''>
         <p className='border-b border-b-black text-center text-base md:text-lg font-bold text-lightforeground'>
           LATEST EXCHANGES
         </p>
@@ -106,6 +106,7 @@ const Rates = () => {
         <div className=''></div>
       </div>
     </div>
+    
     <div className='curve relative h-[109px] '>
       <div className='custom-shape-divider-bottom-1721955052'>
         <svg
