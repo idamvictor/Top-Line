@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { SwipeCarousel } from "./Herocarousel";
+import handArrow from "@/../public/Icons/hand-drawn-arrow.svg"
 import AboutUs from "./AboutUs";
 import WhatWeoffer from "./WhatWeoffer";
 import AOS from "aos";
@@ -15,6 +16,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Image from "next/image";
 
 // ..
 const Homepage = () => {
@@ -29,7 +31,7 @@ const Homepage = () => {
     });
   });
   return (
-    <main data-aos='fade-up  ' className="overflow-x-hidden w-screen" >
+    <main data-aos='fade-up  ' className="space-y-16 font-manrope overflow-x-hidden w-screen" >
       <HeroUi />
       <AboutUs />
       <WhatWeoffer />
@@ -42,7 +44,7 @@ const Homepage = () => {
 const HeroUi = () => {
   return (
     <>
-      <section className='h-[90vh] w-full relative bg-slate-800 '>
+      <section className='h-[90vh] md:h-[70vh] w-full relative bg-slate-800 '>
         <SwipeCarousel />
         <div
           className='txt-btn absolute  top-0 w-full h-full space-y-4 flex justify-center items-center '
@@ -75,57 +77,63 @@ const HeroUi = () => {
         </div>
       </section>
 
-      <div className='wrapper px-5  relative'>
+      <div className='wrapper px-5    relative'>
+      <Image
+     src={handArrow} 
+     alt={"arrow"}
+            width={175} 
+            height={175}
+            className= 'z-50  absolute -rotate-90 -top-28 right-0'
+            />
         <div
-          className='  grid grid-cols-2 lg:grid-cols-4 mt-4  gap-5 w-full md:px-10 px-2 place-items-center'
-          data-aos='fade-up'
+          className='  grid grid-cols-2 lg:grid-cols-4   gap-5 w-full max-w-[1000px] mx-auto overflow-x-hidden md:px-10 px-2 place-items-center'
         >
-          <Card className=' p-1 border border-lightforeground'>
+          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="50"  className=' p-1 border text-left border-lightforeground'>
             <CardHeader className='p-2'>
-              <CardTitle className='  max-sm:text-lg text-xl text-center text-lightforeground'>
+              <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
                 Expert Trainer & Mentors
               </CardTitle>
             </CardHeader>
-            <CardContent className='text-center max-md:text-xs text-base p-1 '>
+            <CardContent className=' max-md:text-xs text-base p-1 '>
               The global audience is increasingly seeking diverse and inclusive
               content that represents different cultures and perspectives. is
               uniquely positioned to meet this demand by highlighting African
               content and talent, alongside
             </CardContent>
           </Card>
-          <Card className=' p-1 border border-lightforeground'>
+          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="100"className=' p-1 border text-left border-lightforeground'>
             <CardHeader className='p-2'>
-              <CardTitle className='  max-sm:text-lg text-xl text-center text-lightforeground'>
+              <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
                 Expert Trainer & Mentors
               </CardTitle>
             </CardHeader>
-            <CardContent className='text-center max-md:text-xs text-base p-1 '>
+            <CardContent className=' max-md:text-xs text-base p-1 '>
               The global audience is increasingly seeking diverse and inclusive
               content that represents different cultures and perspectives. is
               uniquely positioned to meet this demand by highlighting African
               content and talent, alongside
             </CardContent>
           </Card>
-          <Card className=' p-1 border border-lightforeground'>
+          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="150"className=' p-1 border text-left border-lightforeground'>
             <CardHeader className='p-2'>
-              <CardTitle className='  max-sm:text-lg text-xl text-center text-lightforeground'>
+              <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
                 Expert Trainer & Mentors
               </CardTitle>
             </CardHeader>
-            <CardContent className='text-center max-md:text-xs text-base p-1 '>
+            <CardContent className=' max-md:text-xs text-base p-1 '>
               The global audience is increasingly seeking diverse and inclusive
               content that represents different cultures and perspectives. is
               uniquely positioned to meet this demand by highlighting African
               content and talent, alongside
             </CardContent>
           </Card>
-          <Card className=' p-1 border border-lightforeground'>
+          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="200"className=' p-1 border text-left border-lightforeground'>
             <CardHeader className='p-2'>
-              <CardTitle className='  max-sm:text-lg text-xl text-center text-lightforeground'>
+              <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
                 Expert Trainer & Mentors
               </CardTitle>
             </CardHeader>
-            <CardContent className='text-center max-md:text-xs text-base p-1 '>
+            <CardContent className=' max-md:text-xs text-base p-1 '>
               The global audience is increasingly seeking diverse and inclusive
               content that represents different cultures and perspectives. is
               uniquely positioned to meet this demand by highlighting African

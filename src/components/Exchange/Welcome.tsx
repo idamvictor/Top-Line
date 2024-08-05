@@ -4,15 +4,16 @@ import Image from 'next/image';
 
 const Welcome = () => {
   return (
-    <div data-aos="fade-up" className='Welcome relative flex justify-center p-10 items-center bg-white'>
+    <div  className='Welcome  relative flex justify-center p-10 items-center mx-auto max-w-[1000px] bg-white'>
     <Image
       src={imagetwo}
       alt='crypto'
       width={300}
       height={300}
       className='hidden md:block w-[50%] '
+      data-aos="fade-down"
     />
-    <div className='txt-btn  md:w-[50%]'>
+    <div className='txt-btn  md:w-[50%]' data-aos="fade-up">
       <h2 className='font-bold pb-2 text-2xl md:text-3xl text-foreground '>
         Welcome to Topline
       </h2>
@@ -24,7 +25,7 @@ const Welcome = () => {
         for unregistered user. To ensure to have access to all our exchange
         directions and benefits kindly sign up and verify your identity.
       </p>
-      <button className='px-8 py-2 HomeBtn rounded-full bg-background text-white font-medium text-base mt-5 md:text-lg transition-all ease-in-out'>
+      <button data-aos="fade-right" className='px-8 py-2 HomeBtn rounded-full bg-background text-white font-medium text-base mt-5 md:text-lg transition-all ease-in-out'>
         Discover
       </button>
     </div>

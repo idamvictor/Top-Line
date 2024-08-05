@@ -4,6 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
+import { AppProgressBar as ProgressBar } from 'next-nprogress-bar';
+
 import Bars from "@/Ui/Bars";
 /**
  * Array of navigation links with name and corresponding link.
@@ -52,7 +54,7 @@ const MoreNavLinks = [
   },
   {
     name: "FAQ",
-    link: "/Management",
+    link: "/FAQ",
   },
 ];
 
@@ -84,7 +86,7 @@ const Navbar = () => {
     };
   }, [toggleNav]);
   return (
-    <nav className=' text-black shadow-md shadow-foreground bg-white py-3 fixed top-0 z-40 w-full px-3 md:py-5 flex justify-between  lg:justify-evenly items-center '>
+    <nav className=' font-manrope text-black shadow-md shadow-foreground bg-white py-3 fixed top-0 z-40 w-full px-3 md:py-5 flex justify-between  lg:justify-evenly items-center '>
       <Link href='/'>
         <Logo />
       </Link>
@@ -125,6 +127,12 @@ const Navbar = () => {
           })}
         </ul>
       </div>
+      <ProgressBar
+          height="3px"
+          color="#464D09"
+          options={{ showSpinner: true }}
+          shallowRouting
+        />
       <AnimatePresence>{toggleNav && <MobileNav handleClick={setToggleNav} />}</AnimatePresence>
     </nav>
   );

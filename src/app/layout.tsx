@@ -1,10 +1,17 @@
-'use client'
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { AppProgressBar as ProgressBar } from 'next-nprogress-bar';
-
+import {
+  manrope,
+  freizeit_trial_thin,
+  freizeit_trial_light,
+  freizeit_trial_extralight,
+  freizeit_trial_regular,
+  freizeit_trial_medium,
+  freizeit_trial_bold,
+  freizeit_trial_extrabold,
+} from '@/Assets/fonts/index'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,16 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` pt-[4rem] ${inter.className}`}>
+      <body className={` pt-[4rem] ${manrope.variable} ${inter.className}`}>
         <Navbar/>
         {children}
         <Footer/>
-        <ProgressBar
-          height="3px"
-          color="#464D09"
-          options={{ showSpinner: true }}
-          shallowRouting
-        />
         </body>
     </html>
   );

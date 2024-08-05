@@ -2,18 +2,18 @@ import React from "react";
 
 const Trades = () => {
   return (
-    <div data-aos="fade-up" className='trade overflow-hidden relative flex items-end  justify-center bg-background min-h-96 py-5'>
+    <div className='trade overflow-hidden relative flex items-end  justify-center bg-background min-h-96 py-5'>
       <div className='contaiiner bg-white  shadow-xl z-20 border-2 rounded-xl '>
-        <h4 className=' text-2xl my-5 sm:my-10 text-center flex flex-col justify-center items-center'>
+        <h4 data-aos="fade-down" className=' font-bold pb-2 text-2xl md:text-3xl my-5 sm:my-10 text-center flex flex-col justify-center items-center'>
           How to
           <span className=' w-10 h-1 rounded mt-3 bg-background'></span>
         </h4>
         <div className='cards_wrapper flex gap-10 p-5 max-sm:flex-col '>
-          <div className=' text-xl md:text-2xl border border-foreground text-center rounded-md space-y-5 p-6  max-sm:flex-col  w-52  cardOne'>
+          <div data-aos="fade-up-right" data-aos-offset="10" className=' text-xl md:text-2xl border border-foreground text-center rounded-md space-y-5 p-6  max-sm:flex-col  w-52  cardOne'>
             <p>ICon</p>
-            <p>ICon</p>
+            <p>ICon</p> 
           </div>
-          <div className=' text-xl md:text-2xl border border-foreground text-center rounded-md space-y-5 p-6  max-sm:flex-col  w-52  cardOne'>
+          <div data-aos="fade-down-left" data-aos-offset="10" className=' text-xl md:text-2xl border border-foreground text-center rounded-md space-y-5 p-6  max-sm:flex-col  w-52  cardOne'>
             <p>ICon</p>
             <p>ICon</p>
           </div>

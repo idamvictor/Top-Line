@@ -26,11 +26,11 @@ const Reviews = () => {
     </div>
     
     {/* text_container */}
-    <div className='text-center space-y-5 '>
-      <h6 className=' font-bold text-white text-lg md:text-2xl '>
+    <div className='text-center space-y-5 px-2 '>
+      <h6 className=' font-bold max-sm:text-2xl text-white Hero_Txt '>
         10,000 Satisfied clients around the world
       </h6>
-      <p className='max-w-80 mx-auto text-white text-sm md:text-base '>
+      <p className='max-w-[800px] mx-auto text-white text-sm md:text-lg '>
         Yeah! we’re proud with numbers. We’ve helped thousands of clients
         all around the world with our bespoke service. Hover ontop of them
         pic to view their testimonials.
@@ -39,10 +39,10 @@ const Reviews = () => {
        
        
        {/* comment/ review One TOP RIGHT*/}
-        <div className=' top-right-pop-review opacity-0 transition-all ease-in-out absolute right-5 -top-7 max-w-[300px] w-fit h-fit flex items-center justify-center'>
+        <div className=' top-right-pop-review opacity-0 transition-all ease-in-out absolute right-5 -top-7 max-w-[200px] w-fit h-fit flex items-center justify-center'>
           <div className="triangle bg-slate-50 bg-opacity-55 h-5  w-7">
           </div>{/* this is the chat triangle */}
-          <div className=' bg-slate-50 bg-opacity-55 border-none rounded-xl text-xs md:text-sm py-4 px-4 flex flex-col justify-start items-start '>
+          <div className=' bg-slate-50 bg-opacity-55 border-none rounded-xl text-xs md:text-sm py-1 px-4 flex flex-col justify-start items-start '>
             <p>
               Femi from Nigeria
             </p>
@@ -62,10 +62,10 @@ const Reviews = () => {
           </div>
         </div>
        {/* comment/ review TWo TOP LEFT*/}
-        <div className='top-left-pop-review opacity-0 transition-all ease-in-out absolute -top-7 -left-5 max-w-[300px] w-fit h-fit flex items-center justify-center'>
+        <div className='top-left-pop-review opacity-0 transition-all ease-in-out absolute -top-7 -left-5 max-w-[200px] w-fit h-fit flex items-center justify-center'>
           <div className="triangle bg-slate-50 bg-opacity-55 h-5  w-7">
           </div>{/* this is the chat triangle */}
-          <div className=' bg-slate-50 bg-opacity-55 border-none rounded-xl text-xs md:text-sm py-4 px-4 flex flex-col justify-start items-start '>
+          <div className=' bg-slate-50 bg-opacity-55 border-none rounded-xl text-xs md:text-sm py-1 px-4 flex flex-col justify-start items-start '>
             <p>
               Femi from Nigeria
             </p>
@@ -85,10 +85,10 @@ const Reviews = () => {
           </div>
         </div>
        {/* comment/ review Three Bottom LEFT*/}
-       <div className=' pop-review opacity-0 transition-all ease-in-out absolute bottom-5 left-5 max-w-[300px] w-fit h-fit flex items-center justify-center'>
+       <div className=' pop-review opacity-0 transition-all ease-in-out absolute bottom-5 left-5 max-w-[200px] w-fit h-fit flex items-center justify-center'>
           <div className="triangle bg-slate-50 bg-opacity-55 h-5  w-7">
           </div>{/* this is the chat triangle */}
-          <div className=' bg-slate-50 bg-opacity-55 border-none rounded-xl text-xs md:text-sm py-4 px-4 flex flex-col justify-start items-start '>
+          <div className=' bg-slate-50 bg-opacity-55 border-none rounded-xl text-xs md:text-sm py-1 px-4 flex flex-col justify-start items-start '>
             <p>
               Femi from Nigeria
             </p>
@@ -108,10 +108,10 @@ const Reviews = () => {
           </div>
         </div>
        {/* comment/ review Four Top RIGHT*/}
-       <div className=' pop-review opacity-0 transition-all ease-in-out absolute -bottom-5 -right-5 max-w-[300px] w-fit h-fit flex items-center justify-center'>
+       <div className=' pop-review opacity-0 transition-all ease-in-out absolute -bottom-5 -right-5 max-w-[200px] w-fit h-fit flex items-center justify-center'>
           <div className="triangle bg-slate-50 bg-opacity-55 h-5  w-7">
           </div>{/* this is the chat triangle */}
-          <div className=' bg-slate-50 bg-opacity-55 border-none rounded-xl text-xs md:text-sm py-4 px-4 flex flex-col justify-start items-start '>
+          <div className=' bg-slate-50 bg-opacity-55 border-none rounded-xl text-xs md:text-sm py-1 px-4 flex flex-col justify-start items-start '>
             <p>
               Femi from Nigeria
             </p>
