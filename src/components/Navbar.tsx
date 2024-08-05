@@ -4,6 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
+import { AppProgressBar as ProgressBar } from 'next-nprogress-bar';
+
 import Bars from "@/Ui/Bars";
 /**
  * Array of navigation links with name and corresponding link.
@@ -125,6 +127,12 @@ const Navbar = () => {
           })}
         </ul>
       </div>
+      <ProgressBar
+          height="3px"
+          color="#464D09"
+          options={{ showSpinner: true }}
+          shallowRouting
+        />
       <AnimatePresence>{toggleNav && <MobileNav handleClick={setToggleNav} />}</AnimatePresence>
     </nav>
   );

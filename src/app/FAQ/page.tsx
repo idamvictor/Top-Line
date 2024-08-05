@@ -15,7 +15,7 @@ const page = () => {
         <div className='min-h-[60vh] flex  pt-10 text-white pb-3 px-10 justify-center items-center'>
           <div className=' text_btn md:block flex flex-col justify-between items-center w-50% '>
             <p className='small_text'>HOME/FAQ</p>
-            <h1 data-aos='fade-up' className='Hero_Txt font-normal mb-5'>
+            <h1 data-aos='fade-up' className='Hero_Txt mb-5 font-bold'>
               Frequently Asked Questions
             </h1>
             <p
@@ -81,7 +81,7 @@ const page = () => {
         <Accordion
           type='single'
           collapsible
-          className='border-t-0 px-1 md:px-5 md:mt-2 text-white bg-white max-w-[1000px] mx-auto'
+          className='border-t-0 px-1 md:px-5 md:mt-2 my-10 text-white bg-white max-w-[1000px] mx-auto'
         >
           <AccordionItem
             value='item-1'

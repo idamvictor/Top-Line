@@ -1,9 +1,7 @@
-'use client'
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { AppProgressBar as ProgressBar } from 'next-nprogress-bar';
 import {
   manrope,
   freizeit_trial_thin,
@@ -33,12 +31,6 @@ export default function RootLayout({
         <Navbar/>
         {children}
         <Footer/>
-        <ProgressBar
-          height="3px"
-          color="#464D09"
-          options={{ showSpinner: true }}
-          shallowRouting
-        />
         </body>
     </html>
   );
