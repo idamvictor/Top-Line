@@ -31,7 +31,7 @@ const Homepage = () => {
     });
   });
   return (
-    <main data-aos='fade-up  ' className="space-y-16 font-manrope overflow-x-hidden w-screen" >
+    <main data-aos='fade-up  ' className="space-y-10 scroll-smooth font-manrope overflow-x-hidden w-screen" >
       <HeroUi />
       <AboutUs />
       <WhatWeoffer />
@@ -43,11 +43,11 @@ const Homepage = () => {
 // this is hero UI
 const HeroUi = () => {
   return (
-    <>
-      <section className='h-[90vh] md:h-[70vh] w-full relative bg-slate-800 '>
+    <section className="  relative">
+      <section className='h-screen md:h-[70vh] w-full relative bg-slate-800 '>
         <SwipeCarousel />
         <div
-          className='txt-btn absolute  top-0 w-full h-full space-y-4 flex justify-center items-center '
+          className='txt-btn absolute  inset-0 top-0 w-full h-full space-y-4 flex justify-center items-center '
           data-aos='zoom-out-right'
         >
           <div className=' text-start md:text-center space-y-5 mx-5 lg:mx-10 text-white '>
@@ -75,20 +75,23 @@ const HeroUi = () => {
             </div>
           </div>
         </div>
-      </section>
 
-      <div className='wrapper px-5    relative'>
-      <Image
-     src={handArrow} 
-     alt={"arrow"}
-            width={175} 
-            height={175}
-            className= 'z-50  absolute -rotate-90 -top-28 right-0'
-            />
+
+
+
+
+
+
+
+
+
+        
+      </section>
+      <div className='floating-containers-wrapper hidden h-[30vh] lg:h-[10vh]  relative w-full md:flex justify-center items-center'>
         <div
-          className='  grid grid-cols-2 lg:grid-cols-4   gap-5 w-full max-w-[1000px] mx-auto overflow-x-hidden md:px-10 px-2 place-items-center'
+          className=' w-full max-w-[1300px] grid md:absolute sm:grid-cols-2 lg:grid-cols-4   gap-5  mx-auto overflow-x-hidden md:px-10 px-2 place-items-center'
         >
-          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="50"  className=' p-1 border text-left border-lightforeground'>
+          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="50"  className=' p-1 border text-center border-lightforeground'>
             <CardHeader className='p-2'>
               <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
                 Expert Trainer & Mentors
@@ -101,7 +104,7 @@ const HeroUi = () => {
               content and talent, alongside
             </CardContent>
           </Card>
-          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="100"className=' p-1 border text-left border-lightforeground'>
+          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="100"className=' p-1 border text-center border-lightforeground'>
             <CardHeader className='p-2'>
               <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
                 Expert Trainer & Mentors
@@ -114,7 +117,7 @@ const HeroUi = () => {
               content and talent, alongside
             </CardContent>
           </Card>
-          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="150"className=' p-1 border text-left border-lightforeground'>
+          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="150"className=' p-1 border text-center border-lightforeground'>
             <CardHeader className='p-2'>
               <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
                 Expert Trainer & Mentors
@@ -127,7 +130,7 @@ const HeroUi = () => {
               content and talent, alongside
             </CardContent>
           </Card>
-          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="200"className=' p-1 border text-left border-lightforeground'>
+          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="200"className=' p-1 border text-center border-lightforeground'>
             <CardHeader className='p-2'>
               <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
                 Expert Trainer & Mentors
@@ -141,8 +144,68 @@ const HeroUi = () => {
             </CardContent>
           </Card>
         </div>
-      </div>
-    </>
+         </div>
+
+      {/* this wil be visibe for smaller screens */}
+      <div className='wrapper  md:hidden py-5  w-full flex justify-center items-center'>
+        <div
+          className=' w-full max-w-[1500px] grid sm:grid-cols-2 lg:grid-cols-4   gap-5  mx-auto overflow-x-hidden md:px-10 px-2 place-items-center'
+        >
+          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="50"  className=' p-1 border text-center border-lightforeground'>
+            <CardHeader className='p-2'>
+              <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
+                Expert Trainer & Mentors
+              </CardTitle>
+            </CardHeader>
+            <CardContent className=' max-md:text-xs text-base p-1 '>
+              The global audience is increasingly seeking diverse and inclusive
+              content that represents different cultures and perspectives. is
+              uniquely positioned to meet this demand by highlighting African
+              content and talent, alongside
+            </CardContent>
+          </Card>
+          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="100"className=' p-1 border text-center border-lightforeground'>
+            <CardHeader className='p-2'>
+              <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
+                Expert Trainer & Mentors
+              </CardTitle>
+            </CardHeader>
+            <CardContent className=' max-md:text-xs text-base p-1 '>
+              The global audience is increasingly seeking diverse and inclusive
+              content that represents different cultures and perspectives. is
+              uniquely positioned to meet this demand by highlighting African
+              content and talent, alongside
+            </CardContent>
+          </Card>
+          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="150"className=' p-1 border text-center border-lightforeground'>
+            <CardHeader className='p-2'>
+              <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
+                Expert Trainer & Mentors
+              </CardTitle>
+            </CardHeader>
+            <CardContent className=' max-md:text-xs text-base p-1 '>
+              The global audience is increasingly seeking diverse and inclusive
+              content that represents different cultures and perspectives. is
+              uniquely positioned to meet this demand by highlighting African
+              content and talent, alongside
+            </CardContent>
+          </Card>
+          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="200"className=' p-1 border text-center border-lightforeground'>
+            <CardHeader className='p-2'>
+              <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
+                Expert Trainer & Mentors
+              </CardTitle>
+            </CardHeader>
+            <CardContent className=' max-md:text-xs text-base p-1 '>
+              The global audience is increasingly seeking diverse and inclusive
+              content that represents different cultures and perspectives. is
+              uniquely positioned to meet this demand by highlighting African
+              content and talent, alongside
+            </CardContent>
+          </Card>
+        </div>
+         </div>
+    </section>
   );
 };
 export default Homepage;

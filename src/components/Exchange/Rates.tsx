@@ -21,7 +21,7 @@ const Rates = () => {
 
     <div className='grid m-5 gap-y-5 sm:grid-cols-3 bg-white w-[80%] max-w-[1000px] mx-auto py-5 rounded-xl'>
       {/* our Rates Tab */}
-      <div data-aos="fade-left" className=' space-y-5 text-sm'>
+      <div data-aos="fade-left" data-aos-offset="5" className=' space-y-5 text-sm'>
         <p className='border-b border-b-black text-center text-base md:text-xl font-bold text-lightforeground'>
           OUR RATES
         </p>
@@ -48,7 +48,7 @@ const Rates = () => {
       </div>
       {/*  Reserve Tab */}
 
-      <div data-aos="fade-down" className='space-y-5 text-sm'>
+      <div data-aos="fade-down" data-aos-offset="5" className='space-y-5 text-sm'>
         <p className='border-b border-b-black text-center text-base md:text-xl font-bold text-lightforeground'>
           OUR RESERVES
         </p>
@@ -83,7 +83,7 @@ const Rates = () => {
       </div>
 
       {/* Latest Exchange  */}
-      <div data-aos="fade-right" className=''>
+      <div data-aos="fade-right" data-aos-offset="5" className=''>
         <p className='border-b border-b-black text-center text-base md:text-lg font-bold text-lightforeground'>
           LATEST EXCHANGES
         </p>

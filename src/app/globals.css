@@ -143,16 +143,7 @@ font-size: clamp(1rem, 2vw, 1rem);
 
 
 
-/* Path 4.2
 
-position: absolute;
-left: -0.96%;
-right: 40.22%;
-top: 71.2%;
-bottom: 24.56%;
-
-/* theme */
-/* background: #FFFFFF; */
 .custom-shape-divider-bottom-1721955052 {
   position: absolute;
   bottom: 0;
@@ -321,10 +312,6 @@ button {
   scale: 1.1;
   opacity: 1;
  }
- /* body:has(.top_right_ball:hover) .top-left-pop-review{
-  scale: 1.1;
-  opacity: 1;
- } */
  body:has(.ball:hover) .pop-review{
   scale: 1.1;
   opacity: 1;
@@ -425,3 +412,16 @@ body:has(.more:hover,.more_options:hover) .more_options{
   -o-transform: translateX(-50px);
   opacity: 0;
 }
+
+
+/* this is the styles for floating hero and responsiveness */
+/* @media (min-width: 768px) and (max-width: 1023px) {
+  .floating-containers-wrapper{
+    bottom: -75%;
+  }
+}
+@media  (min-width: 1023px) {
+  .floating-containers-wrapper{
+    bottom: -50%;
+  }
+} */

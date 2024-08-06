@@ -18,13 +18,13 @@ useEffect(() => {
   return (
     <>
       <div
-        data-aos='zoom-in'
+        
         className='text-white font-manrope z-20 Desc max-w-[90%] sm:max-w-[70%] my-5 space-y-8 text-center'
       >
-        <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>
+        <h1 data-aos='fade-up' className='text-3xl sm:text-4xl md:text-5xl font-bold'>
           A Community For Traders By Traders
         </h1>
-        <p className='text-sm sm:text-base'>
+        <p data-aos='fade-right' className='text-sm sm:text-base'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -44,7 +44,7 @@ useEffect(() => {
 
 const SocialLinks = () => {
   return (
-    <div className=' flex flex-wrap items-center gap-6 justify-center'>
+    <div data-aos='zoom-in' data-aos-offset='10' className=' flex flex-wrap items-center gap-6 justify-center'>
       <p className='flex items-center text-xl gap-2 text-slate-300 '>
         <FaYoutube className='text-white text-3xl sm:text-3xl md:text-5xl rounded-full p-1 md:p-2 bg-red-600' />
         Youtube

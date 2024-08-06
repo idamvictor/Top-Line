@@ -88,7 +88,7 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
               opacity: imgIndex === idx ? 1 : 0.85,
             }}
             transition={SPRING_OPTIONS}
-            className=' w-screen shrink-0 h-[90vh] '
+            className=' w-screen shrink-0 h-[70vh]'
           >
             <Image
               src={imgSrc}
@@ -96,7 +96,7 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
               loading='lazy'
               // width={500}
               // height={400}
-              className='w-full opacity-40 h-full md:h-full aspect-w-0 aspect-h-0'
+              className='w-full opacity-40 h-full md:h-full aspect-w-16 aspect-h-0'
             />
           </motion.div>
         );

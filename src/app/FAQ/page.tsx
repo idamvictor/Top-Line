@@ -1,21 +1,32 @@
 import Image from "next/image";
 import React from "react";
 import image from "../../../public/FAQ_Hero_IMG.svg";
+import QuestionSvg from "../../../public/question-mark-inside-a-bald-male-side-head-outline-svgrepo-com.svg";
 import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-  } from "@/components/ui/accordion"
-  
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 const page = () => {
   return (
-    <main className='w-screen font-manrope'>
+    <main className='w-screen font-manrope space-y-10'>
       <div className=' relative hero_wraapper bg-background justify-center items-center p-0 '>
-        <div className='min-h-[60vh] flex  pt-10 text-white pb-3 px-10 justify-center items-center'>
-          <div className=' text_btn md:block flex flex-col justify-between items-center w-50% '>
-            <p className='small_text'>HOME/FAQ</p>
-            <h1 data-aos='fade-up' className='Hero_Txt mb-5 font-bold'>
+        <div className='min-h-[30vh] max-h-[50vh] flex  pt-10 text-white pb-3 px-10 justify-center items-center'>
+          <div className=' overflow-y-hidden text_btn md:block flex flex-col justify-between max-md:items-start items-center w-50% '>
+            <p
+              data-aos='fade-right'
+              data-aos-offset='10'
+              className='small_text '
+            >
+              HOME/FAQ
+            </p>
+            <h1
+              data-aos='fade-up'
+              data-aos-offset='10'
+              className='Hero_Txt mb-5 font-bold max-sm:text-3xl'
+            >
               Frequently Asked Questions
             </h1>
             <p
@@ -25,22 +36,15 @@ const page = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
               fermentum turpis.
             </p>
-            <button
-              data-aos='fade-up'
-              dats-aos-offset='10'
-              className=' text-xl lg:text-2xl flex md:justify-center items-center gap-4 HomeBtn  px-4 py-2 md:px-6 md:py-3 font-medium bg-white ExchangeBtn text-black rounded-full'
-            >
-              Get Started
-            </button>
           </div>
 
           <div className='img_container hidden h-full md:flex justify-start items-center'>
             <Image
               src={image}
               alt='crypto'
-              width={400}
-              height={400}
-              className='w-50% w-fit h-[90%] max-h-[25rem] min-w-[400px]'
+              width={200}
+              height={200}
+              className=' object-contain  '
             />
           </div>
         </div>
@@ -61,7 +65,15 @@ const page = () => {
           </div>
         </div>
       </div>
-      <main className='bg-white'>
+
+      <main className='bg-white relative max-w-[1000px] mx-auto'>
+        {/* <Image
+          src={QuestionSvg}
+          alt={"question"}
+          width={200}
+          height={200}
+          className='z-20 right-5 -top-36 opacity-25 absolute   '
+        /> */}
         <p
           className='text-center text-lg md:text-2xl mt-2'
           data-aos='fade-up'
@@ -85,48 +97,48 @@ const page = () => {
         >
           <AccordionItem
             value='item-1'
-            className='border-b-0 text-sm sm:text-2xl m-2'
+            className='border-b-0 text-sm sm:text-lg m-2 font-manrope font-light'
           >
-            <AccordionTrigger className='[&[data-state=open]]:bg-lightforeground bg-foreground p-1 px-2 rounded '>
+            <AccordionTrigger className='[&[data-state=open]]:bg-foreground hover:no-underline font-medium text-black bg-lightforeground p-1 px-2 rounded '>
               1. Can i cancel my investment plan?
             </AccordionTrigger>
-            <AccordionContent className=' text-black max-sm:text-sm text-xl'>
+            <AccordionContent className=' text-black max-sm:text-sm text-lg'>
               Yes, You can cancel your investment plan after 4weeks from the day
               of investing.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem
             value='item-2'
-            className='border-b-0 text-sm sm:text-2xl m-2'
+            className='border-b-0 text-sm sm:text-lg m-2 font-manrope font-light'
           >
-            <AccordionTrigger className='[&[data-state=open]]:bg-lightforeground bg-foreground p-1 px-2 rounded '>
+            <AccordionTrigger className='[&[data-state=open]]:bg-foreground hover:no-underline font-medium text-black bg-lightforeground p-1 px-2 rounded '>
               1. Can i cancel my investment plan?
             </AccordionTrigger>
-            <AccordionContent className=' text-black max-sm:text-sm text-xl'>
+            <AccordionContent className=' text-black max-sm:text-sm text-lg'>
               Yes, You can cancel your investment plan after 4weeks from the day
               of investing.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem
             value='item-3'
-            className='border-b-0 text-sm sm:text-2xl m-2'
+            className='border-b-0 text-sm sm:text-lg m-2 font-manrope font-light'
           >
-            <AccordionTrigger className='[&[data-state=open]]:bg-lightforeground bg-foreground p-1 px-2 rounded '>
+            <AccordionTrigger className='[&[data-state=open]]:bg-foreground hover:no-underline font-medium text-black bg-lightforeground p-1 px-2 rounded '>
               1. Can i cancel my investment plan?
             </AccordionTrigger>
-            <AccordionContent className=' text-black max-sm:text-sm text-xl'>
+            <AccordionContent className=' text-black max-sm:text-sm text-lg'>
               Yes, You can cancel your investment plan after 4weeks from the day
               of investing.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem
             value='item-4'
-            className='border-b-0 text-sm sm:text-2xl m-2'
+            className='border-b-0 text-sm sm:text-lg m-2 font-manrope font-light'
           >
-            <AccordionTrigger className='[&[data-state=open]]:bg-lightforeground bg-foreground p-1 px-2 rounded '>
+            <AccordionTrigger className='[&[data-state=open]]:bg-foreground hover:no-underline font-medium text-black bg-lightforeground p-1 px-2 rounded '>
               1. Can i cancel my investment plan?
             </AccordionTrigger>
-            <AccordionContent className=' text-black max-sm:text-sm text-xl'>
+            <AccordionContent className=' text-black max-sm:text-sm text-lg'>
               Yes, You can cancel your investment plan after 4weeks from the day
               of investing.
             </AccordionContent>
