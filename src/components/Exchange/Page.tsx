@@ -19,19 +19,19 @@ const Exchange = () => {
     });
   });
   return (
-    <>
+    <section className="space-y-5 scroll-smooth">
   <div className=' relative hero_wraapper bg-background justify-center items-center p-0 '>
-        <div className='min-h-[60vh] flex  pt-10 text-white pb-3 px-10 justify-center items-center'>
-          <div className=' text_btn md:block flex flex-col justify-between items-center w-50% '>
-          <h1 data-aos='fade-up' className='Hero_Txt font-normal mb-5'>
+        <div className='min-h-[30vh] max-h-[50vh] flex  pt-10 text-white pb-3 px-10 justify-center items-center'>
+          <div className=' text_btn md:block flex flex-col justify-between items-center md:max-w-[60%] '>
+          <h1 data-aos='fade-up' className='text-2xl md:text-3xl max-sm:text-2xl font-normal mb-5'>
               We provide easy solution to exchange your{" "}
-              <span className=' Hero_Txt font-bold pl-1'>
+              <span className='  font-bold pl-1 '>
                 Cryptocurrency/ GiftCard for Cash
               </span>
             </h1>
             <p
               data-aos='fade-up'
-              className='font-normal text-lg lg:text-xl mb-9'
+              className='font-normal text-sm lg:text-lg mb-9'
             >
              Topline is a platform for trading your bitcoin and giftcard at the
              best rate, why not give us a trial.
@@ -39,7 +39,7 @@ const Exchange = () => {
             <button
               data-aos='fade-up'
               dats-aos-offset='10'
-              className=' text-xl lg:text-2xl flex md:justify-center items-center gap-4 HomeBtn  px-4 py-2 md:px-6 md:py-3 font-medium bg-white ExchangeBtn text-black rounded-full'
+              className=' text-base lg:text-lg flex md:justify-center items-center gap-4 HomeBtn  px-4 py-2 md:px-5 md:py-2 font-medium bg-white ExchangeBtn text-black rounded-full'
             >
               Get Started
             </button>
@@ -49,9 +49,9 @@ const Exchange = () => {
             <Image
               src={image}
               alt='crypto'
-              width={400}
-              height={400}
-              className='w-50% w-fit h-[90%] max-h-[25rem] min-w-[400px]'
+              width={300}
+              height={300}
+              className=' object-contain  '
             />
           </div>
         </div>
@@ -88,7 +88,7 @@ const Exchange = () => {
       <LearnMore />
       {/* eail */}
       <Email />
-    </>
+    </section>
   );
 };
 

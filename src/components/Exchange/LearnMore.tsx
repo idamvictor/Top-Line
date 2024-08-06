@@ -6,8 +6,8 @@ const LearnMore = () => {
   return (
     <div  className='kearn_more bg-background relative pt-14 border-2 border-white '>
     <div className='header overflow-hidden flex flex-col bg-white w-full pl-10 pb-2 md:pb-1 md:pl-20  text-foreground absolute top-0'>
-      <p className='text-sm sm:text-base ' data-aos="fade-up">Mentorship</p>
-      <h6 className='font-bold text-xl md:text-2xl' data-aos="fade-up">
+      <p className='text-sm sm:text-base ' data-aos="fade-up" data-aos-offset="5">Mentorship</p>
+      <h6 className='font-bold text-xl md:text-2xl' data-aos="fade-up" data-aos-offset="5">
         Learn More About Crypto
       </h6>
     </div>
@@ -26,7 +26,7 @@ const LearnMore = () => {
       </svg>
     </div>
     <div className='content w-full flex justify-start items-start gap-x-5	'>
-      <article data-aos="fade-up" data-aos-offset="10" className=' sm:w-1/2 p-5 pt-0 sm:pl-24 z-20'>
+      <article data-aos="fade-up" data-aos-offset="5" className=' sm:w-1/2 p-5 pt-0 sm:pl-24 z-20'>
         <p className=' text-white text-left'>
           No matter how well-informed and educated you think you are, the
           topics of blockchain and cryptocurrency are inexhaustible. You
@@ -44,6 +44,7 @@ const LearnMore = () => {
         height={400}
         className=' hidden sm:block absolute top-0 right-0'
         data-aos="fade-down"
+        data-aos-offset="5"
       />
     </div>
   </div>

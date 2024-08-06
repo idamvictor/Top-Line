@@ -12,30 +12,40 @@ const Hero = () => {
     });
   });
     return (
-      <div  className='relative hero_wraapper bg-background justify-center items-center '>
-        <div data-aos="fade-up" className=' flex pt-10 text-white pb-3 px-10 justify-center items-center gap-7'>
-          <div className='text_btn  py-10 flex gap-5 flex-col justify-between items-start  w-50% max-w-[500px]'>
-            <p className='text-xs sm:text-sm font-normal '>HOME/CONTACT US</p>
-            <h1 className='text-2xl sm:text-3xl font-bold'>
+    
+        <div className=' relative hero_wraapper bg-background justify-center items-center p-0 '>
+        <div className='min-h-[60vh] flex  pt-10 text-white pb-3 px-10 justify-center items-center'>
+          <div className='overflow-y-hidden text_btn md:block flex flex-col justify-between items-center max-md:items-start w-50% '>
+            <p data-aos='fade-right' data-aos-offset='10' className='small_text'>
+    HOME/CONTACT US</p>
+            <h1 data-aos='fade-up' data-aos-offset='10' className='Hero_Txt  mb-5 font-bold max-sm:text-3xl'>
               24/7 Customer support Including weekends.
             </h1>
-            <p className='font-normal text-base mb-9'>
+            <p
+              data-aos='fade-up'
+              className='font-normal text-lg lg:text-xl mb-9'
+            >
               We’re always there ti help regardless the number of queries at hand.
             </p>
+
           </div>
-          <Image
-            src={HeroImage}
-            alt='crypto'
-            width={400}
-            height={400}
-            className='hidden md:block'
-          />
+
+          <div className='img_container hidden h-full md:flex justify-start items-center'>
+            <Image
+              src={HeroImage}
+              alt='crypto'
+              width={400}
+              height={400}
+              className='w-50% w-fit h-[90%] max-h-[25rem] min-w-[400px]'
+            />
+          </div>
         </div>
-        <div data-aos="fade-up" className='curve relative h-[109px] '>
+
+        <div className='curve relative h-[106px] border-b-2 border-white '>
           <div className='custom-shape-divider-bottom-1721955052'>
             <svg
               data-name='Layer 1'
-              xmlns='http://www.w3.org/2000/svg'
+              xmlns='http:www.w3.org/2000/svg'
               viewBox='0 0 1200 120'
               preserveAspectRatio='none'
             >
