@@ -413,7 +413,6 @@ body:has(.more:hover,.more_options:hover) .more_options{
   opacity: 0;
 }
 
-
 /* this is the styles for floating hero and responsiveness */
 /* @media (min-width: 768px) and (max-width: 1023px) {
   .floating-containers-wrapper{

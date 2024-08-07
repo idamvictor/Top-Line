@@ -6,6 +6,7 @@ import HeroImageOne from "@/../public/How_to_One.png";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import HeroCurves from "@/components/ui/shared/HeroCurves";
 const Page = () => {
   React.useEffect(() => {
     AOS.init({
@@ -14,15 +15,17 @@ const Page = () => {
   });
   return (
     <section className=" space-y-20 font-manrope mb-10">
-      <div className=' relative hero_wraapper bg-background justify-center items-center p-0 '>
-        <div className='min-h-[60vh] flex  pt-10 text-white pb-3 px-10 justify-center items-center'>
-          <div className='overflow-y-hidden text_btn md:block flex flex-col justify-between items-center max-md:items-start w-50% '>
-            <p data-aos='fade-right' data-aos-offset='10' className='small_text'>HOME/How-to-page</p>
-            <h1 data-aos='fade-up' data-aos-offset='10' className='Hero_Txt  mb-5 font-bold max-sm:text-3xl'>
+     
+
+
+<HeroCurves>
+<div className='overflow-y-hidden text_btn md:block flex flex-col justify-between items-center max-md:items-start w-50% '>
+            <p data-aos='fade-right' data-aos-offset='0' className='small_text'>HOME/How-to-page</p>
+            <h1 data-aos='fade-up' data-aos-offset='0' className='Hero_Txt  mb-5 font-bold max-sm:text-3xl'>
               Be Informed, Confused on how to use our app
             </h1>
             <p
-              data-aos='fade-up'
+              data-aos='fade-up' data-aos-offset='0'
               className='font-normal text-lg lg:text-xl mb-9'
             >
               Get to know the latest stuff about our services via our blog post.
@@ -39,24 +42,8 @@ const Page = () => {
               className='w-50% w-fit h-[90%] max-h-[25rem] min-w-[400px]'
             />
           </div>
-        </div>
-
-        <div className='curve relative h-[106px] border-b-2 border-white '>
-          <div className='custom-shape-divider-bottom-1721955052'>
-            <svg
-              data-name='Layer 1'
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 1200 120'
-              preserveAspectRatio='none'
-            >
-              <path
-                d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z'
-                className='shape-fill'
-              ></path>
-            </svg>
-          </div>
-        </div>
-      </div>
+</HeroCurves>
+     
 
       <div className='wrapper max-w-[1000px] px-5 md:px-10 mx-auto space-y-10'>
         <Card className=' border border-lightforeground max-w-[700px] xl:max-w-[700px] mx-auto p-0 w-full'>
@@ -69,10 +56,10 @@ const Page = () => {
               className=' w-full '
             />
             <div className='overflow-hidden text_container  space-y-7 max-sm:p-5 sm:py-5'>
-              <h2 data-aos='fade-right' data-aos-offset='10' className='sm:text-xl md:text-2xl text-center capitalize text-lightforeground font-bold'>
+              <h2 data-aos='fade-right' data-aos-offset='0' className='sm:text-xl md:text-2xl text-center capitalize text-lightforeground font-bold'>
                 HOW TO SELL YOUR ITUNES GIFTCARD WITH US .
                 <br />
-                <span data-aos='fade-left' data-aos-offset='10' className='text-xs sm:text-sm text-zimc-800 font-normal'>
+                <span data-aos='fade-left' data-aos-offset='0' className='text-xs sm:text-sm text-zimc-800 font-normal'>
                   19 JUNE, 2019 | BUSINESS
                 </span>
               </h2>
@@ -82,7 +69,67 @@ const Page = () => {
                 persecuti cu est, sea epicuri.
               </p>
               <div className='overflow-hidden btnwrapper flex justify-center items-center'>
-                <button data-aos='fade-up' data-aos-offset='10' className='bg-background px-8 py-2 rounded-full'>
+                <button data-aos='fade-up' data-aos-offset='0' className='bg-background px-8 py-2 rounded-full'>
+                  Watch
+                </button>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+        <Card className=' border border-lightforeground max-w-[700px] xl:max-w-[700px] mx-auto p-0 w-full'>
+          <CardContent className='m-0 p-0  '>
+            <Image
+              src={HeroImageOne}
+              alt='crypto'
+              width={400}
+              height={400}
+              className=' w-full '
+            />
+            <div className='overflow-hidden text_container  space-y-7 max-sm:p-5 sm:py-5'>
+              <h2 data-aos='fade-right' data-aos-offset='0' className='sm:text-xl md:text-2xl text-center capitalize text-lightforeground font-bold'>
+                HOW TO SELL YOUR ITUNES GIFTCARD WITH US .
+                <br />
+                <span data-aos='fade-left' data-aos-offset='0' className='text-xs sm:text-sm text-zimc-800 font-normal'>
+                  19 JUNE, 2019 | BUSINESS
+                </span>
+              </h2>
+              <p className=' text-center text-sm sm:text-base' data-aos='fade-left' data-aos-offset='0'>
+                Lorem ipsum dolor sit amet, magna habemus ius ad, qui minimum
+                voluptaria in. Ad mei modus quodsi complectitur, postea verterem
+                persecuti cu est, sea epicuri.
+              </p>
+              <div className='overflow-hidden btnwrapper flex justify-center items-center'>
+                <button data-aos='fade-up' data-aos-offset='0' className='bg-background px-8 py-2 rounded-full'>
+                  Watch
+                </button>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+        <Card className=' border border-lightforeground max-w-[700px] xl:max-w-[700px] mx-auto p-0 w-full'>
+          <CardContent className='m-0 p-0  '>
+            <Image
+              src={HeroImageOne}
+              alt='crypto'
+              width={400}
+              height={400}
+              className=' w-full '
+            />
+            <div className='overflow-hidden text_container  space-y-7 max-sm:p-5 sm:py-5'>
+              <h2 data-aos='fade-right' data-aos-offset='0' className='sm:text-xl md:text-2xl text-center capitalize text-lightforeground font-bold'>
+                HOW TO SELL YOUR ITUNES GIFTCARD WITH US .
+                <br />
+                <span data-aos='fade-left' data-aos-offset='0' className='text-xs sm:text-sm text-zimc-800 font-normal'>
+                  19 JUNE, 2019 | BUSINESS
+                </span>
+              </h2>
+              <p className=' text-center text-sm sm:text-base' data-aos='fade-left' data-aos-offset='0'>
+                Lorem ipsum dolor sit amet, magna habemus ius ad, qui minimum
+                voluptaria in. Ad mei modus quodsi complectitur, postea verterem
+                persecuti cu est, sea epicuri.
+              </p>
+              <div className='overflow-hidden btnwrapper flex justify-center items-center'>
+                <button data-aos='fade-up' data-aos-offset='0' className='bg-background px-8 py-2 rounded-full'>
                   Watch
                 </button>
               </div>
@@ -93,7 +140,7 @@ const Page = () => {
       </div>
 
       <div className="pagination flex justify-center overflow-y-hidden">
-      <button data-aos='fade-up' data-aos-offset='10' className='bg-background w-10 h-10 text-center rounded-full'>
+      <button data-aos='fade-up' data-aos-offset='0' className='bg-background w-10 h-10 text-center rounded-full'>
           {'>'}
         </button>
       </div>

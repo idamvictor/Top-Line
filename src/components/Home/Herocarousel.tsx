@@ -1,10 +1,11 @@
 "use client";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { motion, useMotionValue } from "framer-motion";
-import heroOne from "@/../public/toplineone.jpg";
-import heroTwo from "@/../public/toplineTwo.jpg";
+import heroOne from "@/../public/frame3569 1.jpg";
+import frame from '../../../public/frame.png'
+
 import Image from "next/image";
-const imgs = [heroOne, heroTwo];
+const imgs = [heroOne, frame];
 
 const ONE_SECOND = 1000;
 const AUTO_DELAY = ONE_SECOND * 10;
@@ -88,16 +89,20 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
               opacity: imgIndex === idx ? 1 : 0.85,
             }}
             transition={SPRING_OPTIONS}
-            className=' w-screen shrink-0 h-[70vh]'
+            className='w-screen shrink-0 h-screen md:min-h-[70vh] xl:min-h-[500px] max-h-[500px] '
           >
-            <Image
+            <div className="aspect w-full h-full flex">
+<Image
               src={imgSrc}
+              
               alt=''
               loading='lazy'
               // width={500}
               // height={400}
-              className='w-full opacity-40 h-full md:h-full aspect-w-16 aspect-h-0'
+              className=' opacity-55  flex-grow aspect-video'
             />
+            </div>
+            
           </motion.div>
         );
       })}

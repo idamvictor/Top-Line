@@ -15,6 +15,7 @@ const Main = () => {
         </h2>
         <form
         data-aos="fade-up"
+        data-aos-offset="0"
           action=''
           className='my-7 flex gap-y-6 flex-col max-w-[600px] mx-auto justify-center items-center'
         >
@@ -22,22 +23,23 @@ const Main = () => {
             <input
               type='text'
               placeholder='Name*'
-              className='border-2 rounded-lg p-3 py-2 outline-lightforeground border-solid w-full sm:w-[50%]'
+              className='border border-slate-300 shadow-md rounded-lg p-3 py-2 outline-lightforeground border-solid w-full sm:w-[50%]'
             />
             <input
               type='text'
-              placeholder='Name*'
-              className='border-2 rounded-lg p-3 py-2 outline-lightforeground border-solid w-full sm:w-[50%]'
+              placeholder='Email*'
+              className='border border-slate-300 shadow-md  rounded-lg p-3 py-2 outline-lightforeground border-solid w-full sm:w-[50%]'
             />
           </div>
           <textarea
             name=''
             id=''
+            placeholder='Your comment'
             cols={12}
             rows={6}
-            className='border-2 rounded-lg p-3 py-2 outline-lightforeground border-solid w-full '
+            className='border border-slate-300 shadow-md rounded-lg p-3 py-2 outline-lightforeground border-solid w-full '
           ></textarea>
-          <button className='px-8 py-2 HomeBtn rounded-full bg-background text-white font-medium text-base mt-2 md:text-lg transition-all ease-in-out self-start'>
+          <button className='px-8 py-2 HomeBtn rounded-full bg-foreground text-white font-medium text-base mt-2 md:text-base transition-all ease-in-out self-start'>
             PUBLISH
           </button>
         </form>
