@@ -43,34 +43,36 @@ const Homepage = () => {
 // this is hero UI
 const HeroUi = () => {
   return (
-    <section className="  relative">
-      <section className='h-screen md:h-[70vh] w-full relative bg-slate-800 '>
+    <section className="   relative">
+      <section className='h-screen md:min-h-[70vh] xl:min-h-[500px] max-h-[500px] w-full relative bg-black  '>
+        
         <SwipeCarousel />
         <div
-          className='txt-btn absolute  inset-0 top-0 w-full h-full space-y-4 flex justify-center items-center '
+          className='txt-btn absolute inset-0 top-0 w-full h-full gap-y-3 flex justify-center max-md:items-center 2xl:items-center max-xl:mt-7 xl:mt-2 py-3 '
           data-aos='zoom-out-right'
         >
           <div className=' text-start md:text-center space-y-5 mx-5 lg:mx-10 text-white '>
-            <p className='max-sm:text-xs font-medium small_text pb-0 xl:text-xl'>
+            <p className='max-sm:text-xs font-bold max-xl:text-lg pb-5  xl:text-xl mt-1'>
               Your One stop for everything finance!
             </p>
-            <h1 className='Hero_Txt font-bold max-sm:text-[9vw]'>
+            <h1 className='  max-md:text-[8vw] md:text-2xl xl:text-3xl font-extrabold '>
               Explore a world of financial opportunities with{" "}
               <span className='font-extrabold text-lightforeground'>
                 TopLine trading
               </span>
             </h1>
-            <h2 className='max-sm:text-[3.5vw] xl:text-[2.5vmin] Hero_Mid_Txt font-medium bg-opacity-85 max-w-[150rem] w-[90%] ml-3 md:mx-auto  '>
+         <div className='button_wrapper flex flex-col items-center justify-center max-w-screen-xl mx-auto'>
+            <h2 className='max-sm:text-[3.5vw] font-extrabold max-xl:text-2xl xl:text-2xl  bg-opacity-85 max-w-[150rem] w-[90%] ml-3 md:mx-auto  '>
               we are your partner in your journey in exploring the financial
               market, our mission is to empower you with the skills, support,
               strategies & resource needed to succeed in the markets and achieve
               your financial goals
             </h2>
 
-            <div className='button_wrapper flex  justify-center'>
-              <button className=' text-xl lg:text-2xl flex md:justify-center items-center gap-4 HomeBtn bg-lightforeground px-4 py-2 md:px-6 md:py-3 rounded-full font-medium '>
+           
+              <button className=' uppercase text-lg lg:text:lg flex w-fit md:justify-center items-center gap-2 HomeBtn bg-lightforeground px-5 py-2 md:px-5 md:py-2 rounded-full font-medium '>
                 Get Started
-                <GoArrowRight className=' text-xl lg:text-2xl' />
+                <GoArrowRight className=' text-xl lg:text-lg' />
               </button>
             </div>
           </div>
@@ -87,56 +89,56 @@ const HeroUi = () => {
 
         
       </section>
-      <div className='floating-containers-wrapper hidden h-[30vh] lg:h-[10vh]  relative w-full md:flex justify-center items-center'>
+      <div className='floating-containers-wrapper hidden h-[30%] md:h-[15%]  lg:h-[10%] xl:h-[25%]  relative w-full md:flex justify-center items-center'>
         <div
-          className=' w-full max-w-[1300px] grid md:absolute sm:grid-cols-2 lg:grid-cols-4   gap-5  mx-auto overflow-x-hidden md:px-10 px-2 place-items-center'
+          className=' w-full max-w-[1200px] grid md:absolute sm:grid-cols-2 lg:grid-cols-4   gap-5  mx-auto overflow-x-hidden md:px-10 px-2 place-items-center'
         >
-          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="50"  className=' p-1 border text-center border-lightforeground'>
+          <Card  data-aos="fade-left" data-aos-offset="5" data-aos-delay="50"  className=' p-1 border text-center border-lightforeground'>
             <CardHeader className='p-2'>
-              <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
+              <CardTitle className='  max-sm:text-lg text-sm   text-foreground font-bold'>
                 Expert Trainer & Mentors
               </CardTitle>
             </CardHeader>
-            <CardContent className=' max-md:text-xs text-base p-1 '>
+            <CardContent className=' max-lg:text-xs max-md:text-xs text-sm p-1 '>
               The global audience is increasingly seeking diverse and inclusive
               content that represents different cultures and perspectives. is
               uniquely positioned to meet this demand by highlighting African
               content and talent, alongside
             </CardContent>
           </Card>
-          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="100"className=' p-1 border text-center border-lightforeground'>
+          <Card  data-aos="fade-left" data-aos-offset="5" data-aos-delay="50"  className=' p-1 border text-center border-lightforeground'>
             <CardHeader className='p-2'>
-              <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
+              <CardTitle className='  max-sm:text-lg text-sm   text-foreground font-bold'>
                 Expert Trainer & Mentors
               </CardTitle>
             </CardHeader>
-            <CardContent className=' max-md:text-xs text-base p-1 '>
+            <CardContent className=' max-lg:text-xs max-md:text-xs text-sm p-1 '>
               The global audience is increasingly seeking diverse and inclusive
               content that represents different cultures and perspectives. is
               uniquely positioned to meet this demand by highlighting African
               content and talent, alongside
             </CardContent>
           </Card>
-          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="150"className=' p-1 border text-center border-lightforeground'>
+          <Card  data-aos="fade-left" data-aos-offset="5" data-aos-delay="50"  className=' p-1 border text-center border-lightforeground'>
             <CardHeader className='p-2'>
-              <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
+              <CardTitle className='  max-sm:text-lg text-sm   text-foreground font-bold'>
                 Expert Trainer & Mentors
               </CardTitle>
             </CardHeader>
-            <CardContent className=' max-md:text-xs text-base p-1 '>
+            <CardContent className=' max-lg:text-xs max-md:text-xs text-sm p-1 '>
               The global audience is increasingly seeking diverse and inclusive
               content that represents different cultures and perspectives. is
               uniquely positioned to meet this demand by highlighting African
               content and talent, alongside
             </CardContent>
           </Card>
-          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="200"className=' p-1 border text-center border-lightforeground'>
+          <Card  data-aos="fade-left" data-aos-offset="5" data-aos-delay="50"  className=' p-1 border text-center border-lightforeground'>
             <CardHeader className='p-2'>
-              <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
+              <CardTitle className='  max-sm:text-lg text-sm   text-foreground font-bold'>
                 Expert Trainer & Mentors
               </CardTitle>
             </CardHeader>
-            <CardContent className=' max-md:text-xs text-base p-1 '>
+            <CardContent className=' max-lg:text-xs max-md:text-xs text-sm p-1 '>
               The global audience is increasingly seeking diverse and inclusive
               content that represents different cultures and perspectives. is
               uniquely positioned to meet this demand by highlighting African
@@ -147,56 +149,56 @@ const HeroUi = () => {
          </div>
 
       {/* this wil be visibe for smaller screens */}
-      <div className='wrapper  md:hidden py-5  w-full flex justify-center items-center'>
+      <div className='wrapper  md:hidden p-5  w-full flex justify-center items-center'>
         <div
           className=' w-full max-w-[1500px] grid sm:grid-cols-2 lg:grid-cols-4   gap-5  mx-auto overflow-x-hidden md:px-10 px-2 place-items-center'
         >
-          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="50"  className=' p-1 border text-center border-lightforeground'>
+          <Card  data-aos="fade-left" data-aos-offset="5" data-aos-delay="50"  className=' p-1 border text-center border-lightforeground'>
             <CardHeader className='p-2'>
-              <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
+              <CardTitle className='  max-sm:text-lg text-base  text-lightforeground'>
                 Expert Trainer & Mentors
               </CardTitle>
             </CardHeader>
-            <CardContent className=' max-md:text-xs text-base p-1 '>
+            <CardContent className=' max-lg:text-sm max-md:text-xs text-sm p-1 '>
               The global audience is increasingly seeking diverse and inclusive
               content that represents different cultures and perspectives. is
               uniquely positioned to meet this demand by highlighting African
               content and talent, alongside
             </CardContent>
           </Card>
-          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="100"className=' p-1 border text-center border-lightforeground'>
+          <Card  data-aos="fade-left" data-aos-offset="5" data-aos-delay="100"className=' p-1 border text-center border-lightforeground'>
             <CardHeader className='p-2'>
-              <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
+              <CardTitle className='  max-sm:text-lg text-base  text-lightforeground'>
                 Expert Trainer & Mentors
               </CardTitle>
             </CardHeader>
-            <CardContent className=' max-md:text-xs text-base p-1 '>
+            <CardContent className=' max-lg:text-sm max-md:text-xs text-sm p-1 '>
               The global audience is increasingly seeking diverse and inclusive
               content that represents different cultures and perspectives. is
               uniquely positioned to meet this demand by highlighting African
               content and talent, alongside
             </CardContent>
           </Card>
-          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="150"className=' p-1 border text-center border-lightforeground'>
+          <Card  data-aos="fade-left" data-aos-offset="5" data-aos-delay="150"className=' p-1 border text-center border-lightforeground'>
             <CardHeader className='p-2'>
-              <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
+              <CardTitle className='  max-sm:text-lg text-base  text-lightforeground'>
                 Expert Trainer & Mentors
               </CardTitle>
             </CardHeader>
-            <CardContent className=' max-md:text-xs text-base p-1 '>
+            <CardContent className=' max-lg:text-sm max-md:text-xs text-sm p-1 '>
               The global audience is increasingly seeking diverse and inclusive
               content that represents different cultures and perspectives. is
               uniquely positioned to meet this demand by highlighting African
               content and talent, alongside
             </CardContent>
           </Card>
-          <Card  data-aos="fade-left" data-aos-offset="10" data-aos-delay="200"className=' p-1 border text-center border-lightforeground'>
+          <Card  data-aos="fade-left" data-aos-offset="5" data-aos-delay="200"className=' p-1 border text-center border-lightforeground'>
             <CardHeader className='p-2'>
-              <CardTitle className='  max-sm:text-lg text-xl  text-lightforeground'>
+              <CardTitle className='  max-sm:text-lg text-base  text-lightforeground'>
                 Expert Trainer & Mentors
               </CardTitle>
             </CardHeader>
-            <CardContent className=' max-md:text-xs text-base p-1 '>
+            <CardContent className=' max-lg:text-sm max-md:text-xs text-sm p-1 '>
               The global audience is increasingly seeking diverse and inclusive
               content that represents different cultures and perspectives. is
               uniquely positioned to meet this demand by highlighting African

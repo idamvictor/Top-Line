@@ -82,6 +82,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('@tailwindcss/aspect-ratio'), require("tailwindcss-animate")],
+  plugins: [ require("tailwindcss-animate")],
 };
 export default config;

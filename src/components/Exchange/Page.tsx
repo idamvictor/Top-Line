@@ -12,6 +12,7 @@ import BlogPost from "@/components/Exchange/BlogPost";
 import Trades from "@/components/Exchange/Trades";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import HeroCurves from "../ui/shared/HeroCurves";
 const Exchange = () => {
   React.useEffect(() => {
     AOS.init({
@@ -20,10 +21,11 @@ const Exchange = () => {
   });
   return (
     <section className="space-y-5 scroll-smooth">
-  <div className=' relative hero_wraapper bg-background justify-center items-center p-0 '>
-        <div className='min-h-[30vh] max-h-[50vh] flex  pt-10 text-white pb-3 px-10 justify-center items-center'>
+
+<HeroCurves>
+
           <div className=' text_btn md:block flex flex-col justify-between items-center md:max-w-[60%] '>
-          <h1 data-aos='fade-up' className='text-2xl md:text-3xl max-sm:text-2xl font-normal mb-5'>
+          <h1 data-aos='fade-up' className='text-2xl md:text-4xl max-sm:text-3xl font-normal mb-5'>
               We provide easy solution to exchange your{" "}
               <span className='  font-bold pl-1 '>
                 Cryptocurrency/ GiftCard for Cash
@@ -38,40 +40,28 @@ const Exchange = () => {
             </p>
             <button
               data-aos='fade-up'
-              dats-aos-offset='10'
+              dats-aos-offset="0"
               className=' text-base lg:text-lg flex md:justify-center items-center gap-4 HomeBtn  px-4 py-2 md:px-5 md:py-2 font-medium bg-white ExchangeBtn text-black rounded-full'
             >
               Get Started
             </button>
           </div>
-
           <div className='img_container hidden h-full md:flex justify-start items-center'>
             <Image
               src={image}
               alt='crypto'
-              width={300}
-              height={300}
-              className=' object-contain  '
+              loading='lazy'
+              // width={500}
+              // height={500}
+              className='  hidden md:flex rounded-xl w-auto'
+               data-aos="zoom-out"
+               data-aos-offset="0"
             />
           </div>
-        </div>
+      </HeroCurves>
+          
 
-        <div className='curve relative h-[106px] border-b-2 border-white '>
-          <div className='custom-shape-divider-bottom-1721955052'>
-            <svg
-              data-name='Layer 1'
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 1200 120'
-              preserveAspectRatio='none'
-            >
-              <path
-                d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z'
-                className='shape-fill'
-              ></path>
-            </svg>
-          </div>
-        </div>
-      </div>
+
       {/* welcome */}
       <Welcome />
       {/* rates */}

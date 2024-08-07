@@ -3,10 +3,20 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { FaBarsStaggered } from "react-icons/fa6";
-import { AppProgressBar as ProgressBar } from 'next-nprogress-bar';
+import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu";
 
-import Bars from "@/Ui/Bars";
+import Bars from "@/components/ui/Bars";
 /**
  * Array of navigation links with name and corresponding link.
  */
@@ -27,10 +37,6 @@ const NavLinks = [
     name: "Signal service",
     link: "/Signal",
   },
-  // {
-  //     name:"Capital management",
-  //     link:"/Management",
-  // },
 ];
 /**
  * Array of additional navigation links with name and corresponding link.
@@ -66,16 +72,15 @@ const MoreNavLinks = [
 const Navbar = () => {
   const [toggleNav, setToggleNav] = useState(false);
   const pathName = usePathname();
- useEffect(()=>{
-   if (toggleNav) {
-    setToggleNav(false)
-   }/* eslint-disable */
- },[pathName])
+  useEffect(() => {
+    if (toggleNav) {
+      setToggleNav(false);
+    } /* eslint-disable */
+  }, [pathName]);
 
   useEffect(() => {
-
     if (!toggleNav) {
-      return
+      return;
     }
     const handleResize = () => {
       setToggleNav(false);
@@ -90,11 +95,6 @@ const Navbar = () => {
       <Link href='/'>
         <Logo />
       </Link>
-      {/* navigation bar */}
-      {/* <FaBarsStaggered
-        
-        className=' text-2xl  mr-3 cursor-pointer '
-      /> */}
       <div
         onClick={() => setToggleNav((prev) => !prev)}
         className='bars absolute right-6 cursor-pointer z-30 md:hidden'
@@ -106,9 +106,26 @@ const Navbar = () => {
       </div>
 
       <Links pathName={pathName} />
-      <p className='hidden md:flex justify-center items-center  more z-30 h-10 w-20'>
-        <span className='nav_links h-fit'>More</span>
-      </p>
+      <NavigationMenu className='hidden md:block '>
+        <NavigationMenuList>
+          <NavigationMenuItem className=''>
+            <NavigationMenuTrigger className='bg-none nav_links h-fit w-fit p-0 m-0 text-black hover:bg-none focus:bg-none'>
+              More
+            </NavigationMenuTrigger>
+            <NavigationMenuContent className='px-0 text-sm font-medium m-0  flex flex-col justify-center items-center min-w-[15rem]'>
+              {MoreNavLinks.map((link, index) => {
+                return (
+                  <Link href={link.link} legacyBehavior passHref>
+                    <NavigationMenuLink className='m-0 w-full p-2 hover:bg-lightforeground'>
+                      {link.name}
+                    </NavigationMenuLink>
+                  </Link>
+                );
+              })}
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
 
       <div
         className=' more_options w-full bg-white  h-0 overflow-hidden   absolute z-20 top-[3.8rem] lg:top-[3.7rem]  
@@ -128,12 +145,14 @@ const Navbar = () => {
         </ul>
       </div>
       <ProgressBar
-          height="3px"
-          color="#464D09"
-          options={{ showSpinner: true }}
-          shallowRouting
-        />
-      <AnimatePresence>{toggleNav && <MobileNav handleClick={setToggleNav} />}</AnimatePresence>
+        height='3px'
+        color='#464D09'
+        options={{ showSpinner: true }}
+        shallowRouting
+      />
+      <AnimatePresence>
+        {toggleNav && <MobileNav handleClick={setToggleNav} />}
+      </AnimatePresence>
     </nav>
   );
 };
@@ -142,7 +161,7 @@ const Navbar = () => {
  * Functional component for rendering a mobile navigation bar.
  * returns {JSX.Element} A JSX element representing the mobile navigation bar.
  */
-const MobileNav = ({handleClick} :any) => {
+const MobileNav = ({ handleClick }: any) => {
   return (
     <motion.nav
       initial={{
@@ -170,11 +189,34 @@ const MobileNav = ({handleClick} :any) => {
         {NavLinks.map((link, index) => {
           return (
             <li key={index} className=' text-center min-w-60  border-b-2 '>
-              <Link href={link.link} onClick={()=>handleClick(false)}>{link.name}</Link>
+              <Link href={link.link} onClick={() => handleClick(false)}>
+                {link.name}
+              </Link>
             </li>
           );
         })}
-        <li>More</li>
+        <li>
+          <NavigationMenu className='block w-2 '>
+            <NavigationMenuList>
+              <NavigationMenuItem className=''>
+                <NavigationMenuTrigger className='bg-none nav_links h-fit w-fit p-0 m-0 text-foreground hover:bg-none focus:bg-none'>
+                  More
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className='px-0 text-sm font-medium m-0  flex flex-col justify-center items-center min-w-[15rem]'>
+                  {MoreNavLinks.map((link, index) => {
+                    return (
+                      <Link href={link.link} legacyBehavior passHref>
+                        <NavigationMenuLink className='m-0 w-full p-2 hover:bg-lightforeground'>
+                          {link.name}
+                        </NavigationMenuLink>
+                      </Link>
+                    );
+                  })}
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </li>
       </ul>
     </motion.nav>
   );
@@ -189,12 +231,12 @@ export const Logo = () => {
     <div className='flex justify-center items-center w-fit gap-1 z-50'>
       <div className='logo bg-background h-10 w-10 rounded-full flex justify-center items-center'>
         <svg
-          width='35'
-          height='35'
+          width='20'
+          height='20'
           viewBox='0 0 18 14'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
-          className=" max-md:w-7 max-md:h-7"
+          className='  '
         >
           <path
             d='M10.8046 13.4684H9.43484V4.14225H0.109375V2.77246H10.8046V13.4684Z'
