@@ -91,7 +91,7 @@ const Navbar = () => {
     };
   }, [toggleNav]);
   return (
-    <nav className=' font-manrope text-black shadow-md shadow-foreground bg-white py-3 fixed top-0 z-40 w-full px-3 md:py-5 flex justify-between  lg:justify-evenly items-center '>
+    <nav className=' font-poppins text-black shadow-md shadow-foreground bg-white py-3 fixed top-0 z-40 w-full px-3 md:py-5 flex justify-between  lg:justify-evenly items-center '>
       <Link href='/'>
         <Logo />
       </Link>

@@ -99,7 +99,7 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
               loading='lazy'
               // width={500}
               // height={400}
-              className=' opacity-55  flex-grow aspect-video'
+              className=' opacity-35  flex-grow aspect-video'
             />
             </div>
             
@@ -118,7 +118,7 @@ const Dots = ({
   setImgIndex: Dispatch<SetStateAction<number>>;
 }) => {
   return (
-    <div className='flex w-fit justify-center gap-2 absolute z-50 bottom-2 right-2'>
+    <div className='flex w-fit justify-center  absolute z-50 bottom-[25%] right-[10rem]'>
       {imgs.map((_, idx) => {
         return (
           <button

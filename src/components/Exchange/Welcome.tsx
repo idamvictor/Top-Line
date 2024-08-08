@@ -24,10 +24,10 @@ const Welcome = () => {
           className='z-20 right-5 -top-36 opacity-25 absolute   '
         /> */}
     <div className='txt-btn  md:w-[50%]' data-aos="fade-up" data-aos-offset="0">
-      <h2 className='font-bold pb-2 text-2xl md:text-3xl text-foreground '>
+      <h2 className='font-bold pb-2 text-xl text-foreground '>
         Welcome to Topline
       </h2>
-      <p className=' text-base md:text-lg leading-8 text-black text-left'>
+      <p className=' text-sm leading-10 text-black text-left'>
         We have the best rates . Simply start your exchange right now. Sign
         up for our Affiliate program and earn commission from each exchange.
         The earnings are credited in your account instantly and can be
@@ -35,7 +35,7 @@ const Welcome = () => {
         for unregistered user. To ensure to have access to all our exchange
         directions and benefits kindly sign up and verify your identity.
       </p>
-      <button data-aos="fade-right" data-aos-offset="0"  className='px-8 py-2 HomeBtn rounded-full bg-background text-white font-medium text-base mt-5 md:text-lg transition-all ease-in-out'>
+      <button  className='px-5 py-2 HomeBtn rounded-full bg-background text-white font-medium text-base mt-5 md:text-lg transition-all ease-in-out'>
         Discover
       </button>
     </div>

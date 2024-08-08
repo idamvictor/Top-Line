@@ -22,10 +22,9 @@ const Exchange = () => {
   return (
     <section className="space-y-5 scroll-smooth">
 
-<HeroCurves>
-
+<HeroCurves >
           <div className=' text_btn md:block flex flex-col justify-between items-center md:max-w-[60%] '>
-          <h1 data-aos='fade-up' className='text-2xl md:text-4xl max-sm:text-3xl font-normal mb-5'>
+          <h1 data-aos='fade-up' className='text-2xl md:text-2xl max-sm:text-3xl font-normal mb-5'>
               We provide easy solution to exchange your{" "}
               <span className='  font-bold pl-1 '>
                 Cryptocurrency/ GiftCard for Cash
@@ -58,6 +57,8 @@ const Exchange = () => {
                data-aos-offset="0"
             />
           </div>
+
+
       </HeroCurves>
           
 

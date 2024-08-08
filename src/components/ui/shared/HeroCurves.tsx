@@ -3,7 +3,7 @@ import React from 'react'
 const HeroCurves = ({children}: any) => {
   return (
     <div className=' relative hero_wraapper bg-background justify-center items-center p-0 '>
-        <div className=' h-[80vh]  xl:min-h-[500px] max-h-[500px] flex  pt-10 text-white pb-3 px-10 justify-center items-center'>
+        <div className=' h-[80vh] gap-5 font-poppins  xl:min-h-[500px] max-h-[500px] flex  pt-10 text-white pb-3 px-10 justify-center items-center'>
         {children}
         </div>
 

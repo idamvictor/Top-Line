@@ -14,18 +14,18 @@ const Hero = () => {
   });
   return (
     <HeroCurves>
-      <div className='overflow-y-hidden text_btn md:block flex flex-col justify-between items-center max-md:items-start w-50% '>
-        <p data-aos='fade-right' data-aos-offset='0' className='small_text'>
-          HOME/CONTACT US
+      <div className='overflow-y-hidden md:w-[50%] space-y-4 text_btn md:block flex flex-col justify-between items max-md:items-start w-50% '>
+        <p data-aos='fade-right' data-aos-offset='0' className=' text-xs'>
+          HOME / CONTACT US
         </p>
         <h1
           data-aos='fade-up'
           data-aos-offset='0'
-          className='Hero_Txt  mb-5 font-bold max-sm:text-3xl'
+          className=' text-3xl leading-relaxed mb-5 font-bold max-sm:text-3xl'
         >
           24/7 Customer support Including weekends.
         </h1>
-        <p data-aos='fade-up' className='font-normal text-lg lg:text-xl mb-9'>
+        <p data-aos='fade-up' className='font-normal  text-lg lg:text-base mb-9'>
           We’re always there ti help regardless the number of queries at hand.
         </p>
       </div>
