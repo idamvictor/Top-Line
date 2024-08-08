@@ -21,7 +21,7 @@ useEffect(() => {
         
         className='text-white font-poppins z-20 Desc max-w-[90%] sm:max-w-[70%] my-5 space-y-8 text-center'
       >
-        <h1 data-aos='fade-up' className='text-3xl sm:text-4xl md:text-5xl font-bold'>
+        <h1 data-aos='fade-up' className='text-3xl sm:text-4xl md:text-4xl font-bold'>
           A Community For Traders By Traders
         </h1>
         <p data-aos='fade-right' className='text-sm sm:text-base'>
