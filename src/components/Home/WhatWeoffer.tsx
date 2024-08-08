@@ -16,14 +16,15 @@ const WhatWeoffer = () => {
     <div className='whatWeOffer relative max-w-[1000px] md:pt-5 mx-auto my-20 text-foreground'>
       <h2
         data-aos='fade-up'
-        className='text-xl overflow-hidden  md:text-2xl font-extrabold pt-5 mb-5 md:mb-10 pl-5 md:pl-0  mt-3 flex flex-col md:items-center  items-start justify-center gap-2 md:gap-5  '
+        data-aos-offset="0"
+        className='text-xl overflow-hidden  md:text-2xl font-extrabold pt-5 mb-5 pl-5 md:pl-0  mt-5 flex flex-col md:items-center  items-start justify-center gap-2 md:gap-5  '
       >
         Here Is What We Offer
         {/* <p className='w-10 h-1 ml-1 bg-background rounded-full '></p> */}
       </h2>
       <div className='flex flex-wrap gap-5 gap-y-10 py-5 items-center justify-center'>
         <Card
-          data-aos='zoom-in'
+          data-aos='fade-up'
           data-aos-offset="0"
           className=' p-0 border  border-lightforeground w-fit max-w-[400px] flex mx-5'
         >
@@ -34,7 +35,7 @@ const WhatWeoffer = () => {
                 alt='Image'
                 width={300}
                 height={300}
-                className=' bg-gray-600 h-full w-[150px] max-h-[180px] rounded'
+                className=' bg-gray-600 h-full min-w-[150px] max-h-[180px] rounded'
               />
             </CardTitle>
           </CardHeader>
@@ -51,7 +52,7 @@ const WhatWeoffer = () => {
           </CardContent>
         </Card>
         <Card
-          data-aos='zoom-in'
+          data-aos='fade-up'
           data-aos-offset="0"
           className=' p-0 border  border-lightforeground w-fit max-w-[400px] flex mx-5'
         >
@@ -62,7 +63,7 @@ const WhatWeoffer = () => {
                 alt='Image'
                 width={300}
                 height={300}
-                className=' bg-gray-600 h-full w-[150px] max-h-[180px] rounded'
+                className=' bg-gray-600 h-full min-w-[150px] max-h-[180px] rounded'
               />
             </CardTitle>
           </CardHeader>
@@ -79,7 +80,7 @@ const WhatWeoffer = () => {
           </CardContent>
         </Card>
         <Card
-          data-aos='zoom-in'
+          data-aos='fade-up'
           data-aos-offset="0"
           className=' p-0 border  border-lightforeground w-fit max-w-[400px] flex mx-5'
         >
@@ -90,7 +91,7 @@ const WhatWeoffer = () => {
                 alt='Image'
                 width={300}
                 height={300}
-                className=' bg-gray-600 h-full w-[150px] max-h-[180px] rounded'
+                className=' bg-gray-600 h-full min-w-[150px] max-h-[180px] rounded'
               />
             </CardTitle>
           </CardHeader>
@@ -107,7 +108,7 @@ const WhatWeoffer = () => {
           </CardContent>
         </Card>
         <Card
-          data-aos='zoom-in'
+          data-aos='fade-up'
           data-aos-offset="0"
           className=' p-0 border  border-lightforeground w-fit max-w-[400px] flex mx-5'
         >
@@ -118,7 +119,7 @@ const WhatWeoffer = () => {
                 alt='Image'
                 width={300}
                 height={300}
-                className=' bg-gray-600 h-full w-[150px] max-h-[180px] rounded'
+                className=' bg-gray-600 h-full min-w-[150px] max-h-[180px] rounded'
               />
             </CardTitle>
           </CardHeader>
@@ -135,7 +136,7 @@ const WhatWeoffer = () => {
           </CardContent>
         </Card>
         <Card
-          data-aos='zoom-in'
+          data-aos='fade-up'
           data-aos-offset="0"
           className=' p-0 border  border-lightforeground w-fit max-w-[400px] flex mx-5'
         >
@@ -146,7 +147,7 @@ const WhatWeoffer = () => {
                 alt='Image'
                 width={300}
                 height={300}
-                className=' bg-gray-600 h-full w-[150px] max-h-[180px] rounded'
+                className=' bg-gray-600 h-full min-w-[150px] max-h-[180px] rounded'
               />
             </CardTitle>
           </CardHeader>
@@ -162,6 +163,7 @@ const WhatWeoffer = () => {
             </p>
           </CardContent>
         </Card>
+
 
 
       </div>

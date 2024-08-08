@@ -424,3 +424,11 @@ body:has(.more:hover,.more_options:hover) .more_options{
     bottom: -50%;
   }
 } */
+
+.gradient-text {
+  background: linear-gradient(to bottom, #adbf09, #464D09); /* Gradient colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* For modern browsers */
+  color: transparent; /* For fallback */
+}

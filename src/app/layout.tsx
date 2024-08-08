@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import {
   manrope,
+  poppins,
   freizeit_trial_thin,
   freizeit_trial_light,
   freizeit_trial_extralight,
@@ -27,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` pt-[4rem] ${manrope.variable} ${inter.className}`}>
+      <body className={` pt-[4rem] ${poppins.variable} ${manrope.variable} ${inter.className}`}>
         <Navbar/>
         {children}
         <Footer/>

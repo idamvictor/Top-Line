@@ -57,6 +57,7 @@ const config: Config = {
       },
       fontFamily: {
         manrope: ["var(--font-manrope)"],
+        poppins: ["var(--font-poppins)"],
         freizeit_trial_thin: ["var(--font-freizeit_trial_thin)"],
         freizeit_trial_light: ["var(--font-freizeit_trial_light)"],
         freizeit_trial_extralight: ["var(--font-freizeit_trial_extralight)"],

@@ -1,9 +1,14 @@
-import { Manrope } from "next/font/google";
+import { Manrope, Poppins } from "next/font/google";
 import localFont from "next/font/local";
 
 export const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-manrope",
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+});
+export const poppins= Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
   weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 

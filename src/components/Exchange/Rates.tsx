@@ -19,10 +19,10 @@ const Rates = () => {
       </svg>
     </div>
 
-    <div className='grid m-5 gap-y-5 sm:grid-cols-3 bg-white w-[80%] max-w-[1000px] mx-auto py-5 rounded-xl'>
+    <div className='grid m-5 gap-y-5 sm:grid-cols-3 bg-white w-[80%] max-w-[900px] mx-auto py-5 rounded-2xl'>
       {/* our Rates Tab */}
-      <div data-aos="fade-left" data-aos-offset="5" className=' space-y-5 text-sm'>
-        <p className='border-b border-b-black text-center text-base md:text-xl font-bold text-lightforeground'>
+      <div data-aos="fade-left" data-aos-offset="0" className=' space-y-5 text-sm'>
+        <p className='border-b border-b-black text-center text-base md:text-base font-bold text-lightforeground'>
           OUR RATES
         </p>
         <div className='info-wrapper flex justify-center gap-5 px-7'>
@@ -48,8 +48,8 @@ const Rates = () => {
       </div>
       {/*  Reserve Tab */}
 
-      <div data-aos="fade-down" data-aos-offset="5" className='space-y-5 text-sm'>
-        <p className='border-b border-b-black text-center text-base md:text-xl font-bold text-lightforeground'>
+      <div data-aos="fade-down" data-aos-offset="0" className='space-y-5 text-sm'>
+        <p className='border-b border-b-black text-center text-base md:text-base font-bold text-lightforeground'>
           OUR RESERVES
         </p>
         <div className='wrapper'>
@@ -83,8 +83,8 @@ const Rates = () => {
       </div>
 
       {/* Latest Exchange  */}
-      <div data-aos="fade-right" data-aos-offset="5" className=''>
-        <p className='border-b border-b-black text-center text-base md:text-lg font-bold text-lightforeground'>
+      <div data-aos="fade-right" data-aos-offset="0" className=''>
+        <p className='border-b border-b-black text-center text-base font-bold text-lightforeground'>
           LATEST EXCHANGES
         </p>
         <div className='historyBar h-[80%] flex items-center flex-col'>
