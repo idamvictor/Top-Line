@@ -31,7 +31,7 @@ useEffect(() => {
           aliquip ex ea commodo consequat.
         </p>
       </div>
-      <div data-aos='zoom-in' className='social space-y-5 z-20'>
+      <div data-aos='zoom-in' className='social space-y-5   z-20'>
         <h2 className='text-center text-sm text-white'>
           We have <span className='text-[#FFC759]'>2000+</span> Active community
           members
