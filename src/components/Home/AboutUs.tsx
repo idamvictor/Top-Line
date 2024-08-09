@@ -13,7 +13,7 @@ function AboutUs() {
   });
   return (
     <div
-    className='Aboutus md:px-7 max-w-[1000px] px-10 md:pt-20  mx-auto my-20 text-foreground relative'>
+    className='Aboutus md:px-7 max-w-[1000px] px-10 max-lg:pt-20 pt-10 mx-auto my-20 text-foreground relative'>
     <h2 data-aos="fade-up" data-aos-offset="0" className='text-xl  md:text-3xl font-bold pt-5 mb-5 pl-5 md:pl-0  mt-5 flex flex-col md:items-center  items-start justify-center gap-2 md:gap-5  '>
       About 
       {/* <p className="w-10 h-1 ml-1 bg-background rounded-full "></p> */}
