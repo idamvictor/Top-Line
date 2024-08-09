@@ -12,7 +12,7 @@ const Welcome = () => {
       width={300}
       height={300}
       className='hidden md:block w-[50%] '
-      data-aos="fade-down"
+      data-aos="fade-up"
       data-aos-offset="0"
     />
     {/* less opac inmage

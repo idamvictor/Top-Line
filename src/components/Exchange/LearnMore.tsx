@@ -1,11 +1,11 @@
 import React from 'react'
-import imagetwo from "../../../public/Layer2.png";
+import imagetwo from "../../../public/LearnMore.png";
 import Image from 'next/image';
 
 const LearnMore = () => {
   return (
-    <div  className='kearn_more bg-background relative pt-14 border-2 border-white '>
-    <div className='header overflow-hidden flex flex-col bg-white w-full pl-10 pb-2 md:pb-1 md:pl-20  text-foreground absolute top-0'>
+    <div  className='kearn_more bg-background relative border-2 border-white w-full'>
+<div className='header overflow-hidden flex flex-col bg-none w-full pl-10  md:pb-1 md:pl-20  text-foreground absolute -top-5'>
       <p className='text-sm sm:text-base ' data-aos="fade-up" data-aos-offset="0">Mentorship</p>
       <h6 className='font-bold text-xl md:text-2xl' data-aos="fade-up" data-aos-offset="0">
         Learn More About Crypto
@@ -25,9 +25,9 @@ const LearnMore = () => {
         ></path>
       </svg>
     </div>
-    <div className='content w-full flex justify-start items-start gap-x-5	'>
+    <div className='content relative w-full flex justify-cenetr items-start gap-x-5 max-w-[1200px] mx-auto	 '>
       <article data-aos="fade-up" data-aos-offset="0" className=' sm:w-1/2 p-5 pt-0 sm:pl-24 z-20'>
-        <p className=' text-white text-left'>
+        <p className=' text-white text-left text-xl'>
           No matter how well-informed and educated you think you are, the
           topics of blockchain and cryptocurrency are inexhaustible. You
           more than likely won’t start trading like a pro or go all the way
@@ -42,7 +42,7 @@ const LearnMore = () => {
         alt='crypto'
         width={400}
         height={400}
-        className=' hidden sm:block absolute top-0 right-0'
+        className=' hidden sm:block absolute -top-52 right-0'
         data-aos="fade-down"
         data-aos-offset="0"
       />

@@ -5,7 +5,7 @@ import Image from 'next/image';
 const Great_expirence = () => {
   return (
     <div  className='great_expirience px-5 py-10 my-10 flex justify-center gap-5 max-w-[1200px] mx-auto'>
-    <div data-aos="fade-up" data-aos-offset="5" className='text_container sm:w-1/2 space-y-5'>
+    <div data-aos="fade-up" data-aos-duration="400" data-aos-offset="0" className='text_container sm:w-1/2 space-y-5'>
       <h3 className=' text-2xl font-bold text-lightforeground '>
         Great expirence <br />
         <span className=' text-foreground'>with Topline</span>
@@ -28,8 +28,9 @@ const Great_expirence = () => {
       width={300}
       height={300}
       className='hidden sm:block'
-      data-aos="fade-down"
-      data-aos-offset="5"
+      data-aos="fade-up"
+      data-aos-duration="400"
+      data-aos-offset="0"
     />
   </div>
   )

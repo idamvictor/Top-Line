@@ -28,10 +28,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` pt-[4rem] ${poppins.variable} ${manrope.variable} ${inter.className}`}>
-        <Navbar/>
+      <body className={`   pt-[4rem] ${poppins.variable} ${manrope.variable} ${inter.className}`}>
+        <main className="max-w-[1620px]  mx-auto ">
+           <Navbar/>
         {children}
         <Footer/>
+        </main>
+       
         </body>
     </html>
   );
