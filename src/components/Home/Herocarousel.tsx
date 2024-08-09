@@ -89,7 +89,7 @@ const Images = ({ imgIndex }: { imgIndex: number }) => {
               opacity: imgIndex === idx ? 1 : 0.85,
             }}
             transition={SPRING_OPTIONS}
-            className='w-screen shrink-0 h-screen md:min-h-[70vh] xl:min-h-[500px] max-h-[500px] '
+            className='w-full shrink-0 h-screen md:min-h-[70vh] xl:min-h-[500px] max-h-[500px] '
           >
             <div className="aspect w-full h-full flex">
 <Image

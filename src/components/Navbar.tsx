@@ -91,7 +91,7 @@ const Navbar = () => {
     };
   }, [toggleNav]);
   return (
-    <nav className=' font-poppins text-black shadow-md shadow-foreground bg-white py-3 fixed top-0 z-40 w-full px-3 md:py-5 flex justify-between  lg:justify-evenly items-center '>
+    <nav className=' font-poppins text-black bg-white py-3 fixed top-0 z-40 w-full px-3 md:px-10 md:py-5 flex justify-between   items-center max-w-[1620px]   '>
       <Link href='/'>
         <Logo />
       </Link>
@@ -109,7 +109,11 @@ const Navbar = () => {
       <NavigationMenu className='hidden md:block '>
         <NavigationMenuList>
           <NavigationMenuItem className=''>
-            <NavigationMenuTrigger className='bg-none nav_links h-fit w-fit p-0 m-0 text-black hover:bg-none focus:bg-none'>
+            <NavigationMenuTrigger
+              className={`bg-none nav_links h-fit w-fit p-0 m-0 text-black hover:bg-none focus:bg-none ${
+                pathName ? "active" : ""
+              }`}
+            >
               More
             </NavigationMenuTrigger>
             <NavigationMenuContent className='px-0 text-sm font-medium m-0  flex flex-col justify-center items-center min-w-[15rem]'>

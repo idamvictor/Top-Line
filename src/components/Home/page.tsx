@@ -31,7 +31,7 @@ const Homepage = () => {
     });
   });
   return (
-    <main data-aos='fade-up  ' className="space-y-14 scroll-smooth font-poppins overflow-x-hidden w-screen" >
+    <main data-aos='fade-up  ' className="space-y-14 scroll-smooth font-poppins overflow-x-hidden w-screen max-w-[1620px] mx-auto" >
       <HeroUi />
       <AboutUs />
       <WhatWeoffer />
@@ -48,7 +48,7 @@ const HeroUi = () => {
         
         <SwipeCarousel />
         <div
-          className='txt-btn absolute inset-0 top-0 w-full h-full gap-y-3 flex justify-center max-md:items-center 2xl:items-center max-xl:mt-7 xl:mt-5 py-5 '
+          className='txt-btn absolute inset-0 top-0 w-full h-full gap-y-3 flex justify-center max-md:items-center  mt-7 xl:mt-5 py-5 '
           data-aos='zoom-out-right'
         >
           <div className=' text-start md:text-center space-y-5  max-w-[1200px] mx-5 lg:mx-10 text-white '>
@@ -80,18 +80,11 @@ const HeroUi = () => {
 
 
 
-
-
-
-
-
-
-
         
       </section>
       <div className='floating-containers-wrapper hidden h-[30%] md:h-[15%]  lg:h-[10%] xl:h-[25%]  relative w-full md:flex justify-center items-center'>
         <div
-          className='text-foreground w-full max-w-[1000px] px-10  grid md:absolute sm:grid-cols-2 lg:grid-cols-4  gap-5  mx-auto overflow-x-hidden md:px-10  place-items-center'
+          className='text-foreground w-full max-w-[1100px] 2xl:max-w-[1200px] px-10  grid md:absolute sm:grid-cols-2 lg:grid-cols-4  gap-5  mx-auto overflow-x-hidden md:px-10  place-items-center'
         >
           <Card  data-aos="fade-left" data-aos-offset="5" data-aos-delay="50"  className='h-full p-3 border text-center flex flex-col justify-between  border-foreground'>
             <CardHeader className='p-2'>

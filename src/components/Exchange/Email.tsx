@@ -2,7 +2,7 @@ import React from 'react'
 
 const Email = () => {
   return (
-    <div data-aos="zoom-in" data-aos-offset="5" className='h-[60vh] sm:h-[50vh] bg-white pb-10 flex-col flex gap-y-5 justify-end items-center'>
+    <div data-aos="zoom-in" data-aos-offset="5" className=' mt-5 bg-white pb-10 flex-col flex gap-y-5 justify-end items-center'>
         <h4 className=' text-2xl my-10 text-center flex flex-col justify-center items-center'>
           Subscribe to our newsletter
           <span className=' w-10 h-1 rounded mt-3 bg-background'></span>

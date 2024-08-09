@@ -1,6 +1,5 @@
 import React from 'react'
 import imagetwo from "../../../public/Layer2.png";
-import exhangeImage from "../../../public/change-currency-svgrepo-com.svg";
 import Image from 'next/image';
 
 const Welcome = () => {
@@ -12,17 +11,9 @@ const Welcome = () => {
       width={300}
       height={300}
       className='hidden md:block w-[50%] '
-      data-aos="fade-down"
+      data-aos="fade-up"
       data-aos-offset="0"
     />
-    {/* less opac inmage
-    <Image
-          src={exhangeImage}
-          alt={"question"}
-          width={200}
-          height={200}
-          className='z-20 right-5 -top-36 opacity-25 absolute   '
-        /> */}
     <div className='txt-btn  md:w-[50%]' data-aos="fade-up" data-aos-offset="0">
       <h2 className='font-bold pb-2 text-xl text-foreground '>
         Welcome to Topline

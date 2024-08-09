@@ -21,7 +21,7 @@ useEffect(() => {
         
         className='text-white font-poppins z-20 Desc max-w-[90%] sm:max-w-[70%] my-5 space-y-8 text-center'
       >
-        <h1 data-aos='fade-up' className='text-3xl sm:text-4xl md:text-5xl font-bold'>
+        <h1 data-aos='fade-up' className='text-3xl sm:text-4xl md:text-4xl font-bold'>
           A Community For Traders By Traders
         </h1>
         <p data-aos='fade-right' className='text-sm sm:text-base'>
@@ -31,7 +31,7 @@ useEffect(() => {
           aliquip ex ea commodo consequat.
         </p>
       </div>
-      <div data-aos='zoom-in' className='social space-y-5 z-20'>
+      <div data-aos='zoom-in' className='social space-y-5   z-20'>
         <h2 className='text-center text-sm text-white'>
           We have <span className='text-[#FFC759]'>2000+</span> Active community
           members

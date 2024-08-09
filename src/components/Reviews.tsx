@@ -27,10 +27,10 @@ const Reviews = () => {
     
     {/* text_container */}
     <div className='text-center space-y-5 px-2 '>
-      <h6 className=' font-bold max-sm:text-2xl text-white Hero_Txt '>
+      <h6 data-aos="fade-up" className=' font-bold text-3xl text-white  '>
         10,000 Satisfied clients around the world
       </h6>
-      <p className='max-w-[800px] mx-auto text-white text-sm md:text-lg '>
+      <p className='max-w-[500px] mx-auto text-white text-sm  ' data-aos="fade-up">
         Yeah! we’re proud with numbers. We’ve helped thousands of clients
         all around the world with our bespoke service. Hover ontop of them
         pic to view their testimonials.

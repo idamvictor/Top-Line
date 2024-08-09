@@ -7,8 +7,8 @@ const Trades = () => {
     <div className='trade overflow-hidden relative flex items-end  justify-center bg-background min-h-96 py-5'>
       <div className='contaiiner py-2 bg-white w-full max-w-[600px] flex justify-center flex-col items-center h-full shadow-xl z-20 border-2 rounded-xl '>
         <h4
-          data-aos='fade-down'
-          data-aos-offset='5'
+          data-aos='fade-up'
+          data-aos-offset='0'
           className=' font-bold pb-2 text-xl my-5 text-center flex flex-col justify-center items-center'
         >
           Trade from anywhere
