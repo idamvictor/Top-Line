@@ -5,6 +5,7 @@ import HeroImage from '@/../public/About.png'
 import HeroCurves from '@/components/ui/shared/HeroCurves'
 import { FaMedal, FaPeopleGroup } from 'react-icons/fa6';
 import { RiCustomerService2Line } from "react-icons/ri";
+import Email from '@/components/Exchange/Email';
 
 const Page = () => {
   return (
@@ -82,12 +83,82 @@ const Page = () => {
         </div>
       </div>
 
-<div className="ourhistory text-center">
-<h3 className=' text-xl mt-10 font-extrabold text-lightforeground'>
+      <div className='ourhistory text-center'>
+        <h3 className=' text-xl mt-10 font-extrabold text-lightforeground'>
           Our history
         </h3>
         <p className='Line h-1 w-10 mx-auto my-2 mb-5 bg-background rounded-full' />
+
+        <div className='timeline max-w-[800px]  min-h-80 relative mx-auto'>
+          <div className='timeline_line bg-foreground absolute  w-1 rounded-full h-full inset-0 -translate-x-full top-0 bottom-0 right-1/2 left-1/2' />
+          <div className='timeline_items py-5 h-full grid grid-cols-2'>
+{/* Box 1*/}
+
+            <div className='timeline_content min-h-32 text-right pr-9 space-y-3'>
+
+              <p className="date font-bold text-lightforeground text-lg mt-3 relative">
+                May 2010
+                <p className='absolute -right-10 w-3 h-3 rounded-full bg-foreground'></p>
+              </p>
+            <p className=' text-sm relative'>
+                Ut enim mi, mattis at sollicitudin rhoncus, rhoncus eget sem.
+              Curabitur aliquam tellus eu nisl suscipit, at vestibulum ex
+              rutrum. Nulla facilisi. Cras ullamcorper pellentesque orci, nec
+              vestibulum nibh.uspendisse
+              <p className='absolute bottom-5 -right-10 w-3 h-3 rounded-full bg-foreground'></p>
+
+            </p>
+            
+            </div>
+            <div className="emptyBox min-w-[500px]"/>
+
+{/* Box 2 */}
+            <div className="emptyBox min-w-[500px]"/>
+            <div className='timeline_content min-h-32 text-left pl-9 space-y-3 mt-5'>
+
+<p className="date font-bold text-lightforeground text-lg mt-3 relative">
+  May 2010
+  
+  <p className='absolute bottom-0 -left-[2.7rem] w-3 h-3 rounded-full bg-foreground'></p>
+
+</p>
+<p className=' text-sm relative'>
+  Ut enim mi, mattis at sollicitudin rhoncus, rhoncus eget sem.
+Curabitur aliquam tellus eu nisl suscipit, at vestibulum ex
+rutrum. Nulla facilisi. Cras ullamcorper pellentesque orci, nec
+vestibulum nibh.uspendisse
+<p className='absolute bottom-5 -left-[2.7rem] w-3 h-3 rounded-full bg-foreground'></p>
+
+</p>
+
 </div>
+{/* Box 3 */}
+
+<div className='timeline_content min-h-32 text-right pr-9 space-y-3 mt-5'>
+
+              <p className="date font-bold text-lightforeground text-lg mt-3 relative">
+                May 2010
+                <p className='absolute -right-10 w-3 h-3 rounded-full bg-foreground'></p>
+              </p>
+            <p className=' text-sm relative'>
+                Ut enim mi, mattis at sollicitudin rhoncus, rhoncus eget sem.
+              Curabitur aliquam tellus eu nisl suscipit, at vestibulum ex
+              rutrum. Nulla facilisi. Cras ullamcorper pellentesque orci, nec
+              vestibulum nibh.uspendisse
+              <p className='absolute bottom-5 -right-10 w-3 h-3 rounded-full bg-foreground'></p>
+
+            </p>
+            
+            </div>
+            <div className="emptyBox min-w-[500px]"/>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
 
       <div className='meet_the_team text-center'>
         <h3 className=' text-xl mt-10 font-extrabold text-lightforeground'>
@@ -95,10 +166,20 @@ const Page = () => {
         </h3>
         <p className='Line h-1 w-10 mx-auto my-2 mb-5 bg-background rounded-full' />
         <p className=' text-sm leading-10 text-zinc-900 font-medium max-w-[500px] mx-auto'>
-          Meet the team that makes the process of this system fast and painless
+        
+                      Meet the team that makes the process of this system fast and painless
           as possible to provide you with good result
         </p>
+    <div className="box_container max-w-[1300px] flex justify-center mx-auto my-10 ">
+       <div className="box w-full bg-slate-400 h-52 max-w-[200px]  rounded-xl opacity-95"></div>
+       <div className="box w-full bg-slate-500 scale-[1.1] h-52 max-w-[200px]  z-10 rounded-xl opacity-95"></div>
+       <div className="box w-full bg-foreground h-52 max-w-[200px] z-20 scale-[1.2] rounded-xl opacity-95"></div>
+       <div className="box w-full bg-slate-500 h-52 scale-[1.1] max-w-[200px] z-10 rounded-xl opacity-95"></div>
+       <div className="box w-full bg-slate-400 h-52 max-w-[200px] rounded-xl opacity-95"></div>
+    </div>
+
       </div>
+      <Email />
     </section>
   );
 }
