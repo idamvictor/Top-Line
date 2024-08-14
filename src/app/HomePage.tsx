@@ -19,18 +19,18 @@ const HomePage = () => {
 
 const Hero = () => {
   return (
-    <section className='Hero relative text-white flex w-full justify-center items-center min-h-fit 2xl:max-h-[700px]  h-[100vh]'>
-      <main className=' flex w-full justify-between h-[85%]  max-md:flex-col '>
+    <section className='Hero relative text-white flex w-full justify-center items-center min-h-fit 2xl:max-h-[700px]  h-[90vh]'>
+      <main className=' flex w-full justify-between h-[70%]  max-md:flex-col max-h-[500px]  '>
         <div className='flex-1 flex gap-5  justify-center items-center  p-4'>
           <div className='text_cont max-w-[500px] space-y-7'>
-            <p className=' font-light text-sm  '>
+            <p className=' font-light text-sm md:text-xs lg:text-sm  '>
               Topline Trading
               <Line />
             </p>
-            <h1 className=' text-3xl md:text-4xl xl:text-5xl font-light'>
+            <h1 className=' text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light'>
               Your Ultimate Financial Markets Hub
             </h1>
-            <p className=' text-slate-400 text-base '>
+            <p className=' text-slate-400 text-base md:text-xs lg:text-base '>
               {
                 " Unlock your potential in the world of finance with our all-in-one educational platform. Whether you're a beginner or an experienced trader, we provide the tools and support you need to succeed."
               }
@@ -43,8 +43,8 @@ const Hero = () => {
             </Button>
           </div>
         </div>
-        <div className='flex-1 flex justify-center   items-center '>
-          <div className='image h-full w-full ma-h-[700px] rounded-xl  bg-gray-800'></div>
+        <div className='flex-1 flex justify-start  items-center '>
+          <div className='image h-full w-full max-w-[700px] rounded-xl max-h-[700px]  bg-gray-800'></div>
         </div>
       </main>
     </section>
