@@ -4,7 +4,6 @@
  * Allows users to discover more about the platform and sign up for services.
  * @returns JSX element containing the Exchange section content.
  */
-import Exchange from "@/components/Exchange/Page";
 import React from "react";
 import type { Metadata } from "next";
 export const metadata: Metadata = {
@@ -14,7 +13,6 @@ export const metadata: Metadata = {
 const ExchangePage = () => {
   return (
     <section className='overflow-x-hidden font-poppins bg-white'>
-     <Exchange/>
     </section>
   );
 };

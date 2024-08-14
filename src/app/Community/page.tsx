@@ -4,7 +4,6 @@
  * @returns JSX element representing the community page.
  */
 import React from "react";
-import Community from "@/components/Community/Community";
 import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "TopLine Community",
@@ -14,7 +13,7 @@ export const metadata: Metadata = {
 const Page = () => {
   return (
     <section className='h-[95vh] md:h-[85vh] relative gap-y-8 bg-gray-800 w-screen community flex  items-center justify-center flex-col'>
-      <Community />
+      {/* <Community /> */}
     </section>
   );
 };

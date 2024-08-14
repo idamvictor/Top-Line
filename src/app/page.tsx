@@ -1,5 +1,5 @@
-import Homepage from "@/components/Home/page";
 import type { Metadata } from "next";
+import HomePage from "./HomePage";
 
  export const metadata: Metadata = {
    title: "TopLine Trading",
@@ -7,8 +7,8 @@ import type { Metadata } from "next";
  };
 export default function Home() {
   return (
-    <main className="">
-      <Homepage/>
-    </main>
+    <>
+      <HomePage/>
+    </>
   );
 }

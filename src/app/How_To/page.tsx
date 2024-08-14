@@ -1,12 +1,8 @@
 'use client'
-import Image from "next/image";
 import React from "react";
-import HeroImage from "@/../public/HeroHowTo.png";
-import HeroImageOne from "@/../public/How_to_One.png";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
-import HeroCurves from "@/components/ui/shared/HeroCurves";
 const Page = () => {
   React.useEffect(() => {
     AOS.init({
@@ -16,37 +12,8 @@ const Page = () => {
   return (
     <section className=" space-y-20 font-poppins mb-10">
      
-     <HeroCurves>
-        <div className='overflow-y-hidden md:w-[50%] space-y-4 text_btn md:block flex flex-col justify-between items max-md:items-start w-50% '>
-          <p data-aos='fade-right' data-aos-offset='0' className=' text-xs'>
-          HOME / How-to-page
-          </p>
-          <h1
-            data-aos='fade-up'
-            data-aos-offset='0'
-            className=' text-3xl leading-relaxed mb-5 font-bold max-sm:text-3xl'
-          >
-             Be Informed, Confused on how to use our app
-          </h1>
-          <p
-            data-aos='fade-up'
-            className='font-normal  text-lg lg:text-base mb-9'
-          >
-             Get to know the latest stuff about our services via our blog post.
-          </p>
-        </div>
-        <div className='img_container hidden h-full md:flex justify-start items-center'>
-          <Image
-            src={HeroImage}
-            alt='crypto'
-            width={400}
-            height={400}
-            className='w-50% w-fit h-[90%] max-h-[25rem] min-w-[400px]'
-          />
-        </div>
-      </HeroCurves>
-
-      <div className='wrapper max-w-[1000px] px-5 md:px-10 mx-auto space-y-10'>
+  
+      {/* <div className='wrapper max-w-[1000px] px-5 md:px-10 mx-auto space-y-10'>
         <Card className=' border border-lightforeground max-w-[700px] xl:max-w-[700px] mx-auto p-0 w-full'>
           <CardContent className='m-0 p-0  '>
             <Image
@@ -138,13 +105,13 @@ const Page = () => {
           </CardContent>
         </Card>
         
-      </div>
+      </div> */}
 
-      <div className="pagination flex justify-center overflow-y-hidden">
+      {/* <div className="pagination flex justify-center overflow-y-hidden">
       <button  className='bg-background w-10 h-10 text-center rounded-full'>
-          {'>'}
-        </button>
-      </div>
+          {'>'} */}
+        {/* </button> */}
+      {/* </div> */}
     </section>
   );
 };

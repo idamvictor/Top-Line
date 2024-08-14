@@ -17,10 +17,15 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import Bars from "@/components/ui/Bars";
+import { Button } from "./ui/button";
 /**
  * Array of navigation links with name and corresponding link.
  */
 const NavLinks = [
+  {
+    name: "About",
+    link: "/About",
+  },
   {
     name: "Exchange",
     link: "/Exchange",
@@ -29,13 +34,22 @@ const NavLinks = [
     name: "Mentorship",
     link: "/Mentorship",
   },
+  
+  {
+    name: "Signals",
+    link: "/Signal",
+  },
+  {
+    name: "Capital",
+    link: "/Management",
+  },
   {
     name: "Community",
     link: "/Community",
   },
   {
-    name: "Signal service",
-    link: "/Signal",
+    name: "Contact",
+    link: "/ContactUs",
   },
 ];
 /**
@@ -91,10 +105,28 @@ const Navbar = () => {
     };
   }, [toggleNav]);
   return (
-    <nav className=' font-poppins text-black bg-white py-3 fixed top-0 z-40 w-full px-3 md:px-10 md:py-5 flex justify-between   items-center max-w-[1620px]   '>
+    <header className=" bg-none max-w-[1620px] mx-auto absolute top-0 left-0 right-0 z-40 px-5 lg:px-10">
+      <nav className=' bg-none font-poppins text-white py-3 left-0 top-0   md:py-7 flex justify-between  items-center'>
+      {/* Logo */}
       <Link href='/'>
         <Logo />
       </Link>
+      {/* middle Links */}
+      <Links pathName={pathName} />
+      {/* auth_btns and language */}
+      <div className="">
+        <Button className="bg-foreground" size="sm">
+          Sign In
+        </Button>
+      </div>
+      {/* Link progressive bar */}
+      <ProgressBar
+        height='3px'
+        color='#ffff'
+        options={{ showSpinner: true }}
+        shallowRouting
+      />
+      {/* mobile nav toggle*/}
       <div
         onClick={() => setToggleNav((prev) => !prev)}
         className='bars absolute right-6 cursor-pointer z-30 md:hidden'
@@ -104,60 +136,12 @@ const Navbar = () => {
           check={toggleNav}
         />
       </div>
-
-      <Links pathName={pathName} />
-      <NavigationMenu className='hidden md:block '>
-        <NavigationMenuList>
-          <NavigationMenuItem className=''>
-            <NavigationMenuTrigger
-              className={`bg-none nav_links h-fit w-fit p-0 m-0 text-black hover:bg-none focus:bg-none ${
-                pathName ? "active" : ""
-              }`}
-            >
-              More
-            </NavigationMenuTrigger>
-            <NavigationMenuContent className='px-0 text-sm font-medium m-0  flex flex-col justify-center items-center min-w-[15rem]'>
-              {MoreNavLinks.map((link, index) => {
-                return (
-                  <Link href={link.link} legacyBehavior passHref>
-                    <NavigationMenuLink className='m-0 w-full p-2 hover:bg-lightforeground'>
-                      {link.name}
-                    </NavigationMenuLink>
-                  </Link>
-                );
-              })}
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-      </NavigationMenu>
-
-      <div
-        className=' more_options w-full bg-white  h-0 overflow-hidden   absolute z-20 top-[3.8rem] lg:top-[3.7rem]  
-       inset-0 transition-all ease-in-out '
-      >
-        <ul className='MoreNavLinks flex items-center justify-evenly gap-2 lg:gap-5 mt-7 mb-3 '>
-          {MoreNavLinks.map((link, index) => {
-            return (
-              <li
-                key={index}
-                className=' inset-0 nav_links  text-sm lg:text-base'
-              >
-                <Link href={link.link}>{link.name}</Link>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-      <ProgressBar
-        height='3px'
-        color='#464D09'
-        options={{ showSpinner: true }}
-        shallowRouting
-      />
       <AnimatePresence>
         {toggleNav && <MobileNav handleClick={setToggleNav} />}
       </AnimatePresence>
     </nav>
+    </header>
+    
   );
 };
 
@@ -232,15 +216,15 @@ const MobileNav = ({ handleClick }: any) => {
  */
 export const Logo = () => {
   return (
-    <div className='flex justify-center items-center w-fit gap-1 z-50'>
-      <div className='logo bg-background h-10 w-10 rounded-full flex justify-center items-center'>
+    <div className='flex  justify-center items-center w-fit gap-1 z-50'>
+      <div className='logo bg-foreground h-10 w-10 rounded-full flex justify-center items-center'>
         <svg
           width='20'
           height='20'
           viewBox='0 0 18 14'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
-          className='  '
+          className=' '
         >
           <path
             d='M10.8046 13.4684H9.43484V4.14225H0.109375V2.77246H10.8046V13.4684Z'
@@ -256,7 +240,7 @@ export const Logo = () => {
           />
         </svg>
       </div>
-      <h1 className=' text-black font-bold text-lg md:text-2xl '>TOPLINE</h1>
+      <h1 className=' text-white font-medium text-lg md:text-xl '>TOPLINE</h1>
     </div>
   );
 };
@@ -267,7 +251,7 @@ export const Logo = () => {
  */
 const Links = ({ pathName }: any) => {
   return (
-    <ul className='hidden md:flex gap-3 lg:gap-x-10  font-medium z-30'>
+    <ul className='hidden md:flex gap-3 lg:gap-x-10 text-sm z-30'>
       {NavLinks.map((link, index) => {
         return (
           <li
