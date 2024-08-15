@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 const Page = () => {
   return (
-    <section className='text-white my-10 mb-16 space-y-7 text-center'>
+    <section className='text-white my-10 mb-16 space-y-7 px-5 text-center'>
       <h1 className='font-bold text-3xl'>Contact Us</h1>
       <p className='font-light'>24/7 Customer support including weekends.</p>
 
