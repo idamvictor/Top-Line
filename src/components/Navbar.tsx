@@ -121,7 +121,7 @@ const Navbar = () => {
       </div>
       {/* Link progressive bar */}
       <ProgressBar
-        height='3px'
+        height='1.5px'
         color='#ffff'
         options={{ showSpinner: true }}
         shallowRouting

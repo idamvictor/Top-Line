@@ -136,7 +136,7 @@ const Reviews =()=>{
       <div className='Reviewscontainer flex flex-wrap gap-10 justify-center items-center'>
         <div className='h-60 w-60 rounded-full bg-white'></div>
         <div className='txt max-w-[700px] text-white space-y-5'>
-          <p className=' font-bold'>
+          <p className=' font-bold text-xl'>
             “Joining this platform has transformed my trading journey! The
             mentorship, real-time signals, and supportive community have boosted
             my confidence and profitability. Highly recommend for anyone serious

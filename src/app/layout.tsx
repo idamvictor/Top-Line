@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`relative ${poppins.variable} ${manrope.variable} ${inter.className}`}>
-        <main className="max-w-screen-2xl min-h-fit p-5  pt-[5rem] relative px-5 lg:px-10  mx-auto font-manrope">
+        <main className="max-w-screen-2xl min-h-fit   pt-[5rem] relative px-5 lg:px-10  mx-auto font-manrope">
            <Navbar/>
         {children}
         <Footer/>
