@@ -7,14 +7,14 @@ import Image from 'next/image';
 import { ArrowUp, Star, StarIcon, Stars } from 'lucide-react';
 const HomePage = () => {
   return (
-   <>
+   <section className='px-5 lg:px-10 '>
    <Hero/>
    <Market/>
    <WhatWeOffer/>
    <Reviews/>
    <Ratings/>
    <NewToCrypto/>
-   </>
+   </section>
   );
 }
 

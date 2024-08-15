@@ -5,6 +5,7 @@
  */
 import React from "react";
 import type { Metadata } from "next";
+import Community from "@/components/Community/Community";
 export const metadata: Metadata = {
   title: "TopLine Community",
   description: "A Community For Traders By Traders",
@@ -12,8 +13,8 @@ export const metadata: Metadata = {
 
 const Page = () => {
   return (
-    <section className='h-[95vh] md:h-[85vh] relative gap-y-8 bg-gray-800 w-screen community flex  items-center justify-center flex-col'>
-      {/* <Community /> */}
+    <section className='h-[95vh] md:h-[85vh] bg-black mx-auto relative gap-y-8  w-full community  flex  items-center justify-center flex-col'>
+       <Community /> 
     </section>
   );
 };
