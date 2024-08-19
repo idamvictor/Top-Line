@@ -1,10 +1,12 @@
+'use client'
 import { Button } from '@/components/ui/button';
 import Line from '@/components/ui/shared/Line'
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import BtcIcon from "@/../public/Icons/BtcIcon.svg"
 import ChartIcon from "@/../public/Icons/ChatsIcon.svg"
 import Image from 'next/image';
 import { ArrowUp, Star, StarIcon, Stars } from 'lucide-react';
+import { allWidgetsPropertise } from '@/lib/data';
 const HomePage = () => {
   return (
    <section className='px-5 lg:px-10 '>
@@ -54,10 +56,56 @@ const Hero = () => {
 };
 
 const Market = () => {
-  const Box = () => {
+  interface widgetProps{
+    symbol:string,
+    width:string,
+    height:string,
+    locale:string,
+    dateRange:string,
+    colorTheme:string,
+    isTransparent: Boolean,
+    autosize: Boolean,
+    largeChartUrl?: string,
+  }
+
+interface boxProps{
+  widgetDetails: widgetProps
+}
+  const Box: React.FC<boxProps> = ( {widgetDetails }) => {
+    const TradingViewWidget: React.FC = () => {
+      const containerRef = useRef<HTMLDivElement>(null);
+
+      useEffect(() => {
+    console.log(widgetDetails)
+
+        if (
+          containerRef.current &&
+          containerRef.current.children.length === 0 && widgetDetails
+        ) {
+          const script = document.createElement("script");
+          script.type = "text/javascript";
+          script.src =
+            "https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js";
+          script.async = true;
+          script.innerHTML = JSON.stringify(widgetDetails)
+
+          containerRef.current.appendChild(script);
+        }
+      }, []);
+
+      return (
+        <div className='tradingview-widget-container'>
+          <div
+            className='tradingview-widget-container__widget'
+            ref={containerRef}
+          ></div>
+        </div>
+      );
+    };
+
     return (
-      <div className='box backdrop-blur-3xl bg-[#aa8fc010] bg-opacity-10 shadow shadow-[#72336c] rounded-xl p-5'>
-        <div className='top flex pb-5 border-b justify-between items-center gap-7 border-b-slate-400 text-slate-300'>
+      <div className='box backdrop-blur-3xl bg-[#aa8fc010] bg-opacity-10 shadow shadow-[#72336c] rounded-xl p-5 min-w-64 md:w-72 lg:w-64 2xl:w-80 min-h-[220px]'>
+        {/* <div className='top flex pb-5 border-b justify-between items-center gap-7 border-b-slate-400 text-slate-300'>
           <Image src={BtcIcon} alt='btc' width={43} height={43} />
           <p>BTC</p>
 
@@ -75,7 +123,9 @@ const Market = () => {
           </p>
 
           <Image src={ChartIcon} alt='btc' />
-        </div>
+        </div> */}
+
+        <TradingViewWidget />
       </div>
     );
   };
@@ -84,11 +134,8 @@ const Market = () => {
       <h2 className='text-slate-300 font-medium text-2xl my-5 ml-5'>
         Market Trend
       </h2>
-      <div className='trend_contaoner flex flex-wrap justify-evenly gap-y-5'>
-        <Box />
-        <Box />
-        <Box />
-        <Box />
+      <div className='trend_contaoner flex flex-wrap justify-evenly gap-5'>
+        {allWidgetsPropertise.map((props:widgetProps ,index)=> <Box key={index} widgetDetails={props} />)}
       </div>
     </section>
   );
@@ -97,8 +144,8 @@ const Market = () => {
 const WhatWeOffer = () => {
   const LongBox = () => {
     return (
-      <div className='LongBpx rounded overflow-hidden text-white w-72 shadow-xl shadow-[#382047]'>
-        <div className='w-72 h-56 bg-white'></div>
+      <div className='LongBpx rounded overflow-hidden text-white w-[16rem] shadow-xl shadow-[#382047]'>
+        <div className='w-[16rem] h-56 bg-white'></div>
         <div className='text space-y-2 py-3 pl-2'>
           <p className='text-lg'>Personalised coaching</p>
           <p className='font-light text-slate-400 h-36'>
