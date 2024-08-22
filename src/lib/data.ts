@@ -2,7 +2,7 @@ export const allWidgetsPropertise=[
     {
       symbol: "BINANCE:BTCUSDT",
       width: "100%",
-      height: "220",
+      height: "187",
       locale: "en",
       dateRange: "12M",
       colorTheme: "dark",
@@ -13,7 +13,7 @@ export const allWidgetsPropertise=[
     {
       symbol: "BINANCE:ETHUSDT",
       width: "100%",
-      height: "220",
+      height: "187",
       locale: "en",
       dateRange: "12M",
       colorTheme: "dark",
@@ -24,7 +24,7 @@ export const allWidgetsPropertise=[
     {
       symbol: "BINANCE:BNBUSDT",
       width: "100%",
-      height: "220",
+      height: "187",
       locale: "en",
       dateRange: "12M",
       colorTheme: "dark",
@@ -35,7 +35,7 @@ export const allWidgetsPropertise=[
     {
       symbol: "CRYPTOCAP:USDT",
       width: "100%",
-      height: "220",
+      height: "187",
       locale: "en",
       dateRange: "12M",
       colorTheme: "dark",

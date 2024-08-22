@@ -182,3 +182,10 @@
   -o-transform: translateX(-50px);
   opacity: 0;
 }
+
+/* custom box shadow */
+.box_shadowOne{
+  box-shadow: 58px 58px 36px -32px rgb(255, 255, 255);
+-webkit-box-shadow: 58px 58px 36px -32px rgb(255, 255, 255);
+-moz-box-shadow: 58px 58px 36px -32px rgb(255, 255, 255);
+}

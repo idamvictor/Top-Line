@@ -104,27 +104,7 @@ interface boxProps{
     };
 
     return (
-      <div className='box backdrop-blur-3xl bg-[#aa8fc010] bg-opacity-10 shadow shadow-[#72336c] rounded-xl p-5 min-w-64 md:w-72 lg:w-64 2xl:w-80 min-h-[220px]'>
-        {/* <div className='top flex pb-5 border-b justify-between items-center gap-7 border-b-slate-400 text-slate-300'>
-          <Image src={BtcIcon} alt='btc' width={43} height={43} />
-          <p>BTC</p>
-
-          <p className='flex justify-between items-center gap-3'>
-            <span className=' text-xs p-1 rounded-md font-bold text-center bg-slate-300 text-black shadow-sm'>
-              BITCOIN
-            </span>
-            <ArrowUp className='bg-slate-700 bg-opacity-55 rotate-45 w-10 h-10 p-2 rounded-full' />
-          </p>
-        </div>
-        <div className='bottom flex justify-between items-center pt-5'>
-          <p className='text-xl font-bold text-slate-300 flex flex-col  '>
-            $56,623.54
-            <span className=' font-normal text-lg mt-4'>1.41%</span>
-          </p>
-
-          <Image src={ChartIcon} alt='btc' />
-        </div> */}
-
+      <div className='box backdrop-blur-3xl max-h-[187px] bg-[#aa8fc010] bg-opacity-10 shadow shadow-[#72336c] rounded-xl p-5 min-w-64 md:w-72 lg:w-64 2xl:w-80 min-h-[220px]'>
         <TradingViewWidget />
       </div>
     );
@@ -144,7 +124,7 @@ interface boxProps{
 const WhatWeOffer = () => {
   const LongBox = () => {
     return (
-      <div className='LongBpx rounded overflow-hidden text-white w-[16rem] shadow-xl shadow-[#382047]'>
+      <div className='LongBpx rounded overflow-hidden text-white w-[16rem] shadow-xl max-h-[465px] shadow-[#382047]'>
         <div className='w-[16rem] h-56 bg-white'></div>
         <div className='text space-y-2 py-3 pl-2'>
           <p className='text-lg'>Personalised coaching</p>
