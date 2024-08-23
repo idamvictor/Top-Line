@@ -185,7 +185,5 @@
 
 /* custom box shadow */
 .box_shadowOne{
-  box-shadow: 58px 58px 36px -32px rgb(255, 255, 255);
--webkit-box-shadow: 58px 58px 36px -32px rgb(255, 255, 255);
--moz-box-shadow: 58px 58px 36px -32px rgb(255, 255, 255);
+  box-shadow: 0px 10px 50px -15px #beb0d0;
 }

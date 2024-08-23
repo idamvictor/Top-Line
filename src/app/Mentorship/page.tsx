@@ -52,7 +52,7 @@ const Hero = () => {
 
         <p className='max-w-[500px] font-light text-gray-400 '>
           Our Mentorship Service is designed to guide you through the
-          complexities of the financial markets. Whether you're a beginner
+          complexities of the financial markets. Whether {"you're"} a beginner
           looking to learn the basics or an experienced trader seeking advanced
           strategies, our mentorship program offers tailored courses across
           various financial sectors. Gain insights, develop skills, and achieve
@@ -72,7 +72,7 @@ const ServicesOffered = () => {
         <Line />
         <p className='text-sm text-gray-400 font-light pt-3'>
           Unlock your full trading potential with our comprehensive Mentorship
-          Services. Whether you're new to the financial markets or an
+          Services. Whether {"you're"} new to the financial markets or an
           experienced trader looking to sharpen your skills, our mentorship
           programs offer personalized guidance and expert insights across
           various asset classes.
@@ -108,6 +108,7 @@ const ServicesOffered = () => {
           </p>
         </div>
       </main>
+
       <main className='cryptoMembership max-w-[1400px] mx-auto max-md:flex-col-reverse flex flex-row-reverse justify-between gap-10 my-20'>
         <div className='text flex-col flex-1 flex justify-between  gap-10'>
           <p className='max-w-[500px] md:text-base font-light '>
@@ -129,9 +130,9 @@ const ServicesOffered = () => {
             Join Us Today
           </Button>
         </div>
-        <div className='image pr-5 md:pr-16 relative flex-1 h-[420px]'>
+        <div className='image pl-5 md:pl-16 relative flex-1 h-[420px]'>
           <div className='imageWrapper bg-white  w-full h-[420px] '></div>
-          <p className='bg-background text-base sm:text-2xl p-2 md:p-5 shadow-purple-200 shadow absolute -bottom-5 md:-bottom-5 -right-1 md:right-0  w-fit rounded'>
+          <p className='bg-background text-base sm:text-2xl p-2 md:p-5 shadow-purple-200 shadow absolute -bottom-5 md:-bottom-5 -left-1 md:left-0  w-fit rounded'>
             Crypto Mentorship
             <Line />
           </p>
