@@ -37,11 +37,11 @@ const NavLinks = [
   
   {
     name: "Signals",
-    link: "/Signal",
+    link: "/Signals",
   },
   {
     name: "Capital",
-    link: "/Management",
+    link: "/Capital",
   },
   {
     name: "Community",
