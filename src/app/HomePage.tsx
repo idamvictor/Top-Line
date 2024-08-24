@@ -28,13 +28,13 @@ const Hero = () => {
   return (
     <section className='Hero relative text-white flex w-full justify-center items-center min-h-fit 2xl:max-h-[700px]  md:h-[90vh]'>
       <main className=' flex w-full justify-between md:h-[70%]  max-md:flex-col md:max-h-[500px]  gap-y-5 '>
-        <div className='flex-1 flex gap-5  justify-center items-center  p-4'>
-          <div className='text_cont max-w-[700px] space-y-7'>
+        <div className='flex-1 flex gap-5  justify-center  p-4'>
+          <div className='text_cont max-w-[700px] space-y-7 max-md:mt-10 '>
             <p className=' font-light text-base md:text-xs lg:text-base  '>
               Topline Trading
               <Line />
             </p>
-            <h1 className='text-5xl font-medium'>
+            <h1 className=' text-4xl md:text-5xl font-medium leading-tight'>
               Your Ultimate Financial Markets Hub
             </h1>
             <p className=' text-slate-400 text-base md:text-xs lg:text-base '>

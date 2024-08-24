@@ -94,7 +94,7 @@ const Navbar = () => {
     };
   }, [toggleNav]);
   return (
-    <header id='nav' className=' bg-none max-w-[1620px] mx-auto absolute top-0 left-0 right-0 z-40 px-5 lg:px-10'>
+    <header id='nav' className=' bg-none max-w-[1620px] mx-auto absolute top-0 left-0 right-0 z-40 px-5 lg:px-10 my-2'>
       <nav className='  bg-none font-poppins font-light text-white py-3 left-0 top-0   md:py-7 flex justify-between  items-center'>
         {/* Logo */}
         <Link href='/'>
