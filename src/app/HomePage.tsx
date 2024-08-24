@@ -34,7 +34,7 @@ const Hero = () => {
               Topline Trading
               <Line />
             </p>
-            <h1 className=' text-4xl lg:text-4xl xl:text-5xl font-light'>
+            <h1 className='text-5xl font-medium'>
               Your Ultimate Financial Markets Hub
             </h1>
             <p className=' text-slate-400 text-base md:text-xs lg:text-base '>
@@ -146,7 +146,7 @@ const WhatWeOffer = () => {
   };
   return (
     <section className='What_We_offer text-slate-300 my-10 mt-20'>
-      <h3 className=' text-3xl flex-col'>
+      <h3 className=' text-3xl flex-col font-medium'>
         What We Offer
         <Line />
       </h3>
