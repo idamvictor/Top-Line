@@ -8,7 +8,7 @@ import { FaBell } from "react-icons/fa";
 
 const Page = () => {
   return (
-    <section className='px-5 lg:px-10'>
+    <section className='px-5 lg:px-10  '>
       <Hero />
       <GetSatrted />
       <Benefit />

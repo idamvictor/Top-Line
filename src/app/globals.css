@@ -89,6 +89,7 @@
  }
 /* Heros background Image */
 .Hero::before{ 
+  @apply max-md:hidden;
   content: "";
   background-image: url("../../public/Hero.svg");
   background-attachment: scroll;
