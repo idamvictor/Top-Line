@@ -66,7 +66,7 @@ const Hero = () => {
 
 const ServicesOffered = () => {
   return (
-    <section className='my-10 '>
+    <section className='my-10 space-y-16 '>
       <h2 className='text-3xl font-medium'>
         Mentorship Services Offered
         <Line />
@@ -501,14 +501,14 @@ const CourseMentors=()=>{
           Meet our expirienced mentors who are here to guide you on your financial journey.
         </p>
       </h3>
-      <div className='Reviewscontainer my-10 flex flex-wrap p-10 bg-opacity-5 gap-10 bg-[#aa8fc00b] justify-center items-center'>
-        <div className='h-60 w-60 rounded-full bg-white'></div>
+      <div className='Reviewscontainer my-10 flex flex-wrap p-5 md:p-10 bg-opacity-5 gap-5 md:gap-10 bg-[#aa8fc00b] justify-center items-center'>
+        <div className='h-44 w-44 md:h-52 md:w-52 rounded-full bg-white'></div>
         <div className='txt max-w-[700px] text-white space-y-5'>
         <p className=''>
           <Stars className=' text-orange-500'/>
 
           </p>
-          <p className=' font-bold text-xl'>
+          <p className=' font-bold md:text-lg'>
             “Joining this platform has transformed my trading journey! The
             mentorship, real-time signals, and supportive community have boosted
             my confidence and profitability. Highly recommend for anyone serious

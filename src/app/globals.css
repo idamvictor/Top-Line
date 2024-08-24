@@ -106,6 +106,24 @@
   background-blend-mode: color-burn;
   
  }
+/* Heros background Image */
+.signalHero::before{ 
+  /* @apply max-md:hidden; */
+  content: "";
+  background-image: url("../../public/signalHero.png");
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode:multiply;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0.4;
+  z-index: 1;
+  
+ }
 
 /* styles for custom bar */
 /* Hide the default checkbox */

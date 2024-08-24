@@ -4,8 +4,8 @@ import React from "react";
 
 const Page = () => {
   return (
-    <section className='text-white max-w-[1620px] mx-auto px-5 md:px-10'>
-      <main className='my-10 space-y-8'>
+    <section className='text-white max-w-[1620px] mx-auto px-5 md:px-10 space-y-10'>
+      <main className='mt-10 space-y-8'>
         <h1 className='font-bold text-3xl text-center'>About Us</h1>
         <p className=' text-center font-light text-base text-slate-300'>
           Welcome to Topline, your premier destination for financial market
@@ -16,8 +16,8 @@ const Page = () => {
           investing, and capital management with confidence.
         </p>
         <div className='whitbg w-full h-80 bg-white '></div>
-        <div className='txt_btn flex justify-between items-start  pt-10  gap-7'>
-          <p className='text-2xl lg:text-3xl lg:max-w-[500px] font-bold max-w-[350px]'>
+        <div className='txt_btn flex max-md:flex-col justify-between items-start  gap-7'>
+          <p className='text-2xl lg:text-3xl lg:max-w-[500px] font-bold md:max-w-[350px]'>
             We offer a wide range of services tailored to meet your needs,
             whether you’re a beginner or a seasoned trader.
           </p>
@@ -35,7 +35,7 @@ const Page = () => {
       </main>
       <OurTeam />
 
-      <section className=' flex justify-between items-center gap-y-10 gap-x-5 py-5 flex-wrap'>
+      <section className=' flex justify-between items-center gap-y-10 gap-x-5  flex-wrap pb-5'>
         <h3 className=' text-xl font-medium max-w-[500px] gap-1 flex-col flex justify-start'>
           Ready to Unlock Your Trading Potential?
           <span className=' font-light text-slate-300 text-sm'>
@@ -75,7 +75,7 @@ const OurTeam = () => {
         Build your next consultancy website within few minutes.
       </p>
 
-      <div className='teams_wrapper flex-wrap gap-5	 flex justify-between items-center my-10 '>
+      <div className='teams_wrapper flex-wrap gap-5 justify-center flex lg:justify-between items-center my-10 '>
         <Box color='#E6474C' />
         <Box color='#00B2A2' />
         <Box color='#D0D0F0' />

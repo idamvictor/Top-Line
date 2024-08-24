@@ -8,38 +8,37 @@ import Qr from '@/../public/mockQr.svg'
 
 const Page = () => {
   return (
-    <section className='px-5 lg:px-10'>
-        <Hero/>
-        <GetSatrted/>
-        <Benefit/>
-        <QrContainer/>
+    <section className=''>
+      <Hero />
+      <section className='px-5 lg:px-10 md:space-y-28 md:pt-5'>
+        <GetSatrted />
+        <Benefit />
+        <QrContainer />
+      </section>
     </section>
-  )
+  );
 }
 const Hero = () => {
     const text =
       "Our Signal Service is designed to give you a competitive edge in the financial markets by providing real-time, actionable trading signals. Whether you’re trading Forex, cryptocurrencies, stocks, or other financial instruments, our expert analysts continuously monitor the markets to deliver precise and timely signals. These signals include entry and exit points, stop-loss levels, and potential profit targets, allowing you to make informed decisions quickly and efficiently.";
     return (
-      <section className='px-5 lg:px-10 relative text-white flex w-full justify-center items-center min-h-fit 2xl:max-h-[700px]  h-[90vh]'>
-        <main className=' flex w-full justify-between h-[70%]  max-md:flex-col max-h-[500px]  '>
+      <section className=' signalHero bg-background max-md:pt-3 px-5 lg:px-10 relative text-white flex w-full justify-center items-center min-h-fit h-[90vh] 2xl:max-h-[600px]  md:h-[80vh] md:max-h-[600px]'>
+        <main className=' z-10 flex w-full justify-between md:h-[70%] gap-y-5 max-md:flex-col md:max-h-[500px]  '>
           <div className='flex-1 flex gap-5 justify-between  items-start  p-4'>
-            <div className='text_cont max-w-[600px] md:max-w-[400px] 2xl:max-w-[700px] space-y-7'>
-              <h1 className=' text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl  font-light'>
+            <div className='text_cont  space-y-7'>
+              <h1 className=' text-2xl md:text-4xl lg:text-5xl xl:text-6xl  font-light'>
               Topline Trading Signals
               </h1>
-              <p className=' text-slate-400 text-base md:text-xs lg:text-base 2xl:text-lg '>
+              <p className=' text-slate-300 text-base md:text-base 2xl:text-lg max-w-[600px] '>
                 { text }
               </p>
               <Button
-                className='bg-foreground text-slate-100 font-light'
+                className='bg-foreground text-slate-100 font-light text-lg'
                 size='lg'
               >
                 Join Now
               </Button>
             </div>
-          </div>
-          <div className='flex-1 flex justify-start  items-center '>
-            <div className='image h-full w-full max-w-[700px] rounded-xl max-h-[700px]  bg-gray-800'></div>
           </div>
         </main>
       </section>
@@ -60,12 +59,12 @@ const Hero = () => {
       );
     };
     return (
-      <section className='What_We_offer text-slate-300 my-20'>
+      <section className='What_We_offer text-white my-12'>
         <h3 className=' text-3xl flex-col'>
         Get Started with Our Signal Service
           <Line />
         </h3>
-        <p className='my-5 font-light text-base '>
+        <p className='my-5 font-light text-base text-slate-300'>
         Ready to elevate your trading game? Follow these simple steps to start receiving our signals directly to your preferred communication platform
         </p>
         <div className='Wrapper flex flex-wrap gap-y-5 justify-evenly items-center'>
@@ -110,16 +109,16 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className='flex-1'>
-            <ol className=' max-w-[600px] mx-auto flex flex-col justify-between h-full min-h-[450px]'>
+          <div className='flex-1 min-h-fit'>
+            <ol className=' max-w-[600px] mx-auto gap-5 flex flex-col justify-between h-full min-h-[450px]'>
               <li>
                 <div className=' flex gap-3 justify-start items-start'>
-                  <p className='bg-foreground rounded-full p-2 px-5 text-xl flex items-center justify-center text-center '>
+                  <p className='bg-foreground rounded-full p-1 px-3 md:p-1 md:px-4 text-sm md:text-lg flex items-center justify-center text-center '>
                     1
                   </p>
-                  <h4 className=' text-xl font-bold'>
+                  <h4 className=' text-lg md:text-xl font-bold'>
                     Real-Time Alerts <br />
-                    <span className='text-slate-400 text-base font-normal'>
+                    <span className='text-slate-400 text-sm md:text-base font-normal'>
                       Receive signals as market conditions change, ensuring you
                       never miss an opportunity.
                     </span>
@@ -128,12 +127,12 @@ const Hero = () => {
               </li>
               <li>
                 <div className=' flex gap-3 justify-start items-start'>
-                  <p className='bg-foreground rounded-full p-2 px-5 text-xl flex items-center justify-center text-center '>
+                  <p className='bg-foreground rounded-full p-1 px-3 md:p-1 md:px-4 text-sm md:text-lg flex items-center justify-center text-center '>
                     1
                   </p>
-                  <h4 className=' text-xl font-bold'>
+                  <h4 className=' text-lg md:text-xl font-bold'>
                     Real-Time Alerts <br />
-                    <span className='text-slate-400 text-base font-normal'>
+                    <span className='text-slate-400 text-sm md:text-base font-normal'>
                       Receive signals as market conditions change, ensuring you
                       never miss an opportunity.
                     </span>
@@ -142,12 +141,12 @@ const Hero = () => {
               </li>
               <li>
                 <div className=' flex gap-3 justify-start items-start'>
-                  <p className='bg-foreground rounded-full p-2 px-5 text-xl flex items-center justify-center text-center '>
+                  <p className='bg-foreground rounded-full p-1 px-3 md:p-1 md:px-4 text-sm md:text-lg flex items-center justify-center text-center '>
                     1
                   </p>
-                  <h4 className=' text-xl font-bold'>
+                  <h4 className=' text-lg md:text-xl font-bold'>
                     Real-Time Alerts <br />
-                    <span className='text-slate-400 text-base font-normal'>
+                    <span className='text-slate-400 text-sm md:text-base font-normal'>
                       Receive signals as market conditions change, ensuring you
                       never miss an opportunity.
                     </span>
@@ -156,12 +155,12 @@ const Hero = () => {
               </li>
               <li>
                 <div className=' flex gap-3 justify-start items-start'>
-                  <p className='bg-foreground rounded-full p-2 px-5 text-xl flex items-center justify-center text-center '>
+                  <p className='bg-foreground rounded-full p-1 px-3 md:p-1 md:px-4 text-sm md:text-lg flex items-center justify-center text-center '>
                     1
                   </p>
-                  <h4 className=' text-xl font-bold'>
+                  <h4 className=' text-lg md:text-xl font-bold'>
                     Real-Time Alerts <br />
-                    <span className='text-slate-400 text-base font-normal'>
+                    <span className='text-slate-400 text-sm md:text-base font-normal'>
                       Receive signals as market conditions change, ensuring you
                       never miss an opportunity.
                     </span>
@@ -177,8 +176,8 @@ const Hero = () => {
  const QrContainer=()=>{
     return (
       <section className='flex max-md:flex-col justify-between items-center gap-10 py-10'>
-        <div className='Qr w-full mx-auto px-5 max-w-[340px]'>
-          <Image src={Qr} alt='' className='object-fill w-full h-[340px]' />
+        <div className='Qr w-full mx-auto px-5 max-w-[260px]'>
+          <Image src={Qr} alt='' className='object-fill w-full h-[260px]' />
           <p className='flex w-full px-2 pb-2  text-white gap-2 overflow-x-hidden text-lg'>
             <Link />
             Https://link.to_the_client.dm
@@ -186,8 +185,8 @@ const Hero = () => {
           <Button className='w-full text-white'>Join Now</Button>
         </div>
 
-        <div className='txt w-full h-full p-10 rounded-lg bg-[#aa8fc010] bg-opacity-55'>
-          <p className='max-w-[700px] mx-auto text-4xl text-white font-light'>
+        <div className='txt w-full h-full p-5 md:p-10 rounded-lg bg-[#aa8fc010] bg-opacity-55'>
+          <p className='max-w-[700px] mx-auto text-2xl md:text-4xl text-white font-light'>
             By clicking the link or scanning the QR code, you’ll be redirected
             to our client DM system where you can get started immediately.
           </p>

@@ -95,7 +95,7 @@ const Navbar = () => {
   }, [toggleNav]);
   return (
     <header id='nav' className=' bg-none max-w-[1620px] mx-auto absolute top-0 left-0 right-0 z-40 px-5 lg:px-10'>
-      <nav className='  bg-none font-poppins font-medium text-white py-3 left-0 top-0   md:py-7 flex justify-between  items-center'>
+      <nav className='  bg-none font-poppins font-light text-white py-3 left-0 top-0   md:py-7 flex justify-between  items-center'>
         {/* Logo */}
         <Link href='/'>
           <Logo />
@@ -174,7 +174,7 @@ export const Logo = () => {
           />
         </svg>
       </div>
-      <h1 className=' text-white font-semibold text-base md:text-base '>
+      <h1 className=' text-white font-medium text-sm '>
         TOPLINE <br />
         Trading</h1>
     </div>
@@ -187,7 +187,7 @@ export const Logo = () => {
  */
 const Links = ({ pathName }: any) => {
   return (
-    <ul className='hidden md:flex gap-3 lg:gap-x-10 text-base z-30'>
+    <ul className='hidden md:flex gap-3 lg:gap-x-10 text-sm z-30'>
       {NavLinks.map((link, index) => {
         return (
           <li

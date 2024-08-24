@@ -3,7 +3,7 @@ import { Logo } from './Navbar'
 
 const Footer = () => {
   return (
-    <footer className='font-poppins relative text-white py-16  grid gap-y-10 md:grid-cols-3 gap-x-20 px-5 lg:px-16 '>
+    <footer className='font-poppins relative text-white py-16  grid gap-y-10 md:grid-cols-3 gap-x-20 px-5 lg:px-16 border-t border-purple-950 '>
       <div className='first-box space-y-7 text-sm font-light'>
         <div className='flex justify-center items-center w-fit gap-1'>
           <Logo />
