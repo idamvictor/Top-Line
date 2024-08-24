@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const Page = () => {
   return (
-    <section className='h-[95vh] md:h-[85vh] bg-black mx-auto relative gap-y-8  w-full community  flex  items-center justify-center flex-col'>
+    <section className='h-[95vh] md:h-[85vh] bg-black mx-auto relative gap-y-8  w-full community mt-5 flex  items-center justify-center flex-col'>
        <Community /> 
     </section>
   );

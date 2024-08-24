@@ -79,9 +79,9 @@ const ServicesOffered = () => {
         </p>
       </h2>
 
-      <main className='forexMembership max-w-[1400px] mx-auto max-md:flex-col flex justify-between gap-10 my-10'>
+      <main className='forexMembership max-w-[1400px] mx-auto max-md:flex-col flex justify-between gap-10 gap-y-14 my-10'>
         <div className='text flex-col flex-1 flex justify-between  gap-10'>
-          <p className='max-w-[500px] text-base font-light '>
+          <p className='md:max-w-[500px] text-base font-semibold text-slate-300'>
             Mastering the art of Forex trading with our specialized mentorship
             programs will empower you with the skills needed to excel in the
             dynamic world of currency markets. Our expert mentors will guide you
@@ -111,7 +111,7 @@ const ServicesOffered = () => {
 
       <main className='cryptoMembership max-w-[1400px] mx-auto max-md:flex-col-reverse flex flex-row-reverse justify-between gap-10 my-20'>
         <div className='text flex-col flex-1 flex justify-between  gap-10'>
-          <p className='max-w-[500px] md:text-base font-light '>
+          <p className='md:max-w-[500px] md:text-base font-semibold text-slate-300'>
             Mastering the art of Forex trading with our specialized mentorship
             programs will empower you with the skills needed to excel in the
             dynamic world of currency markets. Our expert mentors will guide you
@@ -140,7 +140,7 @@ const ServicesOffered = () => {
       </main>
       <main className='forexMembership max-w-[1400px] mx-auto max-md:flex-col flex justify-between gap-10 my-10'>
         <div className='text flex-col flex-1 flex justify-between  gap-10'>
-          <p className='max-w-[500px] md:text-base font-light '>
+          <p className='md:max-w-[500px] md:text-base font-semibold text-slate-300'>
             Mastering the art of Forex trading with our specialized mentorship
             programs will empower you with the skills needed to excel in the
             dynamic world of currency markets. Our expert mentors will guide you

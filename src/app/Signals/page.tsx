@@ -1,7 +1,10 @@
 import { Button } from '@/components/ui/button';
 import Line from '@/components/ui/shared/Line';
+import { Link } from 'lucide-react';
+import Image from 'next/image';
 import React from 'react'
 import { FaBell } from 'react-icons/fa';
+import Qr from '@/../public/mockQr.svg'
 
 const Page = () => {
   return (
@@ -9,6 +12,7 @@ const Page = () => {
         <Hero/>
         <GetSatrted/>
         <Benefit/>
+        <QrContainer/>
     </section>
   )
 }
@@ -81,10 +85,10 @@ const Hero = () => {
           <Line />
         </h3>
         <main className=' flex justify-between max-md:flex-col gap-10 my-10'>
-          <div className='flex-1 relative flex justify-center items-center min-h-[500px] '>
-            <div className='imageWrapper  w-[440px] min-h-[500px] rounded relative'>
-              <div className='relative mg_container bg-gray-500  w-[405px] h-[471px] rounded z-10'></div>
-              <div className='imageWrapper absolute bottom-0 right-0 bg-gray-300 bg-opacity-10 z-5  w-[405px] h-[461px] rounded '></div>
+          <div className='flex-1 relative flex justify-center items-center min-h-[500px]'>
+            <div className='imageWrapper w-full  max-w-[440px] min-h-[500px] rounded relative'>
+              <div className='relative mg_container max-sm:mx-auto bg-gray-500 w-full max-w-[280px]  sm:max-w-[405px] h-[471px] rounded z-10'></div>
+              <div className='imageWrapper absolute bottom-0 right-0 max-sm:mx-auto bg-gray-300 bg-opacity-10 z-5 sm:max-w-[405px]  w-full  max-w-[280px] h-[461px] rounded '></div>
             </div>
             <div className="notification1 absolute top-20 right-0 z-30 bg-[#160622] flex justify-center items-center p-2 gap-3 rounded-md">
               <FaBell className='bg-[#68D585] text-3xl text-slate-800  p-[5px] rounded-full'/>
@@ -167,6 +171,27 @@ const Hero = () => {
             </ol>
           </div>
         </main>
+      </section>
+    );
+  }
+ const QrContainer=()=>{
+    return (
+      <section className='flex max-md:flex-col justify-between items-center gap-10 py-10'>
+        <div className='Qr w-full mx-auto px-5 max-w-[340px]'>
+          <Image src={Qr} alt='' className='object-fill w-full h-[340px]' />
+          <p className='flex w-full px-2 pb-2  text-white gap-2 overflow-x-hidden text-lg'>
+            <Link />
+            Https://link.to_the_client.dm
+          </p>
+          <Button className='w-full text-white'>Join Now</Button>
+        </div>
+
+        <div className='txt w-full h-full p-10 rounded-lg bg-[#aa8fc010] bg-opacity-55'>
+          <p className='max-w-[700px] mx-auto text-4xl text-white font-light'>
+            By clicking the link or scanning the QR code, you’ll be redirected
+            to our client DM system where you can get started immediately.
+          </p>
+        </div>
       </section>
     );
   }

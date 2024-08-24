@@ -2,10 +2,7 @@
 import { Button } from '@/components/ui/button';
 import Line from '@/components/ui/shared/Line'
 import React, { useEffect, useRef } from 'react'
-import BtcIcon from "@/../public/Icons/BtcIcon.svg"
-import ChartIcon from "@/../public/Icons/ChatsIcon.svg"
-import Image from 'next/image';
-import { ArrowUp, Star, StarIcon, Stars } from 'lucide-react';
+import { Stars } from 'lucide-react';
 import { allWidgetsPropertise } from '@/lib/data';
 const HomePage = () => {
   return (
