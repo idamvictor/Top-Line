@@ -13,12 +13,11 @@ const HomePage = () => {
     });
   });
   return (
-    <section className='px-5 lg:px-10 max-md:pt-5 '>
+    <section className='px-5 lg:px-10 max-md:pt-5 space-y-20 pb-10'>
       <Hero />
       <Market />
       <WhatWeOffer />
       <Reviews />
-      <Ratings />
       <NewToCrypto />
     </section>
   );
@@ -115,10 +114,11 @@ const Market = () => {
     );
   };
   return (
-    <section className='Market max-md:pt-10 h-fit '>
-      <h2 className='text-slate-300 font-medium text-2xl my-5 ml-5'>
+    <section className='Market max-md:pt-10 h-fit  text-slate-300 my-10 mt-20'>
+       <h3 className=' text-3xl flex-col font-medium pb-10'>
         Market Trend
-      </h2>
+        <Line />
+      </h3>
       <div className='trend_contaoner flex flex-wrap justify-evenly gap-5'>
         {allWidgetsPropertise.map((props: widgetProps, index) => (
           <Box key={index} widgetDetails={props} />
@@ -130,8 +130,8 @@ const Market = () => {
 const WhatWeOffer = () => {
   const LongBox = () => {
     return (
-      <div className='LongBpx rounded overflow-hidden text-white w-[19rem] shadow-xl max-h-[500px] shadow-[#382047]'>
-        <div className='w-[19rem] h-56 bg-white'></div>
+      <div className='LongBpx rounded-lg overflow-hidden text-white w-full md:max-w-[19rem] shadow-xl max-h-[500px] shadow-[#382047]'>
+        <div className='w-full md:max-w-[19rem] h-56 bg-white'></div>
         <div className='text space-y-2 py-3 pl-2'>
           <p className='text-lg'>Personalised coaching</p>
           <p className='font-light text-slate-400 h-36'>
@@ -146,15 +146,15 @@ const WhatWeOffer = () => {
   };
   return (
     <section className='What_We_offer text-slate-300 my-10 mt-20'>
-      <h3 className=' text-3xl flex-col font-medium'>
+      <h3 className=' text-3xl flex-col font-medium '>
         What We Offer
         <Line />
       </h3>
-      <p className='my-5 font-light text-base '>
+      <p className='my-5 mb-10 font-light text-base '>
         Get access to exclusive trading insights, webinars and mentorship from
         our experienced trader
       </p>
-      <div className='Wrapper flex max-md:flex-wrap gap-5 justify-evenly items-center grid-flow-col'>
+      <div className='Wrapper flex max-md:flex-wrap gap-5 gap-y-10 justify-evenly items-center grid-flow-col'>
         <LongBox />
         <LongBox />
         <LongBox />
@@ -165,8 +165,8 @@ const WhatWeOffer = () => {
 };
 const Reviews = () => {
   return (
-    <section className='  pt-10 pb-20 border-b border-b-slate-300 '>
-      <div className='Reviewscontainer my-10 flex flex-wrap p-5 md:p-10 bg-opacity-5 gap-5 md:gap-10 bg-[#aa8fc00b] justify-center items-center'>
+    <section className=' py-5 '>
+      <div className='Reviewscontainer my-10 flex flex-wrap p-5 md:p-10 bg-opacity-5 gap-5 md:gap-10 bg-[#aa8fc00b] justify-center items-center '>
         <div className='h-44 w-44 md:h-52 md:w-52 rounded-full bg-white'></div>
         <div className='txt max-w-[700px] text-white space-y-5'>
           <p className=''></p>
@@ -186,7 +186,9 @@ const Reviews = () => {
           
           </p>
         </div>
+        
       </div>
+      <Ratings />
       
     </section>
   );
@@ -194,7 +196,7 @@ const Reviews = () => {
 const Ratings = () => {
   const Rating = () => {
     return (
-      <div className='rating w-80 text-center py-5 space-y-3'>
+      <div className='rating w-80 text-center  space-y-3'>
         <h4 className='font-bold text-3xl'>200+</h4>
         <p className='font-light text-sm'>
           Active members engage daily, sharing knowledge and collaborating on
@@ -204,7 +206,7 @@ const Ratings = () => {
     );
   };
   return (
-    <section className='text-white '>
+    <section className='text-white pt-5  border-t-slate-300 border-t'>
       <div className='flex justify-evenly items-center'>
         <Rating />
         <Rating />
@@ -215,7 +217,7 @@ const Ratings = () => {
 };
 const NewToCrypto = () => {
   return (
-    <section className='text-white gap-y-10 my-14 mx-5 border-[0.07rem] px-10 py-2 flex justify-between flex-wrap items-center border-slate-500 rounded-xl'>
+    <section className='text-white gap-y-10  mx-5 border-[0.07rem] px-5 md:px-10 py-2 flex justify-between flex-wrap items-center border-slate-500 rounded-xl'>
       <div className='space-y-3'>
         <h6 className='text-xl font-medium'>New to Cryptocurrency ?</h6>
         <p className='max-w-[350px] text-sm font-light text-slate-300'>

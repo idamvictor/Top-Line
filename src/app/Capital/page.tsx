@@ -21,11 +21,11 @@ const Page = () => {
    const text =
      "Our Capital Management Service is crafted to help you optimize and grow your investments with the guidance of experienced financial professionals. Whether you’re new to investing or looking to enhance your existing portfolio, our team of experts will manage your capital with precision, focusing on risk management, asset allocation, and long-term growth. We offer personalized strategies tailored to your financial goals, ensuring that your investments are diversified across various asset classes, including stocks, bonds, cryptocurrencies, and more.";
    return (
-     <section className='px-5 lg:px-10 relative text-white  flex w-full justify-center items-center min-h-fit 2xl:max-h-[700px]  md:h-[85vh]'>
+     <section className='md:px-5 lg:px-10 relative text-white  flex w-full justify-center items-center min-h-fit 2xl:max-h-[700px]  md:h-[85vh]'>
        <main className=' flex w-full gap-y-5 justify-between md:h-[80vh]  max-md:flex-col md:max-h-[600px]  '>
          <div className='flex-1 flex gap-5 justify-between  items-start  p-4'>
            <div className='text_cont max-w-[600px] md:max-w-[500px] 2xl:max-w-[700px] space-y-7'>
-             <h1 className=' text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl  font-light'>
+             <h1 className=' text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl  font-light'>
                Capital Management
              </h1>
              <p className=' text-slate-400 text-base md:text-xs lg:text-base 2xl:text-lg '>

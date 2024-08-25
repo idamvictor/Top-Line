@@ -22,11 +22,11 @@ const Hero = () => {
     const text =
       "Our Signal Service is designed to give you a competitive edge in the financial markets by providing real-time, actionable trading signals. Whether you’re trading Forex, cryptocurrencies, stocks, or other financial instruments, our expert analysts continuously monitor the markets to deliver precise and timely signals. These signals include entry and exit points, stop-loss levels, and potential profit targets, allowing you to make informed decisions quickly and efficiently.";
     return (
-      <section className=' signalHero bg-background max-md:pt-3 px-5 lg:px-10 relative text-white flex w-full justify-center items-center min-h-fit h-[90vh] 2xl:max-h-[600px]  md:h-[80vh] md:max-h-[600px]'>
+      <section className=' signalHero bg-background  px-5 lg:px-10 relative text-white flex w-full justify-center items-center min-h-fit h-[80vh] 2xl:max-h-[600px]  md:h-[80vh] md:max-h-[600px]'>
         <main className=' z-10 flex w-full justify-between md:h-[70%] gap-y-5 max-md:flex-col md:max-h-[500px]  '>
           <div className='flex-1 flex gap-5 justify-between  items-start  p-4'>
             <div className='text_cont  space-y-7'>
-              <h1 className=' text-2xl md:text-4xl lg:text-5xl xl:text-6xl  font-light'>
+              <h1 className=' text-3xl md:text-4xl lg:text-5xl xl:text-6xl  font-light'>
               Topline Trading Signals
               </h1>
               <p className=' text-slate-300 text-base md:text-base 2xl:text-lg max-w-[600px] '>

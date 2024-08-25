@@ -45,7 +45,7 @@ const Hero = () => {
       <main className='gap-y-5 flex w-full justify-between h-[70%]  max-md:flex-col md:max-h-[500px]  '>
         <div className='flex-1 flex gap-5 justify-between  items-start  p-4'>
           <div className='text_cont max-w-[600px] md:max-w-[400px] 2xl:max-w-[700px] space-y-7'>
-            <h1 className=' text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl  font-light'>
+            <h1 className=' text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl  font-light'>
             Exchange Service
             </h1>
             <p className=' text-slate-400 text-base md:text-xs lg:text-base 2xl:text-lg '>
