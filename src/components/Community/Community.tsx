@@ -19,17 +19,17 @@ useEffect(() => {
     <>
       <div className='text-white font-poppins z-20 Desc max-w-[90%] sm:max-w-[90%] md:my-5 space-y-2 md:space-y-8 text-center'>
         <h1
-          data-aos='fade-up'
-          className='text-3xl sm:text-4xl md:text-5xl font-bold max-w-[100%] md:max-w-[80%] mx-auto'
+          data-aos='fade-up' data-aos-offset='0'
+          className='text-4xl md:text-5xl font-bold max-w-[100%] md:max-w-[80%] mx-auto'
         >
           A Community For Traders By Traders
         </h1>
-        <p data-aos='fade-right' className='text-xs sm:text-base'>
+        <p data-aos='fade-right' data-aos-offset='0' className='text-base'>
          {"Welcome to our vibrant community, a dynamic space where traders, investors, and financial enthusiasts come together to share knowledge, insights, and experiences. Our community is more than just a network—it's a supportive environment designed to help you grow your skills, stay informed, and connect with like-minded individuals. By joining our community, you'll gain access to exclusive content, real-time discussions, and the collective wisdom of members who are passionate about financial markets. Whether you’re here to learn, share, or collaborate, our community offers invaluable resources and a sense of belonging that will empower you on your financial journey. "}
         </p>
       </div>
-      <div data-aos='zoom-in' className='social space-y-3 md:space-y-5 z-20 max-w-[800px]'>
-        <h2 className='text-center text-xs text-white'>
+      <div data-aos='zoom-in' data-aos-offset='0' className='social space-y-3 md:space-y-5 z-20 max-w-[800px]'>
+        <h2 className='text-center text-sm text-white'>
         Stay connected and informed by following us on our social media platforms. With <span className='text-[#FFC759]'>2000+</span> Active community members, Each platform offers unique content tailored to your needs
         </h2>
         <SocialLinks />

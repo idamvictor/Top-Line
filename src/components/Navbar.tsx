@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 import Bars from "@/components/ui/Bars";
 import { Button } from "./ui/button";
@@ -75,6 +75,7 @@ const MoreNavLinks = [
 const Navbar = () => {
   const [toggleNav, setToggleNav] = useState(false);
   const pathName = usePathname();
+  console.log(pathName)
   useEffect(() => {
     if (toggleNav) {
       setToggleNav(false);
@@ -93,6 +94,93 @@ const Navbar = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, [toggleNav]);
+
+  /**
+ * Functional component for rendering a mobile navigation bar.
+ * returns {JSX.Element} A JSX element representing the mobile navigation bar.
+ */
+const MobileNav =useCallback(
+  ({ handleClick, pathName }: any) => {
+    return (
+      <motion.nav
+        initial={{
+          scale: 0,
+          opacity: 0,
+          translateY: -200,
+          filter: 'blur(20px)',
+          translateX: 200,
+          borderRadius:'80%'
+        }}
+        animate={{
+          scale: 1,
+          translateY: 0,
+          opacity: 1,
+          translateX: 0,
+          filter: 'blur(0px)',
+          borderRadius:'0%',
+          transition:{
+            ease:'easeInOut'
+          }
+        }}
+        exit={{
+          scale: 0,
+          opacity: 0,
+          translateY: -200,
+          translateX: 200,
+          filter: 'blur(20px)',
+          borderRadius:'80%',
+          transition:{
+            ease:'easeInOut'
+          }
+        }}
+        className='mobile_nav fixed text-white  bg-background  font-medium block md:hidden right-0 w-full min-h-screen z-50 top-0 rounded-lg shadow '
+      >
+        <header className=" flex justify-between px-5 items-center  pt-8  ">
+        <Logo />
+        <Bars
+              handleClick={() => setToggleNav((prev) => !prev)}
+              check={toggleNav}
+            />
+        </header>
+        <ul className='text-base flex flex-col items-center justify-start pt-10 gap-y-7 h-full max-h-[90vh]'>
+        <li
+                className={`text-center min-w-60   border-b-2 hover:border-b-foreground transition-all ease-in-out ${
+                  pathName==='/'? "text-foreground border-b-foreground" : ""
+                }`}
+              >
+                <Link href={'/'} onClick={() => handleClick(false)}>
+                  Home
+                </Link>
+              </li>
+          {NavLinks.map((link, index) => {
+            return (
+              <li
+                key={index}
+                className={`text-center min-w-60   border-b-2 hover:border-b-foreground transition-all ease-in-out ${
+                  pathName.startsWith(link.link) ? "text-foreground border-b-foreground" : ""
+                }`}
+              >
+                <Link href={link.link} onClick={() => handleClick(false)}>
+                  {link.name}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+        <div className="btn_container flex justify-center items-center gap-10 pt-14">
+        <Button className='bg-foreground ' size='sm'>
+              Sign Out
+            </Button>
+            <Button className='bg-background border border-foreground  ' size='sm'>
+              Sign In
+            </Button>
+        </div>
+        
+      </motion.nav>
+    );
+  },[toggleNav,NavLinks]
+) 
+
   return (
     <header id='nav' className=' bg-none max-w-[1620px] mx-auto absolute top-0 left-0 right-0 z-40 px-5 lg:px-10 my-2'>
       <nav className='  bg-none font-poppins font-light text-white py-3 left-0 top-0   md:py-7 flex justify-between  items-center'>
@@ -150,7 +238,7 @@ const Navbar = () => {
  */
 export const Logo = () => {
   return (
-    <div className='flex  justify-center items-center w-fit gap-1 z-50'>
+    <div className='flex  justify-center items-center w-fit gap-1 z-20'>
       <div className='logo bg-foreground h-10 w-10 rounded-full flex justify-center items-center'>
         <svg
           width='25'
@@ -203,52 +291,5 @@ const Links = ({ pathName }: any) => {
     </ul>
   );
 };
-/**
- * Functional component for rendering a mobile navigation bar.
- * returns {JSX.Element} A JSX element representing the mobile navigation bar.
- */
-const MobileNav = ({ handleClick, pathName }: any) => {
-  return (
-    <motion.nav
-      initial={{
-        scale: 0,
-        opacity: 0,
-        translateY: -200,
 
-        translateX: 200,
-      }}
-      animate={{
-        scale: 1,
-        translateY: 0,
-        opacity: 1,
-        translateX: 0,
-      }}
-      exit={{
-        scale: 0,
-        opacity: 0,
-        translateY: -200,
-        translateX: 200,
-      }}
-      className='mobile_nav absolute bg-background bg-opacity-5 text-slate-300 text-xl sm:text-2xl block md:hidden right-0 w-fit h-[97vh] z-20 top-14 rounded-lg shadow '
-    >
-      <ul className='text-base flex flex-col items-center justify-start pt-14 gap-y-5 h-full max-h-[90vh]'>
-        {NavLinks.map((link, index) => {
-          return (
-            <li
-              key={index}
-              className={`text-center min-w-60   border-b-2 hover:border-b-foreground transition-all ease-in-out ${
-                pathName.startsWith(link.link) ? "text-foreground border-b-foreground" : ""
-              }`}
-            >
-              <Link href={link.link} onClick={() => handleClick(false)}>
-                {link.name}
-              </Link>
-            </li>
-          );
-        })}
-        <li></li>
-      </ul>
-    </motion.nav>
-  );
-};
 export default Navbar;

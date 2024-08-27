@@ -145,7 +145,7 @@ const WhatWeOffer = () => {
     );
   };
   return (
-    <section className='What_We_offer text-slate-300 my-10 mt-20'>
+    <section className='What_We_offer text-slate-300 my-10 py-20'>
       <h3 className=' text-3xl flex-col font-medium '>
         What We Offer
         <Line />
@@ -154,7 +154,7 @@ const WhatWeOffer = () => {
         Get access to exclusive trading insights, webinars and mentorship from
         our experienced trader
       </p>
-      <div className='Wrapper flex max-md:flex-wrap gap-5 gap-y-10 justify-evenly items-center grid-flow-col'>
+      <div className='Wrapper flex max-md:flex-wrap gap-5 gap-y-20 md:gap-y-10 justify-evenly items-center grid-flow-col'>
         <LongBox />
         <LongBox />
         <LongBox />
