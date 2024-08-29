@@ -14,6 +14,7 @@ import {
   freizeit_trial_extrabold,
 } from '@/Assets/fonts/index'
 import NavigateTop from "@/components/NavigateTop";
+import { Providers } from "@/components/Provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,9 +32,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={`relative ${poppins.variable} ${manrope.variable} ${inter.className}`}>
         <main className="max-w-screen-2xl min-h-fit pt-[4.5rem] md:pt-[6rem] relative  mx-auto font-manrope">
-           <Navbar/>
+          <Providers>
+       <Navbar/>
         {children}
-        <Footer/>
+        <Footer/>       
+          </Providers>
+         
        
         </main>
         <NavigateTop/>

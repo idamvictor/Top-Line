@@ -13,7 +13,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/components/ui/accordion";
 export const metadata: Metadata = {
   title: "TopLine Exchange",
   description: "TopLine Trading",
@@ -32,8 +32,7 @@ const ExchangePage = () => {
           coding. Build your next consultancy website within few minutes.
         </p>
       </div>
-      <Faq/>
-
+      <Faq />
     </section>
   );
 };
@@ -46,10 +45,10 @@ const Hero = () => {
         <div className='flex-1 flex gap-5 justify-between  items-start  p-4'>
           <div className='text_cont max-w-[600px] md:max-w-[400px] 2xl:max-w-[700px] space-y-7'>
             <h1 className=' text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl  font-light'>
-            Exchange Service
+              Exchange Service
             </h1>
             <p className=' text-slate-400 text-base md:text-xs lg:text-base 2xl:text-lg '>
-              { text }
+              {text}
             </p>
             <Button
               className='bg-foreground text-slate-100 font-light'
@@ -66,16 +65,56 @@ const Hero = () => {
     </section>
   );
 };
-const Faq=()=>{
-  return(
-<Accordion type="single" collapsible>
-  <AccordionItem value="item-1">
-    <AccordionTrigger>Is it accessible?</AccordionTrigger>
-    <AccordionContent>
-      Yes. It adheres to the WAI-ARIA design pattern.
-    </AccordionContent>
-  </AccordionItem>
-</Accordion>
-  )
-}
+const Faq = () => {
+  return (
+    <section className='text-white max-w-[1620px] mx-auto px-5 md:px-10 space-y-7'>
+      <h3 className=' text-3xl flex-col'>
+        FAQs
+        <Line />
+      </h3>
+      <p>
+        With lots of unique blocks, you can easily build a page without coding.
+        Build your next consultancy website within few minutes.
+      </p>
+      <Accordion
+        type='single'
+        collapsible
+        className=' shadow bg-[#aa8fc010] bg-opacity-50 backdrop-blur-md rounded-lg p-5 '
+      >
+        <AccordionItem value='item-1'>
+          <AccordionTrigger className='border-none'>
+            Is it accessible?
+          </AccordionTrigger>
+          <AccordionContent>
+            Yes. It adheres to the WAI-ARIA design pattern.
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+      <Accordion
+        type='single'
+        collapsible
+        className=' shadow bg-[#aa8fc010] bg-opacity-50 backdrop-blur-md rounded-lg p-5 '
+      >
+        <AccordionItem value='item-1'>
+          <AccordionTrigger>Is it accessible?</AccordionTrigger>
+          <AccordionContent>
+            Yes. It adheres to the WAI-ARIA design pattern.
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+      <Accordion
+        type='single'
+        collapsible
+        className=' shadow bg-[#aa8fc010] bg-opacity-50 backdrop-blur-md rounded-lg p-5 '
+      >
+        <AccordionItem value='item-1'>
+          <AccordionTrigger>Is it accessible?</AccordionTrigger>
+          <AccordionContent>
+            Yes. It adheres to the WAI-ARIA design pattern.
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    </section>
+  );
+};
 export default ExchangePage;

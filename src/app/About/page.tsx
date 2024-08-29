@@ -4,7 +4,7 @@ import React from "react";
 
 const Page = () => {
   return (
-    <section className='text-white max-w-[1620px] mx-auto px-5 md:px-10 space-y-10'>
+    <section className='text-white max-w-[1620px] mx-auto px-5 md:px-10 space-y-20'>
       <main className='mt-10 space-y-8'>
         <h1 className='font-bold text-3xl text-center'>About Us</h1>
         <p className=' text-center font-light text-base text-slate-300'>
@@ -52,9 +52,9 @@ const Page = () => {
 const OurTeam = () => {
   const Box = ({ color }: any) => {
     return (
-      <div className='w-64  p-3 gap-y-2 flex-col flex justify-center items-center bg-[#aa8fc010] bg-opacity-55 shadow  rounded-md'>
+      <div className='w-64  p-3 gap-y-2 flex-col flex justify-center items-center bg-[#aa8fc010] bg-opacity-55 shadow max-sm:w-full max-sm:max-w-96 rounded-md'>
         <div
-          className='img h-[17rem] w-[15rem]'
+          className='img h-[17rem] w-[15rem] max-md:w-full'
           style={{ backgroundColor: color }}
         >
           {/* imageoes here */}
@@ -75,7 +75,7 @@ const OurTeam = () => {
         Build your next consultancy website within few minutes.
       </p>
 
-      <div className='teams_wrapper flex-wrap gap-5 justify-center flex lg:justify-between items-center my-10 '>
+      <div className='teams_wrapper flex-wrap gap-5 gap-y-10 justify-center flex lg:justify-between items-center my-10 '>
         <Box color='#E6474C' />
         <Box color='#00B2A2' />
         <Box color='#D0D0F0' />

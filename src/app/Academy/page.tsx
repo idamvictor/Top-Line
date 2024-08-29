@@ -19,7 +19,7 @@ import { FaXmark } from "react-icons/fa6";
 
 const Mentorship = () => {
   return (
-    <section className='text-white px-5 lg:px-10 '>
+    <section className='text-white px-5 lg:px-10 space-y-20'>
       <Hero />
       <ServicesOffered />
       <PricingWrapper />
@@ -66,7 +66,7 @@ const Hero = () => {
 
 const ServicesOffered = () => {
   return (
-    <section className='my-10 space-y-16 '>
+    <section className=' space-y-20 '>
       <h2 className='text-3xl font-medium'>
         Mentorship Services Offered
         <Line />

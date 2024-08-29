@@ -3,67 +3,42 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 import Bars from "@/components/ui/Bars";
 import { Button } from "./ui/button";
 import { ChevronDown, Globe } from "lucide-react";
+import { Routes } from "@/constant/Constants";
 /**
  * Array of navigation links with name and corresponding link.
  */
 const NavLinks = [
   {
     name: "About",
-    link: "/About",
+    link: Routes.aboutPath,
   },
   {
     name: "Exchange",
-    link: "/Exchange",
+    link: Routes.exchangePath,
   },
   {
     name: "Academy",
-    link: "/Academy",
+    link: Routes.academyPath,
   },
 
   {
     name: "Signals",
-    link: "/Signals",
+    link: Routes.signalPath,
   },
   {
     name: "Capital",
-    link: "/Capital",
+    link: Routes.capitalPath,
   },
   {
     name: "Community",
-    link: "/Community",
+    link: Routes.communityPath,
   },
   {
     name: "Contact",
-    link: "/ContactUs",
-  },
-];
-/**
- * Array of additional navigation links with name and corresponding link.
- */
-const MoreNavLinks = [
-  {
-    name: "Capital management",
-    link: "/Management",
-  },
-  {
-    name: "How to",
-    link: "/How_To",
-  },
-  {
-    name: "About",
-    link: "/About",
-  },
-  {
-    name: "Contact Us",
-    link: "/ContactUs",
-  },
-  {
-    name: "FAQ",
-    link: "/FAQ",
+    link: Routes.contactPatch,
   },
 ];
 
@@ -75,7 +50,6 @@ const MoreNavLinks = [
 const Navbar = () => {
   const [toggleNav, setToggleNav] = useState(false);
   const pathName = usePathname();
-  console.log(pathName)
   useEffect(() => {
     if (toggleNav) {
       setToggleNav(false);
@@ -96,96 +70,109 @@ const Navbar = () => {
   }, [toggleNav]);
 
   /**
- * Functional component for rendering a mobile navigation bar.
- * returns {JSX.Element} A JSX element representing the mobile navigation bar.
- */
-const MobileNav =useCallback(
-  ({ handleClick, pathName }: any) => {
-    return (
-      <motion.nav
-        initial={{
-          scale: 0,
-          opacity: 0,
-          translateY: -200,
-          filter: 'blur(20px)',
-          translateX: 200,
-          borderRadius:'80%'
-        }}
-        animate={{
-          scale: 1,
-          translateY: 0,
-          opacity: 1,
-          translateX: 0,
-          filter: 'blur(0px)',
-          borderRadius:'0%',
-          transition:{
-            ease:'easeInOut'
-          }
-        }}
-        exit={{
-          scale: 0,
-          opacity: 0,
-          translateY: -200,
-          translateX: 200,
-          filter: 'blur(20px)',
-          borderRadius:'80%',
-          transition:{
-            ease:'easeInOut'
-          }
-        }}
-        className='mobile_nav fixed text-white  bg-background  font-medium block md:hidden right-0 w-full min-h-screen z-50 top-0 rounded-lg shadow '
-      >
-        <header className=" flex justify-between px-5 items-center  pt-8  ">
-        <Logo />
-        <Bars
+   * Functional component for rendering a mobile navigation bar.
+   * returns {JSX.Element} A JSX element representing the mobile navigation bar.
+   */
+  const MobileNav = useCallback(
+    ({ handleClick, pathName }: any) => {
+      return (
+        <motion.nav
+          initial={{
+            scale: 0,
+            opacity: 0,
+            translateY: -350,
+            filter: "blur(20px)",
+            translateX: 300,
+          }}
+          animate={{
+            scale: 1,
+            translateY: 0,
+            opacity: 1,
+            translateX: 0,
+            filter: "blur(0px)",
+            borderRadius: "0%",
+            transition: {
+              duration:0.5,
+              ease: "easeInOut",
+            },
+          }}
+          exit={{
+            scale: 0,
+            opacity: 0,
+            translateY: -350,
+            translateX: 300,
+            filter: "blur(20px)",
+            transition: {
+              ease: "easeInOut",
+            },
+          }}
+          className='mobile_nav fixed text-white  bg-background  font-medium block md:hidden right-0 w-full min-h-screen z-50 top-0 rounded-lg shadow '
+        >
+          <header className=' flex justify-between px-5 items-center  pt-8  '>
+            <Logo />
+            <Bars
               handleClick={() => setToggleNav((prev) => !prev)}
               check={toggleNav}
             />
-        </header>
-        <ul className='text-base flex flex-col items-center justify-start pt-10 gap-y-7 h-full max-h-[90vh]'>
-        <li
-                className={`text-center min-w-60   border-b-2 hover:border-b-foreground transition-all ease-in-out ${
-                  pathName==='/'? "text-foreground border-b-foreground" : ""
-                }`}
-              >
-                <Link href={'/'} onClick={() => handleClick(false)}>
-                  Home
-                </Link>
-              </li>
-          {NavLinks.map((link, index) => {
-            return (
-              <li
-                key={index}
-                className={`text-center min-w-60   border-b-2 hover:border-b-foreground transition-all ease-in-out ${
-                  pathName.startsWith(link.link) ? "text-foreground border-b-foreground" : ""
-                }`}
-              >
-                <Link href={link.link} onClick={() => handleClick(false)}>
-                  {link.name}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-        <div className="btn_container flex justify-center items-center gap-10 pt-14">
-        <Button className='bg-foreground ' size='sm'>
-              Sign Out
-            </Button>
-            <Button className='bg-background border border-foreground  ' size='sm'>
+          </header>
+          <ul className='text-base flex flex-col items-center justify-start pt-10 gap-y-7 h-full max-h-[90vh]'>
+            <li
+              className={`text-center min-w-60   border-b-2 hover:border-b-foreground transition-all ease-in-out ${
+                pathName === "/" ? "text-foreground border-b-foreground" : ""
+              }`}
+            >
+              <Link href={"/"} onClick={() => handleClick(false)}>
+                Home
+              </Link>
+            </li>
+            {NavLinks.map((link, index) => {
+              return (
+                <li
+                  key={index}
+                  className={`text-center min-w-60   border-b-2 hover:border-b-foreground transition-all ease-in-out ${
+                    pathName.startsWith(link.link)
+                      ? "text-foreground border-b-foreground"
+                      : ""
+                  }`}
+                >
+                  <Link href={link.link} onClick={() => handleClick(false)}>
+                    {link.name}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          <div className='btn_container flex justify-center items-center gap-10 pt-14'>
+            <Link href={Routes.signupPath}>
+              <Button className='bg-foreground ' size='sm'>
+                Sign Up
+              </Button>
+            </Link>
+
+            <Link href={Routes.signinPath}>
+             <Button
+              className='bg-background border border-foreground  '
+              size='sm'
+            >
               Sign In
             </Button>
-        </div>
-        
-      </motion.nav>
-    );
-  },[toggleNav,NavLinks]
-) 
+            </Link>
+           
+          </div>
+        </motion.nav>
+      );
+    },
+    [toggleNav, NavLinks]
+  );
 
   return (
-    <header id='nav' className=' bg-none max-w-[1620px] mx-auto absolute top-0 left-0 right-0 z-40 px-5 lg:px-10 my-2'>
+    <header
+      id='nav'
+      className=' bg-none max-w-[1620px] mx-auto absolute top-0 left-0 right-0 z-40 px-5 lg:px-10 my-2'
+    >
       <nav className='  bg-none font-poppins font-light text-white py-3 left-0 top-0   md:py-7 flex justify-between  items-center'>
         {/* Logo */}
-        <Link href='/'>
+        <Link href={Routes.homePath}>
           <Logo />
         </Link>
         {/* middle Links */}
@@ -193,23 +180,16 @@ const MobileNav =useCallback(
         {/* auth_btns and language */}
         <div className='flex justify-center items-center'>
           <div className='language md:flex  hidden  '>
-            <Globe  className="w-4"/>
-            <p className="flex justify-center items-center text-xs px-3">
+            <Globe className='w-4' />
+            <p className='flex justify-center items-center text-xs px-3'>
               EN
-              <ChevronDown className="w-5" />
+              <ChevronDown className='w-5' />
             </p>
           </div>
           <Button className='bg-foreground hidden md:block' size='sm'>
             Sign In
           </Button>
-        </div>
-        {/* Link progressive bar */}
-        <ProgressBar
-          height='1.5px'
-          color='#ffff'
-          options={{ showSpinner: true }}
-          shallowRouting
-        />
+        </div>    
         {/* mobile nav toggle*/}
         <div
           onClick={() => setToggleNav((prev) => !prev)}
@@ -229,8 +209,6 @@ const MobileNav =useCallback(
     </header>
   );
 };
-
-
 
 /**
  * Functional component for rendering a logo with the text "TOPLINE".
@@ -264,7 +242,8 @@ export const Logo = () => {
       </div>
       <h1 className=' text-white font-medium text-sm '>
         TOPLINE <br />
-        Trading</h1>
+        Trading
+      </h1>
     </div>
   );
 };
