@@ -23,8 +23,8 @@ const Page = () => {
    return (
      <section className='md:px-5 lg:px-10 relative text-white  flex w-full justify-center items-center min-h-fit 2xl:max-h-[700px]  md:h-[85vh]'>
        <main className=' flex w-full gap-y-5 justify-between md:h-[80vh]  max-md:flex-col md:max-h-[600px]  '>
-         <div className='flex-1 flex gap-5 justify-between  items-start  p-4'>
-           <div className='text_cont max-w-[600px] md:max-w-[500px] 2xl:max-w-[700px] space-y-7'>
+         <div className='flex-1 flex gap-5 justify-between  items-center  p-4'>
+           <div className='text_cont max-w-[600px] max-md:h-[60vh] max-md:flex flex-col justify-center md:max-w-[500px] 2xl:max-w-[700px] space-y-7'>
              <h1 className=' text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl  font-light'>
                Capital Management
              </h1>
@@ -32,7 +32,7 @@ const Page = () => {
                {text}
              </p>
              <Button
-               className='bg-foreground text-slate-100 font-light'
+               className='bg-foreground text-slate-100 font-light w-fit'
                size='lg'
              >
                Join Us Today

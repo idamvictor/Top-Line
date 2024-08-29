@@ -30,7 +30,7 @@ const Mentorship = () => {
 };
 const Hero = () => {
   return (
-    <section className='Hero max-md:flex-col relative flex justify-between gap-10 items-start max-w-[1400px] mx-auto py-12'>
+    <section className='Hero max-md:flex-col relative flex pt-10 justify-between gap-10 items-start max-w-[1400px] mx-auto py-12'>
       <div className='First_container w-full md:w-[534px] space-y-7 xl:w-[570px]'>
         <h1 className=' text-3xl font-bold max-w-[500px] md:max-w-[300px]'>
           Topline Trading Mentorship service
