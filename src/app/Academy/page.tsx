@@ -66,7 +66,7 @@ const Hero = () => {
 
 const ServicesOffered = () => {
   return (
-    <section className=' space-y-20 '>
+    <section className=' space-y-10 '>
       <h2 className='text-3xl font-medium'>
         Mentorship Services Offered
         <Line />
