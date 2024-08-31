@@ -4,8 +4,10 @@ import Line from "@/components/ui/shared/Line";
 import React, { useEffect, useRef } from "react";
 import { Stars } from "lucide-react";
 import { allWidgetsPropertise } from "@/lib/data";
+import homeHero from '@/../public/homeHero.svg'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 const HomePage = () => {
   useEffect(() => {
     AOS.init({
@@ -13,7 +15,7 @@ const HomePage = () => {
     });
   });
   return (
-    <section className='px-5 lg:px-10 max-md:pt-5 space-y-20 pb-10'>
+    <section className='px-5 lg:px-10 max-md:pt-5 space-y-16 pb-10'>
       <Hero />
       <Market />
       <WhatWeOffer />
@@ -50,11 +52,12 @@ const Hero = () => {
           </div>
         </div>
         <div className='flex-1 flex justify-start  items-center '>
-          <div
-            className='image h-full w-full max-w-[700px] rounded-xl max-h-[700px] min-h-[500px] bg-gray-800'
-            data-aos='zoom-in'
-            data-aos-offset='0'
-          ></div>
+
+            <Image
+            src={homeHero}
+            alt="homeHero"
+            className=' h-full w-full max-w-[700px] object-fill rounded-xl max-h-[700px] min-h-[466px] overflow-hidden '
+            />
         </div>
       </main>
     </section>
@@ -108,7 +111,7 @@ const Market = () => {
     };
 
     return (
-      <div className='box backdrop-blur-3xl max-h-[187px] bg-[#aa8fc010] bg-opacity-10 shadow shadow-[#72336c] rounded-xl p-5 min-w-64 md:w-72 lg:w-64 2xl:w-80 min-h-[220px]'>
+      <div className='box backdrop-blur-3xl max-h-[157px] w-[360px] bg-[#aa8fc010] bg-opacity-10 shadow shadow-[#72336c] rounded-xl p-5 min-w-64 md:w-72 lg:w-64 2xl:w-80 min-h-[220px]'>
         <TradingViewWidget />
       </div>
     );
