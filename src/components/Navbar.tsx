@@ -78,9 +78,9 @@ const Navbar = () => {
       return (
         <motion.nav
           initial={{
-            scale: 0,
+            // scale: 0,
             opacity: 0,
-            translateY: -350,
+           
             filter: "blur(20px)",
             translateX: 300,
           }}
@@ -97,9 +97,9 @@ const Navbar = () => {
             },
           }}
           exit={{
-            scale: 0,
+            // scale: 0,
             opacity: 0,
-            translateY: -350,
+           
             translateX: 300,
             filter: "blur(20px)",
             transition: {
