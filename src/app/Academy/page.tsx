@@ -30,7 +30,7 @@ const Mentorship = () => {
 };
 const Hero = () => {
   return (
-    <section className='Hero max-md:flex-col relative flex pt-10 justify-between gap-10 items-start max-w-[1400px] mx-auto py-12'>
+    <section className='Hero max-md:flex-col relative flex px-10 py-20 justify-between gap-10 items-start max-w-[1400px] mx-auto '>
       <div className='First_container w-full md:w-[534px] space-y-7 xl:w-[570px]'>
         <h1 className=' text-3xl font-bold max-w-[500px] md:max-w-[300px]'>
           Topline Trading Mentorship service
@@ -39,7 +39,7 @@ const Hero = () => {
             floor in Nigeria.
           </p>
         </h1>
-        <div className='image_wrapper overflow-hidden max-md:max-w-[534px] mx-auto bg-gray-500 w-full rounded-xl h-[500px]'>
+        <div className='image_wrapper overflow-hidden max-md:max-w-[534px] mx-auto bg-gray-500 w-full rounded-xl h-[530px]'>
           <Image
             src={FIrstImage}
             alt='Topline'
