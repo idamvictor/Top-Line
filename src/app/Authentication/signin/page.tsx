@@ -7,7 +7,7 @@ import Link from 'next/link';
 const Signin = () => {
  
   return (
-    <section className='flex flex-col justify-center items-center py-10 md:py-5 community relative h-[90vh]  md:max-h-[700px]'>
+    <section className='flex flex-col justify-center items-center py-10 md:py-5 community relative md:h-[90vh] md-max:min-h-screen  md:max-h-[700px]'>
       <header className='text-center text-white z-20 md:hidden flex flex-col justify-center items-center space-y-2'>
       <div className='logo bg-foreground h-20 w-20 rounded-full flex justify-center items-center'>
         <svg
