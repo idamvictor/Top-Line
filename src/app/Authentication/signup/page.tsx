@@ -2,6 +2,7 @@ import React from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Signup = () => {
   return (
@@ -17,77 +18,96 @@ const Signup = () => {
               Full Name
             </Label>
             <Input
-              placeholder='First Name'
+              placeholder='i.e john Smith'
               className=' outline-none border-none focus-visible:ring-0 bg-black   bg-opacity-50 backdrop-blur-md'
             />
           </div>
           <div className=' text-left space-y-2'>
-            <Label htmlFor='FullName' className=''>
-              Full Name
+            <Label htmlFor='Email' className=''>
+              Email
             </Label>
             <Input
-              placeholder='First Name'
+              placeholder='i.e john@gmail.com'
               className=' outline-none border-none focus-visible:ring-0 bg-black  bg-opacity-50 backdrop-blur-md'
             />
           </div>
           <div className=' text-left space-y-2'>
-            <Label htmlFor='FullName' className=''>
-              Full Name
+            <Label htmlFor='Password' className=''>
+              Enter Password
             </Label>
             <Input
-              placeholder='First Name'
+              placeholder='Enter Password'
+              type='password'
               className=' outline-none border-none focus-visible:ring-0 bg-black  bg-opacity-50 backdrop-blur-md'
             />
           </div>
           <div className=' text-left space-y-2'>
-            <Label htmlFor='FullName' className=''>
-              Full Name
+            <Label htmlFor='Re-enter password' className=''>
+              Re-Enter Password
             </Label>
             <Input
-              placeholder='First Name'
+              placeholder='Re-enter password'
+              type='password'
               className=' outline-none border-none focus-visible:ring-0 bg-black  bg-opacity-50 backdrop-blur-md'
             />
           </div>
           <div className='max-sm:col-span-2 text-left space-y-2'>
-            <Label htmlFor='FullName' className=''>
-              Full Name
+            <Label htmlFor='phonenumber' className=''>
+              Phone Number
             </Label>
             <Input
-              placeholder='First Name'
+              placeholder='(+234) 1234 5678'
               className=' outline-none border-none focus-visible:ring-0 bg-black  bg-opacity-50 backdrop-blur-md'
             />
           </div>
           <div className='max-sm:col-span-2 text-left space-y-2'>
-            <Label htmlFor='FullName' className=''>
-              Full Name
+            <Label htmlFor='gender' className=''>
+              Gender
             </Label>
             <Input
-              placeholder='First Name'
+              placeholder='Select Gender'
               className=' outline-none border-none focus-visible:ring-0 bg-black  bg-opacity-50 backdrop-blur-md'
             />
           </div>
           <div className=' text-left space-y-2'>
-            <Label htmlFor='FullName' className=''>
-              Full Name
+            <Label htmlFor='Country' className=''>
+              Country
             </Label>
             <Input
-              placeholder='First Name'
+              placeholder='Enter Country'
               className=' outline-none border-none focus-visible:ring-0 bg-black   bg-opacity-50 backdrop-blur-md'
             />
           </div>
           <div className=' text-left space-y-2'>
-            <Label htmlFor='FullName' className=''>
-              Full Name
+            <Label htmlFor='state' className=''>
+              State
             </Label>
             <Input
-              placeholder='First Name'
+              placeholder='Enter State'
               className=' outline-none border-none focus-visible:ring-0 bg-black   bg-opacity-50 backdrop-blur-md'
             />
           </div>
           <div />
-          <Button size='lg' className='text-white col-span-2'>
+          <div className='remeberme flex justify-start text-foreground w-full col-span-2 gap-x-3'>
+            <label htmlFor='remeber me'>
+              <input type='checkbox' />
+            </label>
+            Remember Me
+          </div>
+          <Button
+            aria-label='sign up button to topline'
+            size='lg'
+            className='text-white col-span-2'
+          >
             Sign Up
           </Button>
+          <Link
+            href={"/Authentication/signin"}
+            className='col-span-2 text-center py-4 cursor-pointer hover:underline '
+          >
+            Do have an account? {"  "}
+            <span className='text-foreground px-1'>Sign in to TopLine</span>
+          </Link>
         </form>
       </div>
     </section>

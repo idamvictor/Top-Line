@@ -80,7 +80,7 @@ const Navbar = () => {
           initial={{
             // scale: 0,
             opacity: 0,
-           
+
             filter: "blur(20px)",
             translateX: 300,
           }}
@@ -92,14 +92,14 @@ const Navbar = () => {
             filter: "blur(0px)",
             borderRadius: "0%",
             transition: {
-              duration:0.5,
+              duration: 0.5,
               ease: "easeInOut",
             },
           }}
           exit={{
             // scale: 0,
             opacity: 0,
-           
+
             translateX: 300,
             filter: "blur(20px)",
             transition: {
@@ -150,14 +150,13 @@ const Navbar = () => {
             </Link>
 
             <Link href={Routes.signinPath}>
-             <Button
-              className='bg-background border border-foreground  '
-              size='sm'
-            >
-              Sign In
-            </Button>
+              <Button
+                className='bg-background border border-foreground  '
+                size='sm'
+              >
+                Sign In
+              </Button>
             </Link>
-           
           </div>
         </motion.nav>
       );
@@ -186,10 +185,12 @@ const Navbar = () => {
               <ChevronDown className='w-5' />
             </p>
           </div>
-          <Button className='bg-foreground hidden md:block' size='sm'>
-            Sign In
-          </Button>
-        </div>    
+          <Link href={"/Authentication/signin"}>
+            <Button className='bg-foreground hidden md:block' size='sm'>
+              Sign In
+            </Button>
+          </Link>
+        </div>
         {/* mobile nav toggle*/}
         <div
           onClick={() => setToggleNav((prev) => !prev)}
