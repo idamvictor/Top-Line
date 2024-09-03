@@ -10,6 +10,7 @@ import ReviewImage from '@/../public/assets/Home/review.jpg'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
+
 const HomePage = () => {
   useEffect(() => {
     AOS.init({
