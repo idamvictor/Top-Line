@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import React from "react";
-import FIrstImage from "@/../public/toplineTwo.webp";
+import FIrstImage from "@/../public/assets/toplineTwo.webp";
 import Line from "@/components/ui/shared/Line";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch"

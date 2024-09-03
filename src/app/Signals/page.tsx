@@ -4,7 +4,7 @@ import { Link } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react'
 import { FaBell } from 'react-icons/fa';
-import Qr from '@/../public/mockQr.svg'
+import Qr from '@/../public/assets/mockQr.svg'
 
 const Page = () => {
   return (

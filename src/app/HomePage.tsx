@@ -4,7 +4,9 @@ import Line from "@/components/ui/shared/Line";
 import React, { useEffect, useRef } from "react";
 import { Stars } from "lucide-react";
 import { allWidgetsPropertise } from "@/lib/data";
-import homeHero from '@/../public/homeHero.svg'
+import homeHero from '@/../public/assets/homeHero.svg'
+import cardOne from '@/../public/assets/home/CardOne.svg'
+import ReviewImage from '@/../public/assets/home/review.jpg'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
@@ -15,7 +17,7 @@ const HomePage = () => {
     });
   });
   return (
-    <section className='px-5 lg:px-10 max-md:pt-5 space-y-16 pb-10'>
+    <section className='px-5 lg:px-10 max-md:pt-5 space-y-14 pb-10'>
       <Hero />
       <Market />
       <WhatWeOffer />
@@ -134,7 +136,12 @@ const WhatWeOffer = () => {
   const LongBox = () => {
     return (
       <div className='LongBpx rounded-lg overflow-hidden text-white w-full md:max-w-[19rem] shadow-xl max-h-[500px] shadow-[#382047]'>
-        <div className='w-full md:max-w-[19rem] h-56 bg-white'></div>
+        <div className='w-full overflow-hidden relative md:max-w-[19rem] h-56 '>
+          <Image
+          src={cardOne}
+          alt="LT"
+            className=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-fill"/>
+        </div>
         <div className='text space-y-2 py-3 pl-2'>
           <p className='text-lg'>Personalised coaching</p>
           <p className='font-light text-slate-400 h-36'>
@@ -169,8 +176,13 @@ const WhatWeOffer = () => {
 const Reviews = () => {
   return (
     <section className=' py-5 '>
-      <div className='Reviewscontainer my-10 flex flex-wrap p-5 md:p-10 bg-opacity-5 gap-5 md:gap-10 bg-[#aa8fc00b] justify-center items-center '>
-        <div className='h-44 w-44 md:h-52 md:w-52 rounded-full bg-white'></div>
+      <div className='Reviewscontainer my-5 flex flex-wrap p-5 mb-20 md:p-10 bg-opacity-5 gap-5 md:gap-10 bg-[#aa8fc00b] justify-center items-center '>
+        <div className='relative h-44 w-44 md:h-52 md:w-52 rounded-full overflow-hidden bg-white'>
+        <Image
+          src={ReviewImage}
+          alt="ReviewImage"
+            className=" object-fill rounded-full w-full h-full"/>
+        </div>
         <div className='txt max-w-[700px] text-white space-y-5'>
           <p className=''></p>
           <p className=' font-bold md:text-lg'>
@@ -220,7 +232,7 @@ const Ratings = () => {
 };
 const NewToCrypto = () => {
   return (
-    <section className='text-white gap-y-10  mx-5 border-[0.07rem] px-5 md:px-10 py-2 flex justify-between flex-wrap items-center border-slate-500 rounded-xl'>
+    <section className='text-white gap-y-10  m-5 my-7 border-[0.07rem] px-5 md:px-10 py-2 flex justify-between flex-wrap items-center border-slate-500 rounded-xl'>
       <div className='space-y-3'>
         <h6 className='text-xl font-medium'>New to Cryptocurrency ?</h6>
         <p className='max-w-[350px] text-sm font-light text-slate-300'>

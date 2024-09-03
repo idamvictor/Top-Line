@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Link } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import Qr from "@/../public/mockQr.svg";
-import heroImg from "@/../public/capitalHero.png";
+import Qr from "@/../public/assets/mockQr.svg";
+import heroImg from "@/../public/assets/capitalHero.png";
 import Line from "@/components/ui/shared/Line";
 import { FaBell } from "react-icons/fa";
 

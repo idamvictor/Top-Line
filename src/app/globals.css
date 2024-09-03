@@ -73,7 +73,7 @@
 /* Community background Image */
 .community::before{
   content: "";
-  background-image: url("../../public/community.jpeg");
+  background-image: url("../../public/assets/community.jpeg");
   background-attachment: scroll;
   background-position: center;
   background-size: cover;
@@ -91,7 +91,7 @@
 .Hero::before{ 
   @apply max-md:hidden;
   content: "";
-  background-image: url("../../public/Hero.svg");
+  background-image: url("../../public/assets/Hero.svg");
   background-attachment: scroll;
   background-position: center;
   background-size: cover;
@@ -110,7 +110,7 @@
 .signalHero::before{ 
   /* @apply max-md:hidden; */
   content: "";
-  background-image: url("../../public/signalHero.png");
+  background-image: url("../../public/assets/signalHero.png");
   background-attachment: scroll;
   background-position: center;
   background-size: cover;
@@ -128,7 +128,7 @@
 .exchangeHero::before{ 
   /* @apply max-md:hidden; */
   content: "";
-  background-image: url("../../public/Exchangehero.png");
+  background-image: url("../../public/assets/Exchangehero.png");
   background-attachment: scroll;
   background-position: center;
   background-size: cover;
