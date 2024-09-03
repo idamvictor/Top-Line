@@ -5,8 +5,8 @@ import React, { useEffect, useRef } from "react";
 import { Stars } from "lucide-react";
 import { allWidgetsPropertise } from "@/lib/data";
 import homeHero from '@/../public/assets/homeHero.svg'
-import cardOne from '@/../public/assets/home/CardOne.svg'
-import ReviewImage from '@/../public/assets/home/review.jpg'
+import cardOne from '@/../public/assets/Home/CardOne.svg'
+import ReviewImage from '@/../public/assets/Home/review.jpg'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
