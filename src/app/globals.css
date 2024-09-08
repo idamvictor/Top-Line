@@ -2,297 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 47.4% 11.2%;
- 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
- 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
- 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
- 
+    --background: #11011E;
+    --foreground: #606A08;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 47.4% 11.2%;
- 
-    --primary: 222.2 47.4% 11.2%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: #606A08;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: #606A08;
     --primary-foreground: 210 40% 98%;
- 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
- 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
- 
-    --destructive: 0 100% 50%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
- 
-    --ring: 215 20.2% 65.1%;
- 
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
   }
- 
-  /* .dark {
-    --background: 224 71% 4%;
-    --foreground: 213 31% 91%;
- 
-    --muted: 223 47% 11%;
-    --muted-foreground: 215.4 16.3% 56.9%;
- 
-    --accent: 216 34% 17%;
-    --accent-foreground: 210 40% 98%;
- 
-    --popover: 224 71% 4%;
-    --popover-foreground: 215 20.2% 65.1%;
- 
-    --border: 216 34% 17%;
-    --input: 216 34% 17%;
- 
-    --card: 224 71% 4%;
-    --card-foreground: 213 31% 91%;
- 
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
     --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 1.2%;
- 
-    --secondary: 222.2 47.4% 11.2%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
- 
-    --destructive: 0 63% 31%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
- 
-    --ring: 216 34% 17%;
- 
-    --radius: 0.5rem;
-  } */
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
 }
- 
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-white text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
-    overflow-x: hidden;
+    @apply bg-background text-foreground;
   }
 }
-
-
-/* These are some custom classes  */
- .small_text{
-  font-size: clamp(1rem, 2vw, 1rem);
+ html{
+  scroll-behavior: smooth;
  }
- .Hero_Txt{
-  font-size: clamp(1rem, 4vw, 6.5rem);
- }
- .Hero_Mid_Txt{
-  font-size: clamp(0rem, 2vw, 1rem);
- }
-.About_Txt{
-  font-size: clamp(1rem, 1.5vw, 1.6rem);
- text-justify:distribute;
-}
-
-
-
-
-/* navlinks hover */
-.nav_links{
-position: relative;
-font-size: clamp(1rem, 2vw, 1rem);
-}
- .MoreNavLinks li{
-position: relative;
-font-size: clamp(1rem, 2vw, 1rem);
-
-}
-.nav_links::before{
- content: " ";
- position: absolute;
- background: #000;
- width: 0%;
- height: 10%;
- bottom: 0;
- left: 0;
- transition: all 500ms ease;
-}
-.nav_links:hover::before {
-  transform-origin: right;
-  transition: all 500ms ease;
-  background-image: linear-gradient(220deg, #8B9A06,#464D09);
-
- width: 100%;
- height: 10%;
- bottom: 0;
-}
-.active:before {
-  transform-origin: right;
-  transition: all 500ms ease;
-  background-image: linear-gradient(220deg, #8B9A06,#464D09);
-
- width: 100%;
- height: 10%;
- bottom: 0;
-}
-
-
-
-
-
-.custom-shape-divider-bottom-1721955052 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  padding: 0;
-  transform: rotate(180deg);
-}
-.top_curve {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 0;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1721955052 svg {
-  position: relative;
-  display: block;
-  width: calc(128% + 1.3px);
-  height: 123px;
-  transform: rotateY(180deg);
-}
-
-.custom-shape-divider-bottom-1721955052 .shape-fill {
-  fill: #FFFFFF;
-}
-
-.custom-shape-trade {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-
-}
-
-
-.custom-shape-trade svg {
-  position: relative;
-    display: block;
-    width: calc(153% + 1.3px);
-    height: 359px;
-}
-
-.custom-shape-trade .shape-fill {
-  fill: #FFFFFF;
-}
-
-
-/* divide svg */
-.custom-shape-divider-top-1721991272 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-.custom-shape-divider-top-1721991272 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 106px;
-}
-
-.custom-shape-divider-top-1721991272 .shape-fill {
-  fill: #FFFFFF;
-}
-
-
-.review_top_shape {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-}
-
-/* Home Buttons */
-button {
-  margin: 0.5em;
-  color: white;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  transition: all ease-in;
-  border: 1px transparent solid; 
-
- }
-.HomeBtn:hover {
-  color: #464D09;
-  border: 1px #7e8638 solid; 
- }
- 
- .HomeBtn:after {
+/* Community background Image */
+.community::before{
   content: "";
-  background: white;
-  position: absolute;
-  z-index: -1;
-  left: -20%;
-  right: -20%;
-  top: 0;
-  bottom: 0;
-  transform: skewX(-45deg) scale(0, 1);
-  transition: all 0.5s ease;
- }
-.ExchangeBtn:hover {
-  color: #ffffff;
-   border: 1px #7e8638 solid; 
- }
- 
- .ExchangeBtn:after {
-  content: "";
-  background: #464D09;
-  position: absolute;
-  z-index: -1;
-  left: -20%;
-  right: -20%;
-  top: 0;
-  bottom: 0;
-  transform: skewX(-45deg) scale(0, 1);
-  transition: all 0.5s ease;
- }
- 
- button:hover:after {
-  transform: skewX(-45deg) scale(1, 1);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
- }
-
- /* Community background Image */
- .community::before{
-  content: "";
-  background-image: url("../../public/community.jpeg");
-  background-attachment: fixed;
+  background-image: url("../../public/assets/community.jpeg");
+  background-attachment: scroll;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -300,38 +82,66 @@ button {
   width: 100%;
   position: absolute;
   top: 0;
-  opacity: 0.4;
+  opacity: 0.7;
   z-index: 2;
- }
- /* traingle */
- .triangle{
-  clip-path: polygon(0 57%, 100% 100%, 100% 0);
- }
+  @apply bg-background;
 
- body:has(.top_left_ball:hover) .top-right-pop-review{
-  scale: 1.1;
-  opacity: 1;
  }
- body:has(.ball:hover) .pop-review{
-  scale: 1.1;
-  opacity: 1;
+/* Heros background Image */
+.Hero::before{ 
+  @apply max-md:hidden;
+  content: "";
+  background-image: url("../../public/assets/Hero.svg");
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode:multiply;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+  z-index: 1;
+  background-blend-mode: color-burn;
+  
  }
- body:has(.ball:hover) .pop-review{
-  scale: 1.1;
-  opacity: 1;
+/* Heros background Image */
+.signalHero::before{ 
+  /* @apply max-md:hidden; */
+  content: "";
+  background-image: url("../../public/assets/signalHero.png");
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode:multiply;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0.4;
+  z-index: 1;
+  
  }
- body:has(.ball:hover) .pop-review{
-  scale: 1.1;
-  opacity: 1;
+/* Heros background Image */
+.exchangeHero::before{ 
+  /* @apply max-md:hidden; */
+  content: "";
+  background-image: url("../../public/assets/Exchangehero.png");
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode:multiply;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0.4;
+  z-index: 1;
+  
  }
-/* open desktop more option */
-body:has(.more:hover,.more_options:hover) .more_options{
-  height: fit-content;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-
 
 /* styles for custom bar */
 /* Hide the default checkbox */
@@ -350,6 +160,11 @@ body:has(.more:hover,.more_options:hover) .more_options{
   cursor: pointer;
   font-size: 20px;
   user-select: none;
+  width: 20px; 
+     margin-right: 0; 
+     margin-left: 0; 
+    padding-right: 0; 
+    padding-left: 0; 
 }
 
 .checkmark {
@@ -364,7 +179,7 @@ body:has(.more:hover,.more_options:hover) .more_options{
   width: 25px;
   height: 3px;
   border-radius: 100px;
-  @apply bg-background;
+  @apply bg-foreground;
   /* background-color: rgb(0, 0, 0); */
   position: absolute;
   transition: all 0.3s ease-in-out;
@@ -413,22 +228,38 @@ body:has(.more:hover,.more_options:hover) .more_options{
   opacity: 0;
 }
 
-/* this is the styles for floating hero and responsiveness */
-/* @media (min-width: 768px) and (max-width: 1023px) {
-  .floating-containers-wrapper{
-    bottom: -75%;
-  }
+/* custom box shadow */
+.box_shadowOne{
+  box-shadow: 0px 10px 50px -15px #beb0d0;
 }
-@media  (min-width: 1023px) {
-  .floating-containers-wrapper{
-    bottom: -50%;
-  }
-} */
 
-.gradient-text {
-  background: linear-gradient(to bottom, #adbf09, #464D09); /* Gradient colors */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text; /* For modern browsers */
-  color: transparent; /* For fallback */
+/* active nabarLink */
+.active{
+   @apply bg-foreground p-[1px] rounded-sm
 }
+
+.nav_links{
+  position: relative;
+  transform-origin: center;
+
+}
+.nav_links::after {
+  position: absolute;
+  content: " ";
+  width: 0%;
+  height: 0%;
+  left: 0;
+  bottom: 0;
+  transform-origin: center;
+  transition: all 500ms ease;
+
+}
+
+.nav_links:hover::after {
+  width: 100%;
+  height: 3px;
+  z-index: -1;
+  transform-origin: bottom;
+
+  @apply bg-foreground  rounded-sm
+} 
