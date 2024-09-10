@@ -51,7 +51,7 @@ const SocialLinks = () => {
       </p>
       <p className='flex items-center text-sm sm:text-xl gap-2 text-slate-300 '>
         <FaXTwitter className='text-white text-xl sm:text-3xl md:text-5xl rounded-full p-1 md:p-2 bg-transparent border border-slate-100' />
-        Youtube
+        X
       </p>
       <p className='flex items-center text-sm sm:text-xl gap-2 text-slate-300 '>
         <FaWhatsapp className='text-white text-xl sm:text-3xl md:text-5xl rounded-full p-1 md:p-2 bg-[#00E510]' />
