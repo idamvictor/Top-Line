@@ -233,7 +233,7 @@ const Ratings = () => {
 };
 const NewToCrypto = () => {
   return (
-    <section className='text-white gap-y-10  m-5 my-7 border-[0.07rem] px-5 md:px-10 py-2 flex justify-between flex-wrap items-center border-slate-500 rounded-xl'>
+    <section className='text-white gap-y-10  m-5 my-7 border-[0.07rem] px-5 md:px-11 py-5 flex justify-between flex-wrap items-center border-slate-500 border-opacity-35 rounded-xl'>
       <div className='space-y-3'>
         <h6 className='text-xl font-medium'>New to Cryptocurrency ?</h6>
         <p className='max-w-[350px] text-sm font-light text-slate-300'>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -235,7 +236,7 @@
 
 /* active nabarLink */
 .active{
-   @apply bg-foreground p-[1px] rounded-sm
+   @apply bg-foreground p-1 rounded-sm
 }
 
 .nav_links{
@@ -261,5 +262,5 @@
   z-index: -1;
   transform-origin: bottom;
 
-  @apply bg-foreground  rounded-sm
+@apply bg-foreground  
 } 

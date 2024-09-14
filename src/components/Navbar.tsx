@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { Inter } from "next/font/google";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
@@ -7,6 +8,8 @@ import Bars from "@/components/ui/Bars";
 import { Button } from "./ui/button";
 import { ChevronDown, Globe } from "lucide-react";
 import { Routes } from "@/constant/Constants";
+
+const inter = Inter({ subsets: ["latin"] });
 /**
  * Array of navigation links with name and corresponding link.
  */
@@ -166,10 +169,10 @@ const Navbar = () => {
 
   return (
     <header
-      id='nav'
-      className=' bg-none max-w-[1620px] mx-auto absolute top-0 left-0 right-0 z-40 px-5 lg:px-10 my-2'
+      id="nav"
+      className=" bg-none max-w-[1620px] mx-auto absolute top-0 left-0 right-0 z-40 px-5 lg:px-10 "
     >
-      <nav className='  bg-none font-poppins font-light text-white py-3 left-0 top-0   md:py-7 flex justify-between  items-center'>
+      <nav className="  bg-none font-poppins font-light text-white py-3 left-0 top-0   md:py-7 flex justify-between  items-center">
         {/* Logo */}
         <Link href={Routes.homePath}>
           <Logo />
@@ -177,16 +180,16 @@ const Navbar = () => {
         {/* middle Links */}
         <Links pathName={pathName} />
         {/* auth_btns and language */}
-        <div className='flex justify-center items-center'>
-          <div className='language md:flex  hidden  '>
-            <Globe className='w-4' />
-            <p className='flex justify-center items-center text-xs px-3'>
+        <div className="flex justify-center items-center">
+          <div className="language md:flex  hidden  ">
+            <Globe className="w-4" />
+            <p className="flex justify-center items-center text-xs px-3">
               EN
-              <ChevronDown className='w-5' />
+              <ChevronDown className="w-5" />
             </p>
           </div>
           <Link href={"/Authentication/signin"}>
-            <Button className='bg-foreground hidden md:block' size='sm'>
+            <Button className="bg-foreground hidden md:block" size="sm">
               Sign In
             </Button>
           </Link>
@@ -194,7 +197,7 @@ const Navbar = () => {
         {/* mobile nav toggle*/}
         <div
           onClick={() => setToggleNav((prev) => !prev)}
-          className='bars absolute right-6 cursor-pointer z-30 md:hidden'
+          className="bars absolute right-6 cursor-pointer z-30 md:hidden"
         >
           <Bars
             handleClick={() => setToggleNav((prev) => !prev)}
@@ -241,9 +244,9 @@ export const Logo = () => {
           />
         </svg>
       </div>
-      <h1 className=' text-white font-medium text-sm '>
+      <h1 className={`${inter.className} text-white font-medium text-lg `}>
         TOPLINE <br />
-        Trading
+       
       </h1>
     </div>
   );

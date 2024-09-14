@@ -1,22 +1,52 @@
 "use client";
-import { ArrowUpFromDot } from "lucide-react";
-import { useRouter } from "next/navigation";
-import React from "react";
 
-const NavigateTop = () => {
-  const router = useRouter();
+import React, { useState, useEffect } from "react";
 
-  const handleNavigation = () => {
-    router.push("#nav");
+
+const BackToTopButton = () => {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+     setShowButton(window.scrollY > 300)
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  },[]);
+
+  const handleBackToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <>
-      <ArrowUpFromDot
-        onClick={handleNavigation}
-        className=' fixed bottom-32 right-6 w-10 h-10 p-1 rounded-full bg-white'
-      />
+      {showButton && (
+        <button
+          onClick={handleBackToTop}
+          className="fixed bg-white bottom-10 right-10 rounded-full border p-2 px-3 shadow-md"
+        >
+          <svg
+            width="11"
+            height="18"
+            viewBox="0 0 11 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.58105 4.2L5.58105 1M5.58105 1L9.58105 4.2M5.58105 1V17"
+              stroke="#333333"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      )}
     </>
   );
 };
-export default NavigateTop;
+
+export default BackToTopButton;

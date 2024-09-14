@@ -1,13 +1,18 @@
 import { Button } from "@/components/ui/button";
 import Line from "@/components/ui/shared/Line";
+import { Inter } from "next/font/google";
 import React from "react";
+
+const inter = Inter({ subsets: ["latin"] });
 
 const Page = () => {
   return (
-    <section className='text-white max-w-[1620px] mx-auto px-5 md:px-10 space-y-20'>
-      <main className='mt-10 space-y-8'>
-        <h1 className='font-bold text-3xl text-center'>About Us</h1>
-        <p className=' text-center font-light text-base text-slate-300'>
+    <section className="text-white max-w-[1278px] ${inter.className} mx-auto px-5 md:px-10 space-y-20">
+      <main className="mt-10 space-y-8">
+        <h1 className="font-bold text-4xl text-center">About Us</h1>
+        <p
+          className={` ${inter.className} text-center font-normal  text-base tracking-[-0.2px] max-w-6xl text-slate-300 text-opacity-[80%]`}
+        >
           Welcome to Topline, your premier destination for financial market
           education and empowerment. At Topline, we believe that anyone can
           succeed in the financial markets with the right knowledge, tools, and
@@ -15,19 +20,19 @@ const Page = () => {
           services that help you navigate the complexities of trading,
           investing, and capital management with confidence.
         </p>
-        <div className='whitbg w-full h-80 bg-white '></div>
-        <div className='txt_btn flex max-md:flex-col justify-between items-start  gap-7'>
-          <p className='text-2xl lg:text-3xl lg:max-w-[500px] font-bold md:max-w-[350px]'>
+        <div className="whitbg w-full h-80 bg-white "></div>
+        <div className="txt_btn flex max-md:flex-col justify-between items-start  gap-7">
+          <p className="text-2xl lg:text-3xl lg:max-w-[400px] tracking-[-1.8px] leading-10 text-wrap font-bold md:max-w-[350px]">
             We offer a wide range of services tailored to meet your needs,
             whether you’re a beginner or a seasoned trader.
           </p>
-          <p className='flex flex-col gap-y-5 text-left text-base max-w-[500px] font-light text-slate-300'>
+          <p className="flex flex-col gap-y-5 text-left text-base max-w-[500px] leading-7 font-light text-slate-300 text-opacity-[80%]">
             At Topline, we are committed to your success. Our platform is built
             on a foundation of trust, transparency, and a passion for financial
             education. We continually strive to innovate and enhance our
             offerings, ensuring that you have the best resources at your
             fingertips.
-            <Button size={"sm"} className='w-fit'>
+            <Button size={"sm"} className="w-fit">
               Join Us Today
             </Button>
           </p>
@@ -35,10 +40,10 @@ const Page = () => {
       </main>
       <OurTeam />
 
-      <section className=' flex justify-between items-center gap-y-10 gap-x-5  flex-wrap pb-5'>
-        <h3 className=' text-xl font-medium max-w-[500px] gap-1 flex-col flex justify-start'>
+      <section className=" flex justify-between items-center gap-y-10 gap-x-5  flex-wrap pb-5">
+        <h3 className=" text-xl font-medium max-w-[500px] gap-1 flex-col flex justify-start">
           Ready to Unlock Your Trading Potential?
-          <span className=' font-light text-slate-300 text-sm'>
+          <span className=" font-light text-slate-300 text-sm">
             Our platform is designed to cater to all your financial market needs
             in one place. With our comprehensive services, you can grow your
             knowledge, enhance your trading, and secure your financial future.
