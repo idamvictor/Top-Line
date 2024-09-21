@@ -1,3 +1,5 @@
+"use client"
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -15,6 +17,7 @@ import {
 } from '@/Assets/fonts/index'
 import NavigateTop from "@/components/NavigateTop";
 import { Providers } from "@/components/Provider";
+import { usePathname } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,14 +31,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const pathname = usePathname();
+
+  const isPath = pathname.startsWith("/User")
   return (
     <html lang="en">
       <body className={`relative ${poppins.variable} ${manrope.variable} ${inter.className}`}>
         <main className="max-w-screen-2xl min-h-fit pt-[4.5rem] md:pt-[6rem] relative  mx-auto font-manrope">
           <Providers>
-       <Navbar/>
+      {!isPath && <Navbar/>}
         {children}
-        <Footer/>       
+       { !isPath && <Footer/>       }
           </Providers>
          
        
