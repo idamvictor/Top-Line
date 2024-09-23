@@ -47,7 +47,6 @@ const NavLinks = [
 ];
 
 function Sidebar() {
-const [active, setActive] = useState(false)
 const pathName = usePathname();
 
 return (
