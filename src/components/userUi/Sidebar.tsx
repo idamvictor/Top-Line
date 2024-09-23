@@ -1,6 +1,14 @@
+"use client"
+
 import Image from "next/image";
 import { Routes } from "@/constant/Constants";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import Userprofile from "./SideBar-components/Userprofile";
+import SLogout from "./SideBar-components/SLogout";
+import NAV_LINK from "./SideBar-components/NAV_LINK";
+
 
 
 const NavLinks = [
@@ -12,83 +20,83 @@ const NavLinks = [
   {
     name: "Home",
     icons: "/Icons/Vector.svg",
+    about:
+      "Empowering Your Financial Journey with Expert Guidance and Market Insights.",
     link: Routes.userHome,
   },
   {
     name: "My Courses",
     icons: "/Icons/graduate.svg",
+    about:
+      "Track Your Progress and Master the Markets with Expert-Led Courses.",
     link: Routes.userCourses,
   },
   {
     name: "All Courses",
     icons: "/Icons/book.svg",
+    about:
+      "Master the Markets with Expert-Led Courses Designed for Every Trader.",
     link: Routes.userAllCourses,
   },
   {
     name: "Upcoming Classes",
     icons: "/Icons/class.svg",
-    link: Routes.userUpcoming,
-  },
-  {
-    name: "Help & Support",
-    icons: "/Icons/Help.svg",
+    about: "Stay Ahead with Our Upcoming Classes ",
     link: Routes.userUpcoming,
   },
 ];
 
 function Sidebar() {
-  return (
-    <aside className=" lg:block lg:bg-[#160623] text-serene-ash lg:fixed fixed z-50 bg-[#160623] top-20 w-[15rem] h-[30rem] pt-2  lg:top-0 lg:z-[1000] lg:bottom-0 lg:h-full lg:w-[12.625rem] xl:w-[15.625rem] text-white">
-      <div className="w-36 mx-auto py-3">
-        <Image
-          src="/assets/Home/topline.svg"
-          width={130}
-          height={130}
-          alt="Topline Icon"
+const [active, setActive] = useState(false)
+const pathName = usePathname();
+
+return (
+  <aside className="flex fixed flex-col py-8 max-w-full w-72 text-white bg-white bg-opacity-[0.03] rounded-lg">
+    <header className=" mx-auto">
+      <Image
+        src="/assets/Home/topline.svg"
+        width={130}
+        height={130}
+        alt="Topline Icon"
+      />
+    </header>
+    <hr className="mt-5 ml-10 w-56 border-t-1 border-[#C2CFD6]" />
+    <Userprofile pathName={pathName} />
+    <hr className="mt-8 w-56 ml-10" />
+
+    {/* Navigation Links */}
+
+    <nav className="mt-9 flex flex-col gap-5 ">
+      {NavLinks.map((link) => (
+        <NAV_LINK
+          name={link.name}
+          about={link.about}
+          icons={link.icons}
+          link={link.link}
+          pathName={pathName}
         />
-      </div>
-      <hr className="mt-5 mx-auto w-52 border-t-1 border-[#C2CFD6]" />
+      ))}
+    </nav>
 
-      <div>
-        <Link
-          className="flex justify-start items-center gap-5 mt-7  text-sm bg-[#230c36] "
-          href={Routes.userProfile}
-        >
-          {" "}
-          <Image
-            src="/Icons/Rectangle2.png"
-            alt="Profile link"
-            width={40}
-            height={30}
-            className="ml-3"
-          />
-          <h4 className="flex flex-col text-base my-3">
-            Emmanuel Ginger <span className="text-xs">Freemium plan</span>
-          </h4>
-        </Link>
-      </div>
-
-      {NavLinks.map((link, index) => {
-        return (
-          <nav key={index}>
-            <ul>
-              <li>
-                <Link className="flex gap-4 ml-2 mt-5 text-xs" href={link.link}>
-                  <Image
-                    src={link.icons}
-                    alt="navigation"
-                    width={20}
-                    height={20}
-                  />
-                  {link.name}
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        );
-      })}
-    </aside>
-  );
+    <hr className="mt-8 w-56 ml-10" />
+    <div className="mt-5 ml-3 flex flex-col gap-5">
+      <SLogout
+        name="Help & support"
+        icons="/Icons/Help.svg"
+        color="text-white"
+        link={Routes.userSupport}
+        pathName={pathName}
+      />
+      <SLogout
+        name="Logout"
+        icons="/Icons/logout-03.svg"
+        color="text-[#FF8800]"
+        link="ginger"
+        pathName=""
+      />
+    </div>
+  </aside>
+);
 }
 
 export default Sidebar;

@@ -12,12 +12,13 @@ export default function Layout ({
     children: React.ReactNode
 }>
 ){
-    return(
-                <main >
-                    <Sidebar/>
-                    <Navbar2/>
-                    {children}
-                </main>
-
-    )
+    return (
+      <main>
+        <Sidebar />
+        <div className=" md:text-white lg:ml-[12.625rem] xl:ml-[15.625rem] overflow-y-auto">
+          <Navbar2 />
+          {children}
+        </div>
+      </main>
+    );
 }

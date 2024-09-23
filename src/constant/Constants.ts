@@ -9,11 +9,12 @@ export const Routes= {
     contactPatch:'/ContactUs',
     signinPath:'/Authentication/signin',
     signupPath:'/Authentication/signup',
-    userProfile:'User/Profile',
-    userHome:'User/Home',
-    userCourses: 'User/Courses',
-    userAllCourses: 'User/AllCourses',
-    userUpcoming: 'User/Upcoming',
-    userHelp:'User/Help'
+    userProfile:'/User/Profile',
+    userHome:'/User',
+    userCourses: '/User/Courses',
+    userAllCourses: '/User/AllCourses',
+    userUpcoming: '/User/Upcoming',
+    userHelp:'/User/Help',
+    userSupport: '/User/Support'
 }
 
