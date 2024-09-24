@@ -50,7 +50,7 @@ function Sidebar() {
 const pathName = usePathname();
 
 return (
-  <aside className="flex fixed flex-col py-8 max-w-full w-72 text-white bg-white bg-opacity-[0.03] rounded-lg">
+  <aside className="flex lg:fixed max-md:hidden flex-col py-8 max-w-full w-72 text-white bg-white bg-opacity-[0.03] rounded-lg">
     <header className=" mx-auto">
       <Image
         src="/assets/Home/topline.svg"
