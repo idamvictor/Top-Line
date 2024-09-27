@@ -18,7 +18,7 @@ const Userprofile: React.FC<pathname> = ({pathName}) => {
         href={Routes.userProfile}
       >
         <Image
-          src="/Icons/Rectangle2.png"
+          src="/Icons/profile-image.png"
           alt="Profile link"
           width={40}
           height={30}

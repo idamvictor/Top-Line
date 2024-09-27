@@ -2,9 +2,7 @@
 
 import Image from "next/image";
 import { Routes } from "@/constant/Constants";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
 import Userprofile from "./SideBar-components/Userprofile";
 import SLogout from "./SideBar-components/SLogout";
 import NAV_LINK from "./SideBar-components/NAV_LINK";
@@ -49,8 +47,10 @@ const NavLinks = [
 function Sidebar() {
 const pathName = usePathname();
 
+//come back and arrange the sidebar to be more responsive
+
 return (
-  <aside className="flex lg:fixed max-md:hidden flex-col py-8 max-w-full w-72 text-white bg-white bg-opacity-[0.03] rounded-lg">
+  <aside className="flex fixed flex-col py-8 lg:max-w-full w-72 text-white bg-white bg-opacity-[0.03]  rounded-lg">
     <header className=" mx-auto">
       <Image
         src="/assets/Home/topline.svg"
@@ -68,10 +68,10 @@ return (
     <nav className="mt-9 flex flex-col gap-5 ">
       {NavLinks.map((link) => (
         <NAV_LINK
-          name={link.name}
-          about={link.about}
-          icons={link.icons}
-          link={link.link}
+          name={link?.name}
+          about={link?.about}
+          icons={link?.icons}
+          link={link?.link}
           pathName={pathName}
         />
       ))}

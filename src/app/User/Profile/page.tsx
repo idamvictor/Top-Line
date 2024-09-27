@@ -1,9 +1,11 @@
-import Search from "@/components/userUi/Nav-components/Search"
+
+import UserImage from "@/components/userUi/Profile/UserImage"
 
 const Profile= () => {
   return (
     <div>
-      Profile page </div>
+      <UserImage/>
+     </div>
   )
 }
 
