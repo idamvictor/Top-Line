@@ -21,7 +21,7 @@ export default function Layout ({
         {/* Main Content Section */}
         <main className="w-full lg:mx-10  md:w-[60%] lg:w-[85%] lg:h-screen flex flex-col">
           <div className="p-4">
-            <Search />
+            {/* <Search /> */}
           </div>
           <div className="flex-grow p-4">{children}</div>
         </main>
